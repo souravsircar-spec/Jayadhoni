@@ -1,0 +1,10 @@
+{
+  "name": "জয়ধ্বনি - বাংলা খ্রীষ্টিয় সংগীত",
+  "description": "একটি আধুনিক বাংলা খ্রীষ্টিয় সংগীত ও জয়ধ্বনি অ্যাপ যা আপনার প্রিয় গানগুলোকে সহজে খুঁজে পেতে সাহায্য করে। অফলাইন মুড এবং পিডব্লিউএ সুবিধা সহ।",
+  "requestFramePermissions": [],
+  "short_name": "জয়ধ্বনি",
+  "theme_color": "#059669",
+  "background_color": "#f8fafc",
+  "display": "standalone",
+  "orientation": "portrait"
+}
