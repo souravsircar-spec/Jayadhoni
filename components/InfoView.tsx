@@ -19,11 +19,9 @@ const MainLogo = ({ className }: { className?: string }) => (
       <path d="M350 580 C350 580 350 130 350 80 C350 30 318 0 238 0 C158 0 58 0 58 0 V500 C58 500 158 500 238 500 C318 500 350 530 350 580 Z" fill="white"/>
       <path d="M350 580 C350 580 350 130 350 80 C350 30 382 0 462 0 C542 0 642 0 642 0 V500 C642 500 542 500 462 500 C382 500 350 530 350 580 Z" fill="white"/>
       <rect x="347" y="60" width="6" height="480" rx="3" fill="#CBD5E1" opacity="0.5"/>
-      {/* Enhanced Cross: Thicker, longer, and with a white outline for maximum pop */}
       <g transform="translate(325, 170)">
         <rect x="16" y="0" width="18" height="130" rx="9" fill="#059669" stroke="white" strokeWidth="4"/>
         <rect x="-15" y="35" width="80" height="18" rx="9" fill="#059669" stroke="white" strokeWidth="4"/>
-        {/* Re-apply emerald over the stroke overlap for a clean look */}
         <rect x="16" y="0" width="18" height="130" rx="9" fill="#059669"/>
         <rect x="-15" y="35" width="80" height="18" rx="9" fill="#059669"/>
       </g>
@@ -40,9 +38,9 @@ const PortraitPhoto = ({ className }: { className?: string }) => {
       <div className="relative border-4 border-white shadow-xl overflow-hidden bg-slate-50 w-full h-full aspect-[3/4] flex items-center justify-center">
         {!hasError ? (
           <img 
-            src="portrait.jpg" 
+            src="https://i.ibb.co/9HrvQXbS/portrait.jpg" 
             alt="স্বর্গীয় বিভু রঞ্জন সরকার"
-            className="w-full h-full object-cover grayscale brightness-[1.05]"
+            className="w-full h-full object-cover grayscale brightness-[1.05] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
             onError={() => setHasError(true)}
           />
         ) : (
@@ -51,10 +49,9 @@ const PortraitPhoto = ({ className }: { className?: string }) => {
               <User className="w-8 h-8 opacity-40" />
             </div>
             <div className="space-y-1">
-              <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">চিত্র পাওয়া যায়নি</p>
+              <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">চিত্র লোড করা যায়নি</p>
               <p className="text-[8px] font-bold text-slate-300 uppercase leading-tight">
-                Missing: portrait.jpg<br/>
-                Place in root directory
+                ইমেজ সার্ভারের সাথে সংযোগ বিচ্ছিন্ন হতে পারে
               </p>
             </div>
           </div>

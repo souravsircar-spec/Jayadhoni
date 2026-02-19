@@ -2,8 +2,14 @@
   "name": "jayadhani-app",
   "version": "1.0.0",
   "private": true,
-  "description": "Bengali Christian Hymn App",
+  "description": "Bengali Christian Hymn Application",
   "scripts": {
-    "start": "echo 'Open index.html in a local server'"
+    "start": "echo 'Serve index.html to view the app'"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "lucide-react": "^0.562.0",
+    "@google/genai": "^1.37.0"
   }
 }
