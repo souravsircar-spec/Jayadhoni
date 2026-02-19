@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Song, TabType } from './types';
 import { SONG_DB } from './constants';
 import { CHORUS_DB } from './chorus_db';
@@ -173,8 +174,9 @@ const App: React.FC = () => {
   };
 
   return (
-    <Layout activeTab={activeTab} setActiveTab={setActiveTab}>
-      <header className="bg-white border-b border-slate-100 sticky top-0 z-30 pb-4">
+    <>
+      <Layout activeTab={activeTab} setActiveTab={setActiveTab}>
+        <header className="bg-white border-b border-slate-100 sticky top-0 z-30 pb-4">
         <div className="p-8 pb-4 max-w-2xl mx-auto flex flex-col items-center text-center relative">
           <h1 className="text-4xl font-black text-emerald-600 font-bengali tracking-tight">জয়ধ্বনি</h1>
           <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mt-1">বাংলা খ্রীষ্টিয় সংগীত</p>
@@ -206,10 +208,12 @@ const App: React.FC = () => {
         )}
       </header>
 
-      <main className="max-w-2xl mx-auto py-6 font-bengali">
-        {renderContent()}
-      </main>
-    </Layout>
+        <main className="max-w-2xl mx-auto py-6 font-bengali">
+          {renderContent()}
+        </main>
+      </Layout>
+      <SpeedInsights />
+    </>
   );
 };
 
