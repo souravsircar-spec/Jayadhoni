@@ -268,7 +268,7 @@ export const CHORUS_DB: Song[] = [
   {
     id: 1023,
     title: "প্রভুতে যে আনন্দ (The joy of the Lord)",
-    transliteration: "Prabhute je Anando",
+    transliteration: "The joy of the Lord",
     category: "কোরাস",
     lyrics: `প্রভুতে যে আনন্দ, তাতে পাই শক্তি (৩)
 প্রভুতে আনন্দ তাই আছে শক্তি।

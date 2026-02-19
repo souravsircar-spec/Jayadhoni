@@ -26,7 +26,6 @@ const App: React.FC = () => {
   });
   const searchInputRef = useRef<HTMLInputElement>(null);
 
-  // Scroll to top on navigation
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, [activeTab, selectedSong, selectedCategory]);
