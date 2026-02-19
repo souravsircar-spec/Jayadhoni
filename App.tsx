@@ -8,6 +8,7 @@ import SongDetail from './components/SongDetail';
 import InfoView from './components/InfoView';
 import { Search, ChevronLeft, Tag, Sparkles, X } from 'lucide-react';
 import { toBengaliNumber, latinizeBengali } from './utils/format';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const ALL_SONGS = [...SONG_DB, ...CHORUS_DB];
 
@@ -209,6 +210,7 @@ const App: React.FC = () => {
       <main className="max-w-2xl mx-auto py-6 font-bengali">
         {renderContent()}
       </main>
+      <SpeedInsights />
     </Layout>
   );
 };
