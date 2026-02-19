@@ -49,14 +49,19 @@
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
     <div id="root"></div>
-    <!-- Vite will process this TSX file and bundle all dependencies -->
+    <!-- Vite entry point: All dependencies are handled by Vite -->
     <script type="module" src="/index.tsx"></script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(reg => console.log('SW Registered'))
-                    .catch(err => console.error('SW Registration Failed', err));
+                // Use relative path to avoid origin mismatch in proxy/iframe environments
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('SW Registered', reg.scope))
+                    .catch(err => {
+                        console.warn('SW Registration Failed:', err.message);
+                        // In some preview environments, Service Workers are blocked by design.
+                        // The app will still function normally without it.
+                    });
             });
         }
     </script>

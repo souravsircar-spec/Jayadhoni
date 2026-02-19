@@ -11,16 +11,18 @@ export default defineConfig({
     emptyOutDir: true,
     sourcemap: false,
     rollupOptions: {
+      input: {
+        main: './index.html',
+        sw: './sw.js'
+      },
       output: {
-        // Ensure manifest and sw are not moved/hashed into assets/ if possible
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'manifest.json') return 'manifest.json';
-          return 'assets/[name]-[hash][extname]';
+        // Ensure sw.js remains at the root and unhashed
+        entryFileNames: (chunkInfo) => {
+          return chunkInfo.name === 'sw' ? 'sw.js' : 'assets/[name]-[hash].js';
         }
       }
     }
   },
-  publicDir: false, // We are using the root as the source
   server: {
     port: 3000,
     host: true
