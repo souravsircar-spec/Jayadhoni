@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  command = "# No build command required for this ESM-based structure"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
