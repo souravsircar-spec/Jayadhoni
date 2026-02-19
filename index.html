@@ -49,14 +49,14 @@
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
     <div id="root"></div>
-    <!-- Vite entry point: Vite bundles this and all imported dependencies -->
+    <!-- Vite will process this TSX file and bundle all dependencies -->
     <script type="module" src="/index.tsx"></script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js')
                     .then(reg => console.log('SW Registered'))
-                    .catch(err => console.log('SW Registration Failed', err));
+                    .catch(err => console.error('SW Registration Failed', err));
             });
         }
     </script>

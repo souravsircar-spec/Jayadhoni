@@ -1,4 +1,4 @@
-const CACHE_NAME = 'jayadhani-v1';
+const CACHE_NAME = 'jayadhani-v2';
 const ASSETS = [
   '/',
   '/index.html',
@@ -14,9 +14,10 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  // Simple network-first strategy for a more reliable experience during updates
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
+    fetch(event.request).catch(() => {
+      return caches.match(event.request);
     })
   );
 });
