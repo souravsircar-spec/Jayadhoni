@@ -996,7 +996,7 @@ Sing Christ is risen from the dead!`
 ফলল ত্রিশগুণ, ষাটগুণ, শতগুণ।`
   },
   {
-    "id": 85,
+    "id": 1085,
     "title": "এই ছোট জীবন গাড়িটি তুমি চালাও",
     "transliteration": "Ei Choto Jibon Gariti Tumi Chalao",
     "category": "কোরাস",
@@ -1008,7 +1008,7 @@ Sing Christ is risen from the dead!`
 এই ছোট পায়ে (২) তোমার পথে চলতে শিখাও।`
   },
   {
-    "id": 86,
+    "id": 1086,
     "title": "আমি খুশি আজক",
     "transliteration": "Ami Khushi Ajke",
     "category": "জয়ধ্বনি",
@@ -1027,7 +1027,7 @@ Sing Christ is risen from the dead!`
 তাই আমি খুব খুশি আজকে।`
   },
   {
-    "id": 87,
+    "id": 1087,
     "title": "চালাও প্রভু তোমার নদীর ধারে",
     "transliteration": "Chalao Probhu Tomar Nodir Dhare",
     "category": "জয়ধ্বনি",
@@ -1039,7 +1039,7 @@ Sing Christ is risen from the dead!`
 বাস করতে দাও (৩)।`
   },
   {
-    "id": 88,
+    "id": 1088,
     "title": "কেমন শক্তিমান প্রভু",
     "transliteration": "Kemon Shoktiman Probhu",
     "category": "কোরাস",
@@ -1048,7 +1048,7 @@ Sing Christ is risen from the dead!`
 কেমন শক্তিমান প্রভু।`
   },
   {
-    "id": 89,
+    "id": 1089,
     "title": "ঈশ্বরের রাজ্য ও ধার্মিকতার অন্বেষণ কর",
     "transliteration": "Ishwarer Rajyo O Dharmikotar Onweshon Kor",
     "category": "কোরাস",
@@ -1067,7 +1067,7 @@ Sing Christ is risen from the dead!`
 হাল্লিলু-হাল্লিলুইয়া।`
   },
   {
-    "id": 90,
+    "id": 1090,
     "title": "আমি আনন্দিত হইলাম যখন লোকে বলিল",
     "transliteration": "Ami Anondito Hoilam Jakhon Loke Bolilo",
     "category": "কোরাস",
@@ -1077,7 +1077,7 @@ Sing Christ is risen from the dead!`
 চল আমরা সদাপ্রভুর গৃহে যাই।`
   },
   {
-    "id": 91,
+    "id": 1091,
     "title": "মোর প্রিয় যীশু শীঘ্রই আসিবেন",
     "transliteration": "Halleluia Mor Priyo Jishu Shighro Ashiben",
     "category": "জয়ধ্বনি",
@@ -1090,7 +1090,7 @@ Sing Christ is risen from the dead!`
 মোর প্রিয় যীশু শীঘ্রই আসিবেন।`
   },
   {
-    "id": 92,
+    "id": 1092,
     "title": "যীশু তুমি কত সুন্দর",
     "transliteration": "Jishu Tumi Koto Sundor",
     "category": "জয়ধ্বনি",
@@ -1099,7 +1099,7 @@ Sing Christ is risen from the dead!`
 যীশু তুমি কত সুন্দর।`
   },
   {
-    "id": 93,
+    "id": 1093,
     "title": "যীশু আসিবেন আমায় নিতে আসিবেন",
     "transliteration": "Jishu Ashiben Amay Nite Ashiben",
     "category": "জয়ধ্বনি",
@@ -1109,7 +1109,7 @@ Sing Christ is risen from the dead!`
 হাল্লিলুইয়া, হাল্লিলুইয়া ঊর্দ্ধ দিকে চেয়ে রও।`
   },
   {
-    "id": 94,
+    "id": 1094,
     "title": "মনরে আমার কর",
     "transliteration": "Monre Amar Kor",
     "category": "জয়ধ্বনি",
@@ -1117,7 +1117,7 @@ Sing Christ is risen from the dead!`
 প্রভু যীশুর ধ্যান, প্রভু যীশুর গান।`
   },
   {
-    "id": 95,
+    "id": 1095,
     "title": "সুন্দর প্রভু মোর হাত দুটি করি জোড়",
     "transliteration": "Sundor Probhu Mor Hat Duti Kori Jor",
     "category": "কোরাস",
@@ -1129,7 +1129,7 @@ Sing Christ is risen from the dead!`
 আলোকে ভরিবে প্রাণ (৩)।`
   },
   {
-    "id": 96,
+    "id": 1096,
     "title": "পাছে আমি ভুলে যাই",
     "transliteration": "Pache Ami Bhule Jai",
     "category": "কোরাস",
@@ -1139,7 +1139,7 @@ Sing Christ is risen from the dead!`
 আমি যেন সর্ব্বদাই, তোমার প্রেমে ডুবে রই।`
   },
   {
-    "id": 97,
+    "id": 1097,
     "title": "ঘন কালো অন্ধকারের মাঝে আলো দিল কে",
     "transliteration": "Ghon Kalo Ondhokarer Majhe Alo Dilo Ke",
     "category": "কোরাস",
@@ -1153,7 +1153,7 @@ Sing Christ is risen from the dead!`
 সদাপ্রভু (৪)`
   },
   {
-    "id": 98,
+    "id": 1098,
     "title": "আমি যীশুর হাত কভু ছাড়ব না",
     "transliteration": "Ami Jishur Hat Kobhu Chharbo Na",
     "category": "জয়ধ্বনি",
@@ -1165,7 +1165,7 @@ Sing Christ is risen from the dead!`
 প্রাণের প্রদীপ মোর নিভে যাবে না।`
   },
   {
-    "id": 99,
+    "id": 1099,
     "title": "O, Glory to God",
     "transliteration": "O Gorob Jishu Tini Tulilen Amay",
     "category": "জয়ধ্বনি",
