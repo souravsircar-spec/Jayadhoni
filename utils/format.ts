@@ -29,7 +29,7 @@ export const latinizeBengali = (text: string): string => {
   
   return text
     .split('')
-    .map(char => map[char] || char)
+    .map(char => map[char] !== undefined ? map[char] : char)
     .join('')
     .toLowerCase()
     .replace(/ph/g, 'f')

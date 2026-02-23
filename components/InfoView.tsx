@@ -32,7 +32,7 @@ const MainLogo = ({ className }: { className?: string }) => (
 
 const PortraitPhoto = ({ className }: { className?: string }) => {
   const [hasError, setHasError] = React.useState(false);
-  const imageUrl = "https://i.ibb.co/9HrvQXbS/portrait.jpg";
+  const imageUrl = "/portrait.jpg";
 
   return (
     <div className={`relative group ${className}`}>

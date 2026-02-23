@@ -1,10 +1,10 @@
 import { Song } from './types';
 
 export const HYMNS_101_200: Song[] = [
-  {
+        {
     id: 101,
     title: "নব বরষের প্রথম দিনে বলে যাই",
-    transliteration: "Nobo Borosher Prothom Dine Bole Jai",
+    transliteration: "Nb Brsher Prthm Dine Ble Jai",
     category: "নববর্ষ",
     lyrics: `নব বরষের প্রথম দিনে বলে যাই,
 হে প্রাণ আমার মানবের তরে যেন হারাই।
@@ -23,10 +23,10 @@ export const HYMNS_101_200: Song[] = [
 নব সুরে তারে বেঁধে এনেছি,
 মনের গভীরে যারে পাই।`
   },
-  {
+        {
     id: 102,
     title: "নতুনের আগমনে, নব মনে সাজরে",
-    transliteration: "Notuner Agomone Nobo Mone Sajore",
+    transliteration: "Ntuner Agmne, Nb Mne Sajre",
     category: "নববর্ষ",
     lyrics: `নতুনের আগমনে, নব মনে সাজরে।
 ওরে নূতন আলোর বন্যা আজি, অবগাহন কররে।
@@ -40,10 +40,10 @@ export const HYMNS_101_200: Song[] = [
 ৩ পুরাতনের মনের কালি, নূতন আলোয় মুছে ফেল রে,
 আজি খ্রীষ্ট যীশুর চরণতলে, প্রেমের সুরে মাতি রে।`
   },
-  {
+        {
     id: 103,
     title: "সময় এসেছে এবার",
-    transliteration: "Somoy Esheche Ebar",
+    transliteration: "Smj় Esechhe Ebar",
     category: "নববর্ষ",
     lyrics: `সময় এসেছে এবার,
 হতাশার কথা ছেড়ে,
@@ -60,10 +60,10 @@ export const HYMNS_101_200: Song[] = [
 খ্রীষ্টকে আজ পেয়েছি মোরা
 জীবনের হল সারা।`
   },
-  {
+        {
     id: 104,
     title: "নূতন বরষে, মনের হরষে",
-    transliteration: "Notun Boroshe Moner Horoshe",
+    transliteration: "Nutn Brshe, Mner Hrshe",
     category: "নববর্ষ",
     lyrics: `নূতন বরষে, মনের হরষে,
 এস সবে মিলি, গাহি নব গান,
@@ -100,10 +100,10 @@ export const HYMNS_101_200: Song[] = [
 ত্যজি স্বার্থভাব, ধরি নব ভাব,
 বিশ্বাসেতে যেন হই যত্নবান।`
   },
-  {
+        {
     id: 105,
     title: "হোসান্না! হোসান্না! এ এলেন শান্তিরাজ!",
-    transliteration: "Hosanna Hosanna E Elen Shantiraj",
+    transliteration: "Hosanna! Hosanna! E Elen Shantiraj!",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `(যীশুর যিরূশালেমে যাত্রা)
 হোসান্না হোসান্না এ এলেন শান্তিরাজ!
@@ -128,10 +128,10 @@ export const HYMNS_101_200: Song[] = [
 ৬ অমায়িক শিশুগণের ভাব নাথ হেরি মন্দিরে,
 করিলেন স্তবে প্রীতি লাভ, তাই মনে রাখবে।`
   },
-  {
+        {
     id: 106,
     title: "চলে দলে দলে নগরবাসীগণ — ধর্মধামের পথে",
-    transliteration: "Chole Dole Dole Nogorbashigon",
+    transliteration: "Chle Dle Dle Ngrbasign — Dhrmdhamer Pthe",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `চলে দলে দলে নগরবাসীগণ — ধর্মধামের পথে,
 যথায় দয়াল যীশু যাচ্ছেন — চড়ে গর্দভের পিঠে। (হায়রে)
@@ -152,20 +152,20 @@ export const HYMNS_101_200: Song[] = [
 ঐ পথে বিছাইয়ে, যে যা পেল কাছে,
 আর 'হোসান্না দায়ূদ সন্তান" সবে গাহে উচ্চরবে. (ওভাই)`
   },
-  {
+        {
     id: 107,
     title: "দেখ, প্রেমের মহাসাগর (Assurance of Ebenezer)",
-    transliteration: "Dekho Premer Mohasagor",
+    transliteration: "Dekh, Premer Mhasagr (Assurance Of Ebenejer)",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `দেখ, প্রেমের মহাসাগর, দয়ার মহাপ্লাবন হয়।
 এসে, জীবনদাতা মরেন, মোদের জীবন করতে ক্রয়।
 তাঁহার কথা কে না বলে? তাঁর প্রশংসা কে না গায়?
 এমন অসীম প্রেম কি কেহ চিরকাল ভুলিয়া রয়।`
   },
-  {
+        {
     id: 108,
     title: "গেথশিমানী বনে, নিকুঞ্জ কাননে",
-    transliteration: "Gethsemane Bone Nikunjo Kanone",
+    transliteration: "Gethshimani Bne, Nikunj Kanne",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `গেথশিমানী বনে, নিকুঞ্জ কাননে,
 প্রভু কি কারণে বসেছ একাকী
@@ -187,10 +187,10 @@ export const HYMNS_101_200: Song[] = [
 অধমজনে আমি, দয়া কর স্বামী,
 মম ভ্রাতা তুমি, তব পদে থাকি।`
   },
-  {
+        {
     id: 109,
     title: "তব প্রেম দেখে আমি যীশু, মনে হলেম হতজ্ঞান",
-    transliteration: "Tobo Prem Dekhe Ami Jishu",
+    transliteration: "Tb Prem Dekhe Ami Jishu, Mne Hlem Htjnan",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `তব প্রেম দেখে আমি যীশু, মনে হলেম হতজ্ঞান,
 তুমি প্রাণ দিয়া নাথ প্রাণ কিনেছ, তাই তো প্রাণের প্রাণ।
@@ -207,10 +207,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ আমি পাপী নগণ্য, যীশুর হয়েছি গণ্য, 
 তাই যীশু ধন্য, যীশু ধন্য, গায় মম প্রাণ।`
   },
-  {
+        {
     id: 110,
     title: "আহা! কালভেরি ভূমি লাল হয়ে গেল",
-    transliteration: "Aha Calvary Bhumi Lal Hoye Gelo",
+    transliteration: "Aha! Kalbheri Bhumi Lal Hye Gel",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `আহা! কালভেরি ভূমি লাল হয়ে গেল, ঝরেছে প্রভুর রক্ত,
 পাষাণ নয়নে অশ্রু দুলিল, আঁখি মেলে দেখ ভক্ত।
@@ -227,10 +227,10 @@ export const HYMNS_101_200: Song[] = [
 প্রাণ দিল ক্রুশে মানবেরে প্রেম বিলাতে.
 শত লাঞ্ছনা সহিল যে প্রভু, পাতকীর অনুরক্ত।`
   },
-  {
+        {
     id: 111,
     title: "আমি আর সহিতে পারি না— আমার ত্রাণনাথ আজ ক্রুশেতে।",
-    transliteration: "Ami Ar Shoite Pari Na",
+    transliteration: "Ami Ar Shite Pari Na— Amar Trannath Aj Krushete।",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `আমি আর সহিতে পারি না— 
     আমার ত্রাণনাথ আজ ক্রুশেতে।
@@ -250,10 +250,10 @@ export const HYMNS_101_200: Song[] = [
 ৫ যীশু তোমার জন্য এত সইলেন হে—
 তোমার কঠিন মন কি গলে না?`
   },
-  {
+        {
     id: 112,
     title: "ক্ষমা সুন্দর, প্রভুর প্রেমের বাণী",
-    transliteration: "Khoma Sundor Probhur Premer Bani",
+    transliteration: "Kshma Sundr, Prbhur Premer Bani",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `ক্ষমা সুন্দর, প্রভুর প্রেমের বাণী,
 পাতকীর মনে, চেতনা দিল গো আনি।
@@ -270,10 +270,10 @@ export const HYMNS_101_200: Song[] = [
 পাপী পেল ক্রুশে সেই ক্ষণে পরিত্রাণ.
 নিরাশা তিমিরে জ্বলে ওঠে যেন, ভরসা প্রদীপ খানি।`
   },
-  {
+        {
     id: 113,
     title: "মোর তারক হইলেন বলিদান (Bleeding Lamb)",
-    transliteration: "Mor Tarok Hoilen Bolidan",
+    transliteration: "Mor Tark Hilen Blidan (Bliding Lamb)",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `১ মোর তারক হইলেন বলিদান, ধন্য প্রিয় হত মেষ!
 ভাই আইস করি তাঁহার গান, ধন্য প্রিয় হত মেষ!
@@ -292,10 +292,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ এ তরঙ্গময় সংসারে, নির্ভর আমি হত মেষ,
 আনন্দে যাইব ওপারে, ধন্য তব গুণ অশেষ।`
   },
-  {
+        {
     id: 114,
     title: "মোর জন্য যীশু মরিলেন (What a wonderful Saviour!)",
-    transliteration: "Mor Jonno Jishu Morilen",
+    transliteration: "Mor Jnj Jishu Mrilen (What A Wonderful Sabhiour!)",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `১ মোর জন্য যীশু মরিলেন, কেমন আশ্চর্য্য ত্রাতা!
 প্রায়শ্চিত্ত তিনি করিলেন, কেমন আশ্চর্য্য ত্রাতা!
@@ -319,10 +319,10 @@ export const HYMNS_101_200: Song[] = [
 ৬ সব জীবন তাঁকে দিয়েছি, কেমন আশ্চর্য্য ত্রাতা!
  ও থাকি শেষে তাঁহার ঠাঁই, কেমন আশ্চর্য্য ত্রাতা! `
   },
-  {
+        {
     id: 115,
     title: "কি মোর পাপ পারে ধুতে? (What can wash away my strain.)",
-    transliteration: "Ki Mor Paap Pare Dhute",
+    transliteration: "Ki Mor Pap Pare Dhute? (What Can Wash Away My Strain.)",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `১ কি মোর পাপ পারে ধুতে? কেবল মাত্র যীশুর রক্ত!
  কি পারে নির্মল করতে? কেবল মাত্র যীশুর রক্ত!
@@ -340,10 +340,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ এতে সুখ ও শান্তি পাই, কেবল মাত্র যীশুর রক্ত!
  এতে আমি নির্মল হই, কেবল মাত্র যীশুর রক্ত! `
   },
-  {
+        {
     id: 116,
     title: "প্রণাম লহ গো খ্রীষ্ট!",
-    transliteration: "Pronam Loho Go Khristo",
+    transliteration: "Prnam Lh Go Khrisht!",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `প্রণাম লহ গো খ্রীষ্ট!
 উদয় করিয়া দিলে ধরাতলে, আপনারে প্রেমনিষ্ঠ।
@@ -360,10 +360,10 @@ export const HYMNS_101_200: Song[] = [
  শত্রুগণের নাওনি কো প্রতিশোধ,
  সঁপিলে জীবন ক্রুশের উপরে, ছিল যাহা পরিশিষ্ট।`
   },
-  {
+        {
     id: 117,
     title: "পরম প্রেমিক যীশু তুমি",
-    transliteration: "Porom Premik Jishu Tumi",
+    transliteration: "Prm Premik Jishu Tumi",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `পরম প্রেমিক যীশু তুমি,
 আমার ব্যথি হয়ে, ক্রুশে জীবন দিলে।
@@ -380,10 +380,10 @@ export const HYMNS_101_200: Song[] = [
  এমন ক্ষমা কেউ দেয়নি, তুলনা যে তাঁর নাই,
  শুধু তুমি দিলে।`
   },
-  {
+        {
     id: 118,
     title: "লাল টকটকে রক্ত, ফোঁটায় ফোঁটায় ঝরে",
-    transliteration: "Lal Toktoke Rokto Photay Photay Jhore",
+    transliteration: "Lal Tktke Rkt, Fontay Fontay Jhre",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `লাল টকটকে রক্ত, ফোঁটায় ফোঁটায় ঝরে,
 সে তো আমারই তরে, সে তো তোমারই তরে.
@@ -400,10 +400,10 @@ export const HYMNS_101_200: Song[] = [
  এমন মুক্তির আলো পেয়েছ কি কখন?
  সে তো ক্রুশের উপর জীবন দিয়ে, পাপীরে মুক্তি দিল।`
   },
-  {
+        {
     id: 119,
     title: "ক্ষমার বাণী, ক্ষমার বাণী",
-    transliteration: "Khomar Bani Khomar Bani",
+    transliteration: "Kshmar Bani, Kshmar Bani",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `ক্ষমার বাণী ক্ষমার বাণী,
 বিশ্বত্রাতা মহাপ্ৰভুর প্রেম। ক্ষমার বাণী।
@@ -416,10 +416,10 @@ export const HYMNS_101_200: Song[] = [
  এইতো তাঁরই প্রেমের পরিচয়।
  সমতা দিয়ে গড়া ওরে তাঁর হৃদয়খানি।`
   },
-  {
+        {
     id: 120,
     title: "তোমারই ক্রুশ পানে চাহি, আমারি প্রাণ ভরে যায়",
-    transliteration: "Tomari Krush Pane Chahi",
+    transliteration: "Tomari Krush Pane Chahi, Amari Pran Bhre Jay",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `১ তোমারই ক্রুশ পানে চাহি, আমারি প্রাণ ভরে যায়,
  তোমারই প্রেম ব্যথা স্মরি, নয়নে ধারা বহে হায়!
@@ -433,10 +433,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ তোমারি পুনরুত্থানে, চরাচর হর্ষে গান গায়,
  তোমারি ক্রুশ মহিমায়, মন মোর পুলকিত হয়।`
   },
-  {
+        {
     id: 121,
     title: "রক্ত ঝরে, রক্ত ঝরে, রক্ত ঝরে, রক্ত ঝরে —",
-    transliteration: "Rokto Jhore Rokto Jhore",
+    transliteration: "Rkt Jhre, Rkt Jhre, Rkt Jhre, Rkt Jhre —",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `রক্ত ঝরে রক্ত ঝরে রক্ত ঝরে রক্ত ঝরে —
 ১ পাপের পসরা শিরে নিয়ে, বিশ্বের গ্লানি সব বয়ে,
@@ -448,10 +448,10 @@ export const HYMNS_101_200: Song[] = [
 ৩ বিশ্বাসেতে মুক্তি পাবে, মরণ ভয় আর না রবে,
  কেঁদে বল সবারে— "পাপী চেয়ে দেখ ঐ ক্রুশোপরে।" `
   },
-  {
+        {
     id: 122,
     title: "ক্রুশ বয়ে প্রাণপতি যায় গিরি পথে",
-    transliteration: "Krush Boye Pranpoti Jay Giri Pothe",
+    transliteration: "Krush Bye Pranpti Jay Giri Pthe",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `ক্রুশ বয়ে প্রাণপতি যায় গিরি পথে,
 কাঁপে অঙ্গ থরথর পথ চলিতে দয়াল। যায় গিরি পথে—
@@ -466,10 +466,10 @@ export const HYMNS_101_200: Song[] = [
 ২ মানুষেরই পাপের ভারে, ধুলায় প্রভু গেলেন পড়ে,
  মাটির ধরা সিক্ত হল, পুণ্য শোণিতে।`
   },
-  {
+        {
     id: 123,
     title: "আনন্দে যীশু নাম হৃদয় খুলে বল",
-    transliteration: "Anonde Jishu Naam Hridoy Khule Bolo",
+    transliteration: "Annde Jishu Nam Hridy Khule Bl",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `(ভাই) আনন্দে যীশু নাম হৃদয় খুলে বল,
 (যীশু নাম হৃদয় খুলে বল)
@@ -495,10 +495,10 @@ export const HYMNS_101_200: Song[] = [
 ৭ ওহে খ্রীষ্ট ভক্তদল শাস্ত্র লয়ে চল,
  ও সেই প্রেমময়ের প্রেমের কথা, সর্ব দেশে বল।`
   },
-  {
+        {
     id: 124,
     title: "জয় হও এই হৃদয় মাঝে",
-    transliteration: "Joy Houk Ei Hridoy Majhe",
+    transliteration: "Jy Ho Ei Hridy Majhe",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `১ জয় হও এই হৃদয় মাঝে, একবার ঐরূপ দেখি নয়ন ভরে হে।
  এস ত্রাতার মুর্তি ধরে, তুমি বিদ্ধ আছ ক্রুশোপরে হে,
@@ -519,10 +519,10 @@ export const HYMNS_101_200: Song[] = [
 ৬ যতদিন আছে এ জীবন, যেন সদা ঐ রূপ করি দর্শন হে,
  এসে হও উদয় দয়াময় হৃদয় মন্দিরে হে।`
   },
-  {
+        {
     id: 125,
     title: "বল, কতটুকু ভালো, করেছ কি বলো?",
-    transliteration: "Bolo Kototuku Bhalo Korecho Ki Bolo",
+    transliteration: "Bl, Kttuku Bhalo, Krechh Ki Blo?",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `১ বল, কতটুকু ভালো, করেছ কি বলো?
  ক্রুশের উপরে, প্রেমসুধা ঝরে,
@@ -543,10 +543,10 @@ export const HYMNS_101_200: Song[] = [
 ৬ ঈশ্বর পুত্র হয়ে ওহে প্রাণ-রবি,
  ক্রুশ মৃত্যুসহ তুমি মোদের সবই।`
   },
-  {
+        {
     id: 126,
     title: "এপথে শুধুই নিবিড় বেদনা, এ পথে অশ্রুমালা",
-    transliteration: "Epothe Shudhui Nibiro Bedona",
+    transliteration: "Epthe Shudhui Nibir Bedna, E Pthe Oshrumala",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
     lyrics: `এপথে শুধুই নিবিড় বেদনা, এ পথে অশ্রুমালা,
 এপথে রয়েছে অসহ যাতনা, এপথে অনেক জ্বালা।
@@ -565,10 +565,10 @@ export const HYMNS_101_200: Song[] = [
  এপথে আমিও যাব ক্রুশতলে, তুলে নিয়ে দুঃখ-ডালা.
  কালভেরী পথে! কালভেরী পথে! কালভেরী পথে!`
   },
-  {
+        {
     id: 127,
     title: "আজ মহা পরিত্রাণ ভাই, আজ মহা পরিত্রাণ",
-    transliteration: "Aj Moha Poritran Bhai",
+    transliteration: "Aj Mha Pritran Bhai, Aj Mha Pritran",
     category: "পুনরুত্থান",
     lyrics: `আজ মহা পরিত্রাণ ভাই, আজ মহা পরিত্রাণ,
 যীশু উঠেছেন দেখ, পাপীরে করিতে ত্রাণ।
@@ -585,10 +585,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ নেচে নেচে তালে তালে, সবে মিলে বাহু তুলে,
  (এখন) জয় যীশু জয় যীশু বলে, কর তাঁহার গুণকীর্ত্তন।`
   },
-  {
+        {
     id: 128,
     title: "এস সবে গাহি, বিজয় গান",
-    transliteration: "Esho Sobe Gahi Bijoy Gaan",
+    transliteration: "Es Sbe Gahi, Bijy Gan",
     category: "পুনরুত্থান",
     lyrics: `এস সবে গাহি, বিজয় গান।
 মরণজয়ী যীশু রাজার জয় জয় গান।
@@ -606,10 +606,10 @@ export const HYMNS_101_200: Song[] = [
  স্তুতি প্রতাপের গাহি গান। 
  যীশু রাজার জয় জয় গান।`
   },
-  {
+        {
     id: 129,
     title: "মুক্ত কণ্ঠে গাহিছে ভক্ত, জীবিত যীশুর গান",
-    transliteration: "Mukto Konthe Gahiche Bhokto",
+    transliteration: "Mukt Knthe Gahichhe Bhkt, Jibit Jishur Gan",
     category: "পুনরুত্থান",
     lyrics: `মুক্ত কণ্ঠে গাহিছে ভক্ত, জীবিত যীশুর গান।
 সেই সঙ্গীতে, ভরে ওঠে আজি, বিশ্বজনের প্রাণ।
@@ -624,10 +624,10 @@ export const HYMNS_101_200: Song[] = [
 ২ উত্থিত প্রভু গৌরবময়, মৃত্যু মেনেছে পরাজয়,
 শাস্ত্রের বাক্য সফল করেছেন, চিরজীবি মহীয়ান।`
   },
-  {
+        {
     id: 130,
     title: "মৃত্যু বিজয়ী, খ্রীষ্ট যীশুর জয়গান মোরা গাই",
-    transliteration: "Mrityu Bijoyi Khristo Jishur Joygaan",
+    transliteration: "Mritju Bijyi, Khrisht Jishur Jygan Mora Gai",
     category: "পুনরুত্থান",
     lyrics: `মৃত্যু বিজয়ী, খ্রীষ্ট যীশুর জয়গান মোরা গাই।
 উত্থিত প্রভু সমাধি হইতে মৃতদের মাঝে নাই।
@@ -643,10 +643,10 @@ export const HYMNS_101_200: Song[] = [
 ২ খ্রীষ্টের বাণী হয়েছে পূর্ণ, মরণ গর্ব দলিত চূর্ণ,
 আঁধারের শেষে, জগতের জ্যোতি, দেখিতে যে আজি পাই।`
   },
-  {
+        {
     id: 131,
     title: "মৃত্যুকে যীশু করেছেন জয়, সমাধি দুয়ার খোলা",
-    transliteration: "Mrityuke Jishu Korechen Joy",
+    transliteration: "Mritjuke Jishu Krechhen Jy, Smadhi Duyar Khola",
     category: "পুনরুত্থান",
     lyrics: `মৃত্যুকে যীশু করেছেন জয়, সমাধি দুয়ার খোলা,
 জীবিত প্রভুর বন্দনা গানে, প্রাণে, প্রাণে আনে দোলা।
@@ -662,10 +662,10 @@ export const HYMNS_101_200: Song[] = [
 ২ মরণ বিজয়ী খ্রীষ্টের তরে, গাহিছে সবাই সুমধুর স্বরে।
 দিকে দিকে তাই, জয়ধ্বনি সনে আজ, সুরের লহরী তোলা।`
   },
-  {
+        {
     id: 132,
     title: "আজি গানে গানে গাহিব যীশুর জয়",
-    transliteration: "Aji Ganer Ganey Gahibo Jishur Joy",
+    transliteration: "Aji Gane Gane Gahib Jishur Jy",
     category: "পুনরুত্থান",
     lyrics: `আজি গানে গানে গাহিব যীশুর জয়।
 ক্রুশের ব্যথা সয়ে, মৃত্যুকে জয় করে, হলেন চিরবিজয়ী।
@@ -685,10 +685,10 @@ export const HYMNS_101_200: Song[] = [
 শয়তান চিরতরে মানল যে হার,
 এস সবে আজ, গাই যীশুর জয়, হৃদয় খোল প্রাণভরে।`
   },
-  {
+        {
     id: 133,
     title: "জয় জয় মৃত্যুঞ্জয় প্রভু যীশু, হে পতিত-পাবন",
-    transliteration: "Joy Joy Mrityunjoy Probhu Jishu",
+    transliteration: "Jy Jy Mritjunjy Prbhu Jishu, He Ptit-pabn",
     category: "পুনরুত্থান",
     lyrics: `জয় জয় মৃত্যুঞ্জয় প্রভু যীশু, হে পতিত-পাবন।
 পতিত-পাবন অধম তাররণ, পতিত-পাবন কাঙ্গাল স্মরণ।
@@ -708,10 +708,10 @@ export const HYMNS_101_200: Song[] = [
 ৫ তুমি বলিরূপ উপহারে, ক্রুশোপরে, (দয়াময় হে)
 তুমি পাপী-ত্রাণ হেতু রক্ত করেছ সেচন।`
   },
-  {
+        {
     id: 134,
     title: "সবে বল যীশুর জয়, যত দিন দেহে প্রাণ রয়",
-    transliteration: "Sobe Bolo Jishur Joy",
+    transliteration: "Sbe Bl Jishur Jy, Jt Din Dehe Pran Ry",
     category: "পুনরুত্থান",
     lyrics: `সবে বল যীশুর জয়,
 যত দিন দেহে প্রাণ রয়।
@@ -731,10 +731,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ কাঁপুক দ্যাবিল, শুনুক বিদল, দেখুক স্বর্গ-দূত,
 নরক যোগ্য মানব-নিকর, গাহিছে পেয়ে ত্রাণ যীশু জয়।`
   },
-  {
+        {
     id: 135,
     title: "কি মহানন্দ উপস্থিত, কি জয় যীশুর উত্থানে",
-    transliteration: "Ki Mohanondo Upasthit",
+    transliteration: "Ki Mhannd Upsthit, Ki Jy Jishur Utthane",
     category: "পুনরুত্থান",
     lyrics: `১ কি মহানন্দ উপস্থিত, কি জয় যীশুর উত্থানে,
 পাপ অন্ধকার হয় অন্তর্হিত, কাল নিশি অবসানে।
@@ -752,10 +752,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ ঐ স্বর্গে দূতগণে গায়, পুণ্য পুণ্য পুণ্য!
 আর প্রতিধ্বনি এ ধরায়, ধন্য ধন্য ধন্য।`
   },
-  {
+        {
     id: 136,
     title: "অদ্য যীশু উঠিলেন, — হাললেলুইয়া!",
-    transliteration: "Oddo Jishu Uthilen",
+    transliteration: "Odj Jishu Uthilen, — Halleluiya!",
     category: "পুনরুত্থান",
     lyrics: `১ অদ্য যীশু উঠিলেন, — হাললেলুইয়া!
 ইহা কেমন শুভদিন, — হাললেলুইয়া!
@@ -777,10 +777,10 @@ export const HYMNS_101_200: Song[] = [
 শেষে মৃত্যু করে জয়, — হাললেলুইয়া!
  হইয়া উঠি তেজোময়, — হাললেলুইয়া!`
   },
-  {
+        {
     id: 137,
     title: "শ্রীগুরু আসছেন ব'লে, কুতূহলে, সাজ ফেলে সবাই চল",
-    transliteration: "Shriguru Ashchen Bole",
+    transliteration: "Shriguru Aschhen B'le, Kutuhle, Saj Fele Sbai Chl",
     category: "পুনঃ আগমন",
     lyrics: `শ্রীগুরু আসছেন ব'লে, কুতূহলে, সাজ ফেলে সবাই চল।
 
@@ -804,10 +804,10 @@ export const HYMNS_101_200: Song[] = [
 অন্তরের ময়লা কালি, ধুয়ে ফেলি,
 জ্বালিয়ে দিবেন শান্তির আলো।`
   },
-  {
+        {
     id: 138,
     title: "আসবেন প্রভু মেঘপথে, আবার ফিরে ধরাতলে",
-    transliteration: "Ashben Probhu Meghpothe",
+    transliteration: "Asben Prbhu Meghpthe, Abar Fire Dhratle",
     category: "পুনঃ আগমন",
     lyrics: `আসবেন প্রভু মেঘপথে, আবার ফিরে ধরাতলে,
 মহাতূরী-ধ্বনি সহ, পাঠাবেন দূত দলে দলে।
@@ -821,10 +821,10 @@ export const HYMNS_101_200: Song[] = [
 ৩ পাপী-তাপী ব্রাহ্মকামি, হও গো প্রভুর অনুগামী,
 তাঁরই আগমনের তরে, জেগে থাক প্রতি পলে।`
   },
-  {
+        {
     id: 139,
     title: "জেগে থাক, বলেন প্রভু, কর সদা প্রার্থনা",
-    transliteration: "Jege Thako Bolen Probhu",
+    transliteration: "Jege Thak, Blen Prbhu, Kr Sda Prarthna",
     category: "পুনঃ আগমন",
     lyrics: `১ জেগে থাক, বলেন প্রভু, কর সদা প্রার্থনা,
 কেহ জানিবে না কভু, আমার গুপ্ত মন্ত্রণা,
@@ -841,10 +841,10 @@ export const HYMNS_101_200: Song[] = [
 ওহে প্রভু, সেই কারণ চেতন রাখ আমারে,
 আত্মার দ্বারা কর শাসন, অঞ্জন দাও মোর চক্ষুতে।`
   },
-  {
+        {
     id: 140,
     title: "ভাঙ্গিবে ভাঙ্গিবে ভাঙ্গিবে এবার, শয়তানের দুর্গ ভয়ঙ্কর",
-    transliteration: "Bhangibe Bhangibe Bhangibe Ebar",
+    transliteration: "Bhanggibe Bhanggibe Bhanggibe Ebar, Shytaner Durg Bhj়ngkr",
     category: "পুনঃ আগমন",
     lyrics: `ভাঙ্গিবে ভাঙ্গিবে ভাঙ্গিবে এবার, এই শয়তানের দুর্গ ভয়ঙ্কর,
 মহা ভূমিকম্প হবে ভবে, ভেঙ্গে যাবে ভেঙ্গে যাবে,
@@ -859,10 +859,10 @@ export const HYMNS_101_200: Song[] = [
 ৩ জয়ধ্বনি কর সকলে অগ্রসর হও সবলে,
 ঐ ভেঙ্গে পড়ে ভূতলে, পড়ে শয়তানের দুর্গেরি প্রাকার।`
   },
-  {
+        {
     id: 141,
     title: "পাপের কারণ কর ক্রন্দন, (তুমি) আর অচেতন থেক না",
-    transliteration: "Paper Karon Koro Krondon",
+    transliteration: "Paper Karn Kr Krndn, (Tumi) Ar Ochetn Thek Na",
     category: "পুনঃ আগমন",
     lyrics: `পাপের কারণ কর ক্রন্দন, (তুমি) আর অচেতন থেক না।
 তোমার হৃদয় মাঝে পাপ পুষে, গোপন করে রেখো না,
@@ -883,10 +883,10 @@ export const HYMNS_101_200: Song[] = [
 ৫ নীনবীবাসীর মত, এখন হও খেদান্বিত,
 (হও) চট পরে ভস্মে শায়িত, বল আর পাপ করব না।`
   },
-  {
+        {
     id: 142,
     title: "আসিতেছেন ঈশ্বর নন্দন চড়ি মেঘ-রথে সদলে",
-    transliteration: "Ashitechen Ishwar Nondon",
+    transliteration: "Asitechhen Ishbr Nndn Chri Megh-rthe Sdle",
     category: "পুনঃ আগমন",
     lyrics: `আসিতেছেন ঈশ্বর নন্দন চড়ি মেঘ-রথে সদলে।
 সবে প্রস্তুত হও, প্রস্তুত হও, প্রস্তুত হও (তোমরা) সকলে।
@@ -912,10 +912,10 @@ export const HYMNS_101_200: Song[] = [
 ৭ বিশ্বস্ত যে দাস হইবে, পাঁচ তোরা সে দশ করিবে,
 যীশু অক্ষয় মুকুট মাথায় দিয়ে, বসাবেন নিয়ে কোলে।`
   },
-  {
+        {
     id: 143,
     title: "শেষের সে দিবস ভয়ঙ্কর, ভেবে দেখ একবার",
-    transliteration: "Shesher Se Dibosh Bhoyonkor",
+    transliteration: "Shesher Se Dibs Bhj়ngkr, Bhebe Dekh Ekbar",
     category: "পুনঃ আগমন",
     lyrics: `শেষের সে দিবস ভয়ঙ্কর, ভেবে দেখ একবার।
  দূতগণ সাথে, যীশু মেঘরথে,
@@ -936,10 +936,10 @@ export const HYMNS_101_200: Song[] = [
 দূর গেছে ক্লেশ, নাহি দুঃখ লেশ,
 (আমার) অঙ্গীকারিত দেশ, কর অধিকার।`
   },
-  {
+        {
     id: 144,
     title: "জাগোরে, জাগোরে, জাগোরে, খ্রীষ্টিয়ান ভাই",
-    transliteration: "Jagore Jagore Jagore",
+    transliteration: "Jagore, Jagore, Jagore, Khrishtij়an Bhai",
     category: "পুনঃ আগমন",
     lyrics: `জাগোরে জাগোরে জাগোরে,
 জাগো জাগো জাগোরে খ্রীষ্টিয়ান ভাই।
@@ -961,10 +961,10 @@ export const HYMNS_101_200: Song[] = [
 দুর্ভিক্ষ মহামারী, যুদ্ধ ভূরি ভূরি,
 বাঁচাতে প্রাণ আয় যীশুর ঠাঁই।`
   },
-  {
+        {
     id: 145,
     title: "এ পৃথিবীর লোক চিন্তা কর রে",
-    transliteration: "E Prithibir Lok Chinta Koro Re",
+    transliteration: "E Prithibir Lok Chinta Kr Re",
     category: "পুনঃ আগমন",
     lyrics: `এ পৃথিবীর লোক চিন্তা কর রে,
 যীশু যখন আসবে তোমরা কি করিবে রে।
@@ -981,10 +981,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ আমরা সবাই যাব চলে স্বর্গেরই পথে,
 বাইবেল বলে তোমরা তখন বিলাপ করিবে।`
   },
-  {
+        {
     id: 146,
     title: "কি সুখের আশ্বাস—যীশু আমার (Blessed Assurance)",
-    transliteration: "Ki Sukher Ashwas Jishu Amar",
+    transliteration: "Ki Sukher Ashbas—jishu Amar (Blessed Assurance)",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ কি সুখের আশ্বাস—যীশু আমার।
 আঃ কি গৌরবের আস্বাদ চমৎকার।
@@ -1003,10 +1003,10 @@ export const HYMNS_101_200: Song[] = [
 জাগি প্রতীক্ষায়, উর্ধ্ব তাকাই,
 তাঁর পুণ্যে পুণ্য, প্রেমে হারাই।`
   },
-  {
+        {
     id: 147,
     title: "হে মহা শিল্পী, তোমারি সুষমা, আকাশ মাটি ও জলে",
-    transliteration: "He Moha Shilpi",
+    transliteration: "He Mha Shilpi, Tomari Sushma, Akash Mati O Jle",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `হে মহা শিল্পী, তোমারি সুষমা, আকাশ মাটি ও জলে,
 তব লাবণ্য ওগো রূপকার, ছড়ালে ভুবন তলে।
@@ -1022,10 +1022,10 @@ export const HYMNS_101_200: Song[] = [
 ২ পাখির কণ্ঠে মধুপের তানে, উপল-মধুর ঝরনার গানে। 
 চিরসুন্দর তব পরিচয়, তরুলতা ফুলেফলে।`
   },
-  {
+        {
     id: 148,
     title: "সিদ্ধ হোক ইচ্ছা নাথ তোমারি (Have thine own way Lord)",
-    transliteration: "Siddho Houk Iccha Nath Tomari",
+    transliteration: "Siddh Hok Ichchha Nath Tomari (Habhe Thine Own Way Lord)",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ সিদ্ধ হোক ইচ্ছা নাথ তোমারি,
 তুমি তো কুমোর, আমি মাটি,
@@ -1041,10 +1041,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ সিদ্ধ হোক ইচ্ছা নাথ তোমারি, তব শক্তিতে আমায় ধর,
 দেখুক সবাই আমার মাঝে, খ্রীষ্ট কেবলি সদাই আছেন।`
   },
-  {
+        {
     id: 149,
     title: "আমি তোমার নাথ, আছি চিরকাল (I am Thine Oh Lord)",
-    transliteration: "Ami Tomar Nath Achi Chirokal",
+    transliteration: "Ami Tomar Nath, Achhi Chirkal (I Am Thine Oh Lord)",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ আমি তোমার নাথ, আছি চিরকাল, তোমা ছাড়া কারো নই,
 থাকি বিশ্বাসে, তব সান্নিধ্যের, বাসনা এ নিয়তই।
@@ -1067,10 +1067,10 @@ export const HYMNS_101_200: Song[] = [
 ৫ যবে যাব নাথ, স্বর্গ কাননে, মৃত্যু-নদী পরপর,
 তখন বুঝিব, প্রেমের মাহাত্ম্য, স্বর্গ-সুখ কি চমৎকার!`
   },
-  {
+        {
     id: 150,
     title: "প্রার্থনা মোর তব কাছে প্রভু, করি আজ নিবেদন",
-    transliteration: "Prarthona Mor Tobo Kache Probhu",
+    transliteration: "Prarthna Mor Tb Kachhe Prbhu, Kri Aj Nibedn",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ প্রার্থনা মোর তব কাছে প্রভু, করি আজ নিবেদন,
 পরশে তোমার শুচি হোক মম, ধুলিময় তনু মন।
@@ -1086,10 +1086,10 @@ export const HYMNS_101_200: Song[] = [
 তাইতো প্রভুগো, তোমাকে জানাই,
 নব চেতনার শুভ আগমনে, মুছে যাক পুরাতন।`
   },
-  {
+        {
     id: 151,
     title: "আমায় তুমি ডেকেছ প্রভু তোমার কাজে",
-    transliteration: "Amay Tumi Dekecho Probhu",
+    transliteration: "Amay Tumi Dekechh Prbhu Tomar Kaje",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ আমায় তুমি ডেকেছ প্রভু তোমার কাজে,
 অন্তরে মোর তাই এত গান, তাই এত সুর বাজে।
@@ -1105,10 +1105,10 @@ export const HYMNS_101_200: Song[] = [
 বাড়াতে বৃথাই বোঝা আপনার,
 অকৃতি অধমে লওগো এবার, তোমার কাজের মাঝে।`
   },
-  {
+        {
     id: 152,
     title: "যীশু থাক, শান্তি রাখ, শয়তানের পথ রুদ্ধ করে",
-    transliteration: "Jishu Thako Shanti Rakho",
+    transliteration: "Jishu Thak, Shanti Rakh, Shytaner Pth Ruddh Kre",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ যীশু থাক, শান্তি রাখ, শয়তানের পথ রুদ্ধ করে;
 মান অভিমান, সব ছাড়িলাম, তব আত্মা পাবার তরে.
@@ -1121,10 +1121,10 @@ export const HYMNS_101_200: Song[] = [
 ৩ নামের গুণ প্রতিদিন, শিখাও তব ভাষা মোরে,
 ন নূতন প্রার্থনা শিখাও, গান করিব ঘরে ঘরে.`
   },
-  {
+        {
     id: 153,
     title: "ক্রুশের কাছে রাখ হে (Jesus keep me near the Cross)",
-    transliteration: "Krush-er Kache Rakho He",
+    transliteration: "Krusher Kachhe Rakh He (Jesus Kip Me Near The Cross)",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ ক্রুশের কাছে রাখ হে, যীশু নিত্য আমায়;
 বহুমূল্য স্বাস্থ্যকর স্রোতঃ বহে তথায়।
@@ -1142,10 +1142,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ ক্রুশের কাছে জাগিব, বিশ্বাস, প্রেম, আশায়,
 যাবৎ নাহি পৌছিব, স্বর্গ-কূলে সবায়।`
   },
-  {
+        {
     id: 154,
     title: "বরিষ আশীষ-বারি",
-    transliteration: "Borisho Ashish Bari",
+    transliteration: "Brish Ashish-bari",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ বরিষ আশীষ-বারি,
 (আজি) অবিরত ধারে যীশু সবার উপরি।
@@ -1162,10 +1162,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ পূর্ণ কর সবে পবিত্র আত্মায়,
 (যেন) ভারতেতে তব প্রেমে মাতাইতে পারি।`
   },
-  {
+        {
     id: 155,
     title: "তুমি আলোময়, আলো দাও প্রভু, আঁধারের কর লয়",
-    transliteration: "Tumi Alomoy Alo Dao Probhu",
+    transliteration: "Tumi Alomy, Alo Dao Prbhu, Andharer Kr Ly",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ তুমি আলোময়, আলো দাও প্রভু, আঁধারের কর লয়,
 তুমি অনন্ত, অসীম-অনাদি, তুমি সত্যময়.
@@ -1181,10 +1181,10 @@ export const HYMNS_101_200: Song[] = [
 আমি মগ্ন তোমার ধ্যানে,
 তুমি যে জীবন, তুমি প্রেমময়, তুমি আমার জয়.`
   },
-  {
+        {
     id: 156,
     title: "ব্যথিতেরে কর — শান্তি দান",
-    transliteration: "Byathitere Koro Shanti Daan",
+    transliteration: "Bjthitere Kr — Shanti Dan",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `ব্যথিতেরে কর — শান্তি দান
 এসো পাপী তোমার দ্বারে, চাহে জুড়াইতে তাপিত পরাণ.
@@ -1204,10 +1204,10 @@ export const HYMNS_101_200: Song[] = [
 ৫ তোমার কীর্তি ভূ-মণ্ডলে গাবে ভেসে চোখের জলে,
 রেখে তোমার চরণতলে বাঁধা দেহ-আত্মা মন ও প্রাণ.`
   },
-  {
+        {
     id: 157,
     title: "তুমি পথ, তুমি জীবন, তুমি সত্যময়!",
-    transliteration: "Tumi Poth Tumi Jibon Tumi Sottomoy",
+    transliteration: "Tumi Pth, Tumi Jibn, Tumi Stjmy!",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ তুমি পথ, তুমি জীবন, তুমি সত্যময়!
 মুক্তিদাতা তুমি পাতকীর, তুমি যীশু চির-আশ্রয়.
@@ -1221,10 +1221,10 @@ export const HYMNS_101_200: Song[] = [
 ২ নিত্য নিয়ত তব প্রেমবাণী, পাপীর পরাণে, আশা দেয় আনি,
 ভূলোকে, দ্যুলোকে, তোমারি মহিমা, যুগে, যুগে জেগে রয়.`
   },
-  {
+        {
     id: 158,
     title: "যীশুকে সব করি অর্পণ (All to Jesus I surrender)",
-    transliteration: "Jishuke Sob Kori Orpon",
+    transliteration: "Jishuke Sb Kri Orpn (All To Jesus I Surrender)",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ যীশুকে সব করি অর্পণ, স্বেচ্ছায় সকল করি দান,
 প্রেম ও বিশ্বাসে এ জীবন, কাটাই তাঁহার সান্নিধ্যের.
@@ -1245,10 +1245,10 @@ export const HYMNS_101_200: Song[] = [
 ৫ যীশুকে সব করি অর্পণ, বুঝিতেছি কাজ আত্মার,
 পূর্ণ মুক্তির কি আনন্দ! হোক জয় জয়কার নাম তাঁহার.`
   },
-  {
+        {
     id: 159,
     title: "মোর প্রাণ মন, তোমাকেই প্রভু, করেছি সমর্পণ",
-    transliteration: "Mor Pran Mon Tomakei Probhu",
+    transliteration: "Mor Pran Mn, Tomakei Prbhu, Krechhi Smrpn",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `মোর প্রাণ মন, তোমাকেই প্রভু, করেছি সমর্পণ,
 তুমি এস বস, আলো কর মম, হৃদয়-সিংহাসন।
@@ -1262,10 +1262,10 @@ export const HYMNS_101_200: Song[] = [
 
 ২ মিছে পথে পথে ঘুরিব না তাই, তব কাছে প্রভু আশ্রয় চাই। তোমার অভয় চরণে আমারে, রাখিও অনুক্ষণ।`
   },
-  {
+        {
     id: 160,
     title: "আমার রাখাল কভু ঘুমান না",
-    transliteration: "Amar Rakhal Kobhu Ghuman Na",
+    transliteration: "Amar Rakhal Kbhu Ghuman Na",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ আমার রাখাল কভু ঘুমান না,
 আমার আর কিসের ভাবনা.
@@ -1287,10 +1287,10 @@ export const HYMNS_101_200: Song[] = [
 ৬ যিনি নিজ রক্তে কিনিয়াছেন, হে—
 তঁারে কখনও ছাড়িব না.`
   },
-  {
+        {
     id: 161,
     title: "এনেছি আজ হৃদয়খানি তোমার পায়ে দিতে",
-    transliteration: "Enechi Aj Hridoykhani",
+    transliteration: "Enechhi Aj Hridj়khani Tomar Paj়e Dite",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `এনেছি আজ হৃদয়খানি তোমার পায়ে দিতে,
 তোমার প্রেমের পরশমণি, পরাণ ভরে নিতে.
@@ -1305,10 +1305,10 @@ export const HYMNS_101_200: Song[] = [
 ২ দীনের আশা পূর্ণ কর, ওগো প্রভু মনোহর,
 চাই গো যীশু জীবনে মোর, তোমারে লভিতে.`
   },
-  {
+        {
     id: 162,
     title: "পাপিষ্ঠ আমি নাই আশা, ঐ রক্তে আমার ভরসা",
-    transliteration: "Papistho Ami Nai Asha",
+    transliteration: "Papishth Ami Nai Asha, Oi Rkte Amar Bhrsa",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ পাপিষ্ঠ আমি নাই আশা, ঐ রক্তে আমার ভরসা,
 মোর দীন-হীন প্রাণে দাও আশা, হে যীশু, লও আমায়-আমায়.
@@ -1325,10 +1325,10 @@ export const HYMNS_101_200: Song[] = [
 ৫ পাপ-বন্ধন হইতে মুক্ত হই, তোমারি প্রেমে করতে জয়,
 এই জগৎ যেন তোমার হয়, হে যীশু, লও আমায়-আমায়.`
   },
-  {
+        {
     id: 163,
     title: "অনুতাপের অশ্রু যখন পড়বে ঝরে জানি",
-    transliteration: "Onutaper Oshru Jokhoni Porbe Jhore",
+    transliteration: "Onutaper Oshru Jkhn Prbe Jhre Jani",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `অনুতাপের অশ্রু যখন পড়বে ঝরে জানি,
 পরশ তোমার মিলবে প্রভু, শুনব প্রেমের বাণী.
@@ -1345,10 +1345,10 @@ export const HYMNS_101_200: Song[] = [
 পরাণ-দয়ার দেইনি মম খুলে,
 এবার বরণ করে নেব নয়ন ধারা আনি.`
   },
-  {
+        {
     id: 164,
     title: "নিঃসম্বল আমি—কিছুই নাই (Just as I am)",
-    transliteration: "Nisshombol Ami Kichui Nai",
+    transliteration: "Nihsmbl Ami—kichhui Nai (Just As I Am)",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ নিঃসম্বল আমি—কিছুই নাই, তোমারই রক্তে আশা পাই,
 তাই সাহস করি তোমার ঠাঁই, খ্রীষ্ট, আমি আসি হে!
@@ -1368,10 +1368,10 @@ export const HYMNS_101_200: Song[] = [
 ৬ ভারগ্রস্ত আমি—অতিশয়, প্রেম, তুমি কিন্তু শক্তিময়,
 তাই পাইলাম শান্তি; গেল ভয়, খ্রীষ্ট, আমি আসি হে!`
   },
-  {
+        {
     id: 165,
     title: "তোমার ক্রুশের বেদন প্রভু, দাও আমারে দাও",
-    transliteration: "Tomar Krush-er Bedon Probhu",
+    transliteration: "Tomar Krusher Bedn Prbhu, Dao Amare Dao",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `তোমার ক্রুশের বেদন প্রভু, দাও আমারে দাও,
 রক্তে তোমার ধুয়ে আমায়, খাঁটি করে নাও.
@@ -1386,10 +1386,10 @@ export const HYMNS_101_200: Song[] = [
 ২ সে রক্তেতে যায় গো ওরে, পাপী যত নারী নরে,
 তোমার কাছে এলে সবাই, সুখ যে তুমি পাও.`
   },
-  {
+        {
     id: 166,
     title: "তোমার কাছে লও-গো ডেকে আমায়",
-    transliteration: "Tomar Kache Lou Go Deke Amay",
+    transliteration: "Tomar Kachhe Lo-go Deke Amay",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `তোমার কাছে লও-গো ডেকে আমায়,
 ক্লান্তি আমার হরণ কর, তোমার স্নিগ্ধ ছায়ায়.
@@ -1404,10 +1404,10 @@ export const HYMNS_101_200: Song[] = [
 ২ তোমার চরণতলে, যেন প্রদীপ হয়ে জ্বলে,
 আঁধার ভরা চিত্তখানি, তোমার মহিমায়.`
   },
-  {
+        {
     id: 167,
     title: "প্রভু, তোমায় আমি চাই",
-    transliteration: "Probhu Tomay Ami Chai",
+    transliteration: "Prbhu, Tomay Ami Chai",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `প্রভু, তোমায় আমি চাই,
 তুমি ছাড়া মুক্তিদাতা, আর তো কেহ নাই.
@@ -1422,10 +1422,10 @@ export const HYMNS_101_200: Song[] = [
 ২ তোমার রক্তে শুচি করে, তুমি আমায় তুলেছ টেনে,
 জীবন আমার ধন্য হল, তোমার করুণায়.`
   },
-  {
+        {
     id: 168,
     title: "অনেক দূরে সরে গেছি, প্রভু তোমার থেকে",
-    transliteration: "Onek Dure Sore Gechi",
+    transliteration: "Onek Dure Sre Gechhi, Prbhu Tomar Theke",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `অনেক দূরে সরে গেছি, প্রভু তোমার থেকে,
  এবার আমায় আপন করে, লও-না কাছে ডেকে.
@@ -1440,10 +1440,10 @@ export const HYMNS_101_200: Song[] = [
 ২ তোমার মহাপ্রেমে ডোরে, বেঁধে আবার রাখ মোরে,
 মনে আমার তব ছবি, দাওনা শুধু এঁকে.`
   },
-  {
+        {
     id: 169,
     title: "ভগ্ন-প্রাণে তুমি প্রভু, আশার প্রদীপ জ্বালো",
-    transliteration: "Bhagno-Prane Tumi Probhu",
+    transliteration: "Bhgn-prane Tumi Prbhu, Ashar Prdip Jbalo",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `ভগ্ন-প্রাণে তুমি প্রভু, আশার প্রদীপ জ্বালো,
 ছিন্ন জীবন মলিন হৃদয়, তুমি আজ শুচি করো.
@@ -1456,10 +1456,10 @@ export const HYMNS_101_200: Song[] = [
 তোমার ক্রুশের কথা বলতে যে চাই। 
 চিরাশ্বত তুমি জানি প্রভু, তুমি আশীর্বাদ করো।`
   },
-  {
+        {
     id: 170,
     title: "দয়া কর আমার উপর, ওহে যীশু দয়াবান",
-    transliteration: "Doya Koro Amar Upor",
+    transliteration: "Dya Kr Amar Upr, Ohe Jishu Dyaban",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ দয়া কর আমার উপর, ওহে যীশু দয়াবান,
 তুমি নরের নিস্তারকর্তা, তুমি সর্ব্বশক্তিমান।
@@ -1477,10 +1477,10 @@ export const HYMNS_101_200: Song[] = [
 আমি আইসি অন্যে বলি, রক্ষা হয় খ্রীষ্টের কৃপায়।
 পাপীজন খ্রীষ্টের নামে, নিবেদিলে রক্ষা পায়।`
   },
-  {
+        {
     id: 171,
     title: "সব সঁপেছি তোমার পায়ে, আর কিছু মোর নাই",
-    transliteration: "Sob Shopechi Tomar Paye",
+    transliteration: "Sb Snpechhi Tomar Paye, Ar Kichhu Mor Nai",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `সব সঁপেছি তোমার পায়ে, আর কিছু মোর নাই,
 এবার শুধু অভয় পদের স্মরণ টুকু চাই.
@@ -1495,10 +1495,10 @@ export const HYMNS_101_200: Song[] = [
 ২ অন্তরে বাহিরে আমার, দাও ঘুচিয়ে সকল আঁধার,
 নয়ন ভরে তোমায় দেখে, ধন্য হয়ে যাই।`
   },
-  {
+        {
     id: 172,
     title: "রাখ নামায়ে তোমার প্রাণের বোঝা",
-    transliteration: "Rakho Namaye Tomar Praner Bojha",
+    transliteration: "Rakh Namaye Tomar Praner Bojha",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `রাখ নামায়ে তোমার প্রাণের বোঝা,
 দয়াল প্রভু যীশুর চরণে;
@@ -1522,10 +1522,10 @@ export const HYMNS_101_200: Song[] = [
 আছে প্রতিকার, নিশ্চিত জেনে,
 পাবে মুক্তি, পাবে শান্তি, তোমার অশান্ত জীবনে।`
   },
-  {
+        {
     id: 173,
     title: "কিছুই না রহুক প্রভু, কিছুই না রহুক",
-    transliteration: "Kichui Na Rohuk Probhu",
+    transliteration: "Kichhui Na Rhuk Prbhu, Kichhui Na Rhuk",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `কিছুই না রহুক প্রভু, কিছুই না রহুক,
 তোমার আমার মাঝে, (আর) কিছুই না রহুক।
@@ -1548,10 +1548,10 @@ export const HYMNS_101_200: Song[] = [
 ৬ (তুমি) হও আমার উচ্চ আশা, হও আমার ভালোবাসা,
 যীশু বৈ মোর ত্রিভুবনে, কিছুই না রহুক।`
   },
-  {
+        {
     id: 174,
     title: "হৃদয়ে জ্বালাও যীশু তব অনলে",
-    transliteration: "Hridoye Jwalao Jishu Tobo Onole",
+    transliteration: "Hridye Jbalao Jishu Tb Onle",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `হৃদয়ে জ্বালাও যীশু তব অনলে,
 জ্বালাও জ্বালাও প্রাণ দগ্ধ কর এ প্রাণ,
@@ -1572,10 +1572,10 @@ export const HYMNS_101_200: Song[] = [
 অনলেতে খাটি কর, ওহে যীশু দয়াধার
 এই চির নিবেদন, তব পদতলে।`
   },
-  {
+        {
     id: 175,
     title: "পিতা তোমার পাদপদ্মে মোরা রাখিলাম এই দান",
-    transliteration: "Pita Tomar Padopode",
+    transliteration: "Pita Tomar Padpdme Mora Rakhilam Ei Dan",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `পিতা তোমার পাদপদ্মে মোরা রাখিলাম এই দান,
 গ্রহণ কর নিজ গুণে চরণে দাও স্থান।
@@ -1589,10 +1589,10 @@ export const HYMNS_101_200: Song[] = [
 ৩ তোমার দয়া করে স্মরণ, ঐ পাদপদ্মে করি অর্পণ,
 ক্ষুদ্র এই দান এ দেহ মন, এ আত্মা, এ প্রাণ।`
   },
-  {
+        {
     id: 176,
     title: "তুমি অধিষ্ঠিত হও, এই গৃহে (সভায়) ঈশ্বর কুমার!",
-    transliteration: "Tumi Odhisthito Hou",
+    transliteration: "Tumi Odhishthit Ho, Ei Grihe (Sbhay) Ishbr Kumar!",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `তুমি অধিষ্ঠিত হও, এই গৃহে (সভায়) ঈশ্বর কুমার!
 বিরাজ কর সবার প্রাণে, তুমি মূর্ত্তিমান হও হৃদয় সবার।
@@ -1615,10 +1615,10 @@ export const HYMNS_101_200: Song[] = [
 যেন পায় স্থান তোমার পায়ে, যখন
 ভাঙ্গবে এ সংসারের বাজার।`
   },
-  {
+        {
     id: 177,
     title: "ঘরে যাও, সঙ্গে লও, প্রিয় যীশুর হস্ত ধরে",
-    transliteration: "Ghore Jao Songe Lou",
+    transliteration: "Ghre Jao, Sngge Lo, Priy Jishur Hst Dhre",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `ঘরে যাও, সঙ্গে লও, প্রিয় যীশুর হস্ত ধরে,
 (প্রিয়) যীশু সহ গৃহবাসে, থাক প্রফুল্ল অন্তরে।
@@ -1635,10 +1635,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ পিতার প্রেম, অনুপম, যীশুর কৃপা সহকারে,
  আত্মার সাহায্য সদা, বর্ত্তুক তোমাদের উপরে।`
   },
-  {
+        {
     id: 178,
     title: "যীশুই মুক্তিদাতা, পাপীর পরিত্রাতা",
-    transliteration: "Jishui Muktidata",
+    transliteration: "Jishui Muktidata, Papir Pritrata",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `যীশুই মুক্তিদাতা, পাপীর পরিত্রাতা,
 দুঃখের এই ভুবনে, তিনিই শান্তিদাতা।
@@ -1653,10 +1653,10 @@ export const HYMNS_101_200: Song[] = [
 জীবন পথে চলি, সেই আলো হাতে নিয়ে।
 জীবনের নতুন, সুর ও ছন্দ খুঁজে পাই।`
   },
-  {
+        {
     id: 179,
     title: "তোমাকে ভালোবাসা যায় না প্রভু",
-    transliteration: "Tomake Bhalobasha Jay Na Probhu",
+    transliteration: "Tomake Bhalobasa Jay Na Prbhu",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `তোমাকে ভালোবাসা যায় না প্রভু,
 যদি মানুষকে আগে ভালোবাসতে না পারি।
@@ -1677,10 +1677,10 @@ export const HYMNS_101_200: Song[] = [
 তোমায় আপন করে সবায় আপন ভাবে,
 হৃদয় মাঝারে যেন রাখতে পারি।`
   },
-  {
+        {
     id: 180,
     title: "তোমার পথে আমি চলেছি, আমার দুটি হাত ধর",
-    transliteration: "Tomar Pothe Ami Cholechi",
+    transliteration: "Tomar Pthe Ami Chlechhi, Amar Duti Hat Dhr",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `তোমার পথে আমি চলেছি, আমার দুটি হাত ধর,
 অন্তু বিহীন ভালবাসায়, হৃদয় আমার তুমি ভরো।
@@ -1695,10 +1695,10 @@ export const HYMNS_101_200: Song[] = [
 ২ মিলনের এই শুভ যাত্রায়, চিরসাথী হয়ে তুমি রও,
 ঐ প্রেমের নিত্য ধারায়, আমায় সিক্ত তুমি করো।`
   },
-  {
+        {
     id: 181,
     title: "দিয়ে তব রক্ত, কর মোরে ধৌত",
-    transliteration: "Diye Tobo Rokto",
+    transliteration: "Diye Tb Rkt, Kr More Dhout",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `দিয়ে তব রক্ত কর মোরে ধৌত,
 যে রক্ত স্রোতঃ বয় কালভেরী শিখরে।
@@ -1725,10 +1725,10 @@ export const HYMNS_101_200: Song[] = [
 ধর প্রভু মোরে ধর হে এখনি,
 ডুবাও আমারে ঐ রক্ত সাগরে।`
   },
-  {
+        {
     id: 182,
     title: "যীশুর কাছে যাইব, — আলোতে, আলোতে",
-    transliteration: "Jishur Kache Jaibo",
+    transliteration: "Jishur Kachhe Jaib, — Alote, Alote",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ যীশুর কাছে যাইব — আলোতে আলোতে,
 তঁাহার সঙ্গে চলিব — প্রভুর আলোতে
@@ -1749,10 +1749,10 @@ export const HYMNS_101_200: Song[] = [
 স্বর্গে প্রবেশ করিব — আলোতে আলোতে,
 চিরকাল থাকিব — প্রভুর আলোতে।`
   },
-  {
+        {
     id: 183,
     title: "তোমার রক্ত কর হে সেচন",
-    transliteration: "Tomar Rokto Koro He Shechon",
+    transliteration: "Tomar Rkt Kr He Sechn",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `তোমার রক্ত কর হে সেচন,
 যাতে সকল পাপ মোর হবে গো মোচন।
@@ -1779,10 +1779,10 @@ export const HYMNS_101_200: Song[] = [
 সফল কর মোর অন্তরে তোমার ক্রুশীয় মরণ।
 কর সফল তোমার অসীম দয়া সফল কর আমার জীবন।`
   },
-  {
+        {
     id: 184,
     title: "তুমি জুড়ালে মোর তাপিত পরাণ, পাপের ক্ষমা দিয়ে",
-    transliteration: "Tumi Jurale Mor Tapito Poran",
+    transliteration: "Tumi Jurale Mor Tapit Pran, Paper Kshma Diye",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `তুমি জুড়ালে মোর তাপিত পরাণ, পাপের ক্ষমা দিয়ে।
 ধন্য হল অসার জীবন, তোমার দয়া পেয়ে।
@@ -1802,10 +1802,10 @@ export const HYMNS_101_200: Song[] = [
 ৫ গাব সদা আনন্দ গান রেখে ঐ চরণে বাঁধা এ প্রাণ,
 রেখো মোরে হে দয়াবান চিরদিন ঐ পায়ে।`
   },
-  {
+        {
     id: 185,
     title: "প্রিয় যীশু আমার, ধর আমায় ধর",
-    transliteration: "Priyo Jishu Amar Dhoro Amay Dhoro",
+    transliteration: "Priy Jishu Amar, Dhr Amay Dhr",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ প্রিয় যীশু আমার ধর আমায় ধর;
 প্রিয় ভ্রাতা শক্তিদাতা শক্তি বিতর।
@@ -1825,10 +1825,10 @@ export const HYMNS_101_200: Song[] = [
 বিশ্বাস প্রত্যাশা প্রেম হউক সতত উজ্জ্বল;
 তব সনে থাকিবারে দেও সদা ইচ্ছা মোর।`
   },
-  {
+        {
     id: 186,
     title: "(শিশু সঙ্গীত) প্রভু যীশু, আমি শিশু",
-    transliteration: "Probhu Jishu Ami Shishu",
+    transliteration: "(Shishu Snggit) Prbhu Jishu, Ami Shishu",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `প্রভু যীশু আমি শিশু তোমায় বড় ভালোবাসি,
 তোমার ইচ্ছা মিলায়ে ইচ্ছা চলব বলে সভায় আসি।
@@ -1842,10 +1842,10 @@ export const HYMNS_101_200: Song[] = [
 ৩ সভায় তোমার রব শুনিব প্রার্থনা ও গান করিব,
 ইহা ছাড়া কার্য দ্বারা তোমার সাক্ষী হব আসি।`
   },
-  {
+        {
     id: 187,
     title: "প্রভু মোরে দয়া কর, তব দয়া চাই",
-    transliteration: "Probhu More Doya Koro",
+    transliteration: "Prbhu More Dya Kr, Tb Dya Chai",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ প্রভু মোরে দয়া কর তব দয়া চাই,
 তুমি ছাড়া মুক্তিদাতা আর তো কেহ নাই।
@@ -1857,10 +1857,10 @@ export const HYMNS_101_200: Song[] = [
 তোমার ক্রুশের তলে ভাসি আমি আঁখি জলে,
 তোমার চরণে শুধু দাও মোরে ঠাঁই।`
   },
-  {
+        {
     id: 188,
     title: "পূজাতে এই বেলা, (যীশু) পূর্ণ কর হে হৃদয় থালা",
-    transliteration: "Pujate Ei Bela",
+    transliteration: "Pujate Ei Bela, (Jishu) Purn Kr He Hridy Thala",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ পূজাতে এই বেলা (যীশু) পূর্ণ কর হে হৃদয় থালা,
 অধোমুখে ধরি চরণ (কিছু) না হয় দাও পদ-ধুলা।
@@ -1873,10 +1873,10 @@ export const HYMNS_101_200: Song[] = [
 ৩ যেমন দূতে ডাকে তোমায় তেমন গান শুনাও আমায়,
 গাব নাম প্রশংসা জয় (যীশু) যথা লোকের মেলা।`
   },
-  {
+        {
     id: 189,
     title: "যীশু পরিষ্কার কর আমারে",
-    transliteration: "Jishu Porishkar Koro Amare",
+    transliteration: "Jishu Prishkar Kr Amare",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `যীশু পরিষ্কার কর আমারে,
 ধোওয়াও আমারে আপন রুধিরে,
@@ -1890,10 +1890,10 @@ export const HYMNS_101_200: Song[] = [
 আমারে ছুঁইতে কভু না পারিবে,
 ত্যজিয়া আমারে অন্যত্র যাইবে হেরে তব রক্ত মম অন্তরে।`
   },
-  {
+        {
     id: 190,
     title: "সঁপিনু সকলি যীশু চরণে তব সাদরে",
-    transliteration: "Shopinu Sokoli Jishu Chorone",
+    transliteration: "Snpinu Skli Jishu Chrne Tb Sadre",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `সঁপিনু সকলি যীশু চরণে তব সাদরে,
 তোমার ধণ তোমায় দিয়া সুখী হব অন্তরে।
@@ -1910,10 +1910,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ লহ মম ভালোবাসা লহ মম উচ্চ আশা,
 লহ সুখের লালসা তোমারি সেবার তরে।`
   },
-  {
+        {
     id: 191,
     title: "প্রভু, দাও সেই সুর কণ্ঠে আমার",
-    transliteration: "Probhu Dao Sei Shur",
+    transliteration: "Prbhu, Dao Sei Sur Knthe Amar",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ প্রভু দাও সেই সুর কণ্ঠে আমার প্রাণ ভরে গান গাইতে.
 সে নয়ন দাও যে নয়নে পাই তোমার মহিমা হেরিতে.
@@ -1929,10 +1929,10 @@ export const HYMNS_101_200: Song[] = [
 পেয়েছে সাগর চির আনন্দ,
 আমি কি কাঁদিব নিভৃতে. (প্রভু)`
   },
-  {
+        {
     id: 192,
     title: "এ পাপীর হৃদয়ে, এস প্রভু",
-    transliteration: "E Papir Hridoye Esho Probhu",
+    transliteration: "E Papir Hridj়e, Es Prbhu",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `১ এ পাপীর হৃদয়ে এস প্রভু জুড়াও মোর তপ্ত প্রাণ,
 তুমি প্রভু মোর অন্তর্যামী,
@@ -1952,10 +1952,10 @@ export const HYMNS_101_200: Song[] = [
 চলব শুধু তোমারই দেখানো পথে,
 প্রভু তোমা বিনা নাই মোর প্রাণ।`
   },
-  {
+        {
     id: 193,
     title: "যীশু দয়াময়, তোমার নিজ গুণে আজ দয়া কর মোরে",
-    transliteration: "Jishu Doyamoy Tomar Nijo Gune",
+    transliteration: "Jishu Dj়amj়, Tomar Nij Gune Aj Dj়a Kr More",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `যীশু দয়াময় তোমার নিজ গুণে আজ দয়া কর মোরে.
 আমার সকলই ভার তোমার উপর অর্পণ করি তব করে.
@@ -1970,10 +1970,10 @@ export const HYMNS_101_200: Song[] = [
 একবার সেই মত আসি যীশু মশীহ,
 স্থান দান কর এই অধীনেরে.`
   },
-  {
+        {
     id: 194,
     title: "মোরা তোমার চরণ ধুয়ে দেব, দুই নয়নের জলে",
-    transliteration: "Mora Tomar Choron Dhuye Debo",
+    transliteration: "Mora Tomar Chrn Dhuye Deb, Dui Nyner Jle",
     category: "প্রার্থনা ও সমর্পণ",
     lyrics: `মোরা তোমার চরণ ধুয়ে দেব দুই নয়নের জলে,
 ক্ষমা করে দাও গো প্রভু তোমার কোলে তুলে,
@@ -1987,10 +1987,10 @@ export const HYMNS_101_200: Song[] = [
 লোভের অনল জ্বলছে সদাই মোদের দেহ মনে.
 বাঁচাও প্রভু মোদের জীবন তব রক্ত ঢেলে.`
   },
-  {
+        {
     id: 195,
     title: "প্রতিজ্ঞা করতে হবে, প্রতিজ্ঞা মানতে হবে",
-    transliteration: "Protigga Korte Hobe",
+    transliteration: "Prtijna Krte Hbe, Prtijna Mante Hbe",
     category: "খ্রীষ্টিয় জীবন ও সাক্ষ্য",
     lyrics: `প্রতিজ্ঞা করতে হবে প্রতিজ্ঞা মানতে হবে,
 জীবনের যাত্রাপথে প্রতিজ্ঞা মানতে হবে।
@@ -2005,10 +2005,10 @@ export const HYMNS_101_200: Song[] = [
 ভালো যে বাসতে হবে এগিয়ে চলতে হবে,
 জীবনের যাত্রাপথে প্রতিজ্ঞা মানতে হবে।`
   },
-  {
+        {
     id: 196,
     title: "খ্রীষ্টের নামে শপথ কর, সোজা হ'য়ে মোরা দাঁড়াব",
-    transliteration: "Khrist-er Name Shopoth Koro",
+    transliteration: "Khrishter Name Shpth Kr, Soja H'j়e Mora Dand়ab",
     category: "খ্রীষ্টিয় জীবন ও সাক্ষ্য",
     lyrics: `খ্রীষ্টের নামে শপথ কর সোজা হ'য়ে মোরা দাঁড়াব,
 ঝড়-ঝঞ্ঝার দুনিয়াতে মোরা নতুন প্রভাত রাখব।
@@ -2023,10 +2023,10 @@ export const HYMNS_101_200: Song[] = [
 ২ যাব মোরা সেই দীপ নেভা ঘরে যেথা বঞ্চিত হাহাকার করে।
 সেই আঁধারেতে খ্রীষ্টের নামে আলোকের দ্যুতি ছড়াব। (ছড়াব তাই)`
   },
-  {
+        {
     id: 197,
     title: "মোরা গড়বো নূতন সমাজ",
-    transliteration: "Mora Gorbo Notun Somaj",
+    transliteration: "Mora Grbo Nutn Smaj",
     category: "খ্রীষ্টিয় জীবন ও সাক্ষ্য",
     lyrics: `মোরা গড়বো নূতন সমাজ গড়বো নূতন সমাজ,
 থাকবে না সেখানে মলিনতা থাকবে না সেখানে কলুষতা,
@@ -2038,10 +2038,10 @@ export const HYMNS_101_200: Song[] = [
 ২ পাপের কালিমা যত ধুয়ে যাবে তাঁরই রক্তে,
 অভয় বাণী এই যে তাঁর ছাড়বো না কোন মতে।`
   },
-  {
+        {
     id: 198,
     title: "মোরা পেয়েছি ভাই যীশুর আলো সকল জনে",
-    transliteration: "Mora Peyechi Bhai Jishur Alo",
+    transliteration: "Mora Peyechhi Bhai Jishur Alo Skl Jne",
     category: "খ্রীষ্টিয় জীবন ও সাক্ষ্য",
     lyrics: `মোরা পেয়েছি ভাই যীশুর আলো সকল জনে,
 মোদের মায়ায় ভরা দিশেহারা হৃদয় ও মনে।
@@ -2056,10 +2056,10 @@ export const HYMNS_101_200: Song[] = [
 ২ মোদের হৃদয়কমল দুলিছে পুলকে গাহিছে জ্বালো
 ভারতের প্রতি ঘরে আজি এই দিব্য আলো।`
   },
-  {
+        {
     id: 199,
     title: "কি শুভদিন, হে প্রাণেশ্বর! (O Happy Day)",
-    transliteration: "Ki Shuvodin He Praneshwar",
+    transliteration: "Ki Shubhdin, He Praneshbr! (O Happy Day)",
     category: "খ্রীষ্টিয় জীবন ও সাক্ষ্য",
     lyrics: `১ কি শুভদিন হে প্রাণেশ্বর যেদিনে (মোর) মন হইল স্থির,
 বাসনা সব তোমার উপর করিনু স্থাপন হইয়া ধীর।
@@ -2078,10 +2078,10 @@ export const HYMNS_101_200: Song[] = [
 ৪ এ হইল স্থির যে আমি তাঁর তিনি আমার আছেন নিশ্চয়,
 যাবজ্জীবন রে মন আমার বিভ্রান্ত রহ সব সময়।`
   },
-  {
+        {
     id: 200,
     title: "অগ্রসর হও আজি খ্রীষ্ট-সেনা সব (Onward Christian Soldiers)",
-    transliteration: "Ogrosor Hou Aji Khrist Shena",
+    transliteration: "Ogrsr Ho Aji Khrisht-sena Sb (Onward Christian Soldiers)",
     category: "খ্রীষ্টিয় জীবন ও সাক্ষ্য",
     lyrics: `১ অগ্রসর হও আজি খ্রীষ্ট-সেনা সব,
 সবে মিলে আইস করি বিজয় রব।

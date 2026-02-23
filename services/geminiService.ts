@@ -22,9 +22,9 @@ export const getSpiritualReflection = async (title: string, lyrics: string): Pro
   `;
 
   try {
-    // Using gemini-3-pro-preview for complex reasoning tasks like theological reflection.
+    // Using gemini-3.1-pro-preview for complex reasoning tasks like theological reflection.
     const response = await ai.models.generateContent({
-      model: "gemini-3-pro-preview",
+      model: "gemini-3.1-pro-preview",
       contents: prompt,
       config: {
         responseMimeType: "application/json",

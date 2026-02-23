@@ -1,10 +1,10 @@
 import { Song } from './types';
 
 export const CHORUS_DB: Song[] = [
-  {
+        {
     id: 1001,
     title: "আইস, আমরা প্রণিপাত করি",
-    transliteration: "Aisho Amra Pronipat Kori",
+    transliteration: "Ais, Amra Prnipat Kri",
     category: "কোরাস",
     lyrics: `আইস, আমরা প্রণিপাত করি, প্রণত হই,
 আমাদের নির্মাতা সদাপ্রভুর সাক্ষাতে জানু পাতি,
@@ -12,10 +12,10 @@ export const CHORUS_DB: Song[] = [
 আমরা তাঁহার চরাণির প্রজা ও তাঁহার হস্তের মেষ।
 —গীতসংহিতা ৯৫:৬,৭`
   },
-  {
+        {
     id: 1002,
     title: "গান কর সদাপ্রভুর উদ্দেশ্যে বীণা সহকারে",
-    transliteration: "Gaan Koro Sodaprobhur Uddeshe Bina Sohokare",
+    transliteration: "Gan Kr Sdaprbhur Uddeshje Bina Shkare",
     category: "কোরাস",
     lyrics: `গান কর সদাপ্রভুর উদ্দেশ্যে বীণা সহকারে,
 বীণা সহকারে ও গানের রবে.
@@ -27,20 +27,20 @@ export const CHORUS_DB: Song[] = [
 পর্ব্বতগণ একসঙ্গে আনন্দগান করুক; সদাপ্রভুর সাক্ষাতেই.
 —গীতসংহিতা ৯৮:৫-৮`
   },
-  {
+        {
     id: 1003,
     title: "কেননা পাপের বেতন মৃত্যু",
-    transliteration: "Kenona Paper Beton Mrityu",
+    transliteration: "Kenna Paper Betn Mritju",
     category: "কোরাস",
     lyrics: `কেননা পাপের বেতন মৃত্যু (৩)
 হায়! পাপী আজও জানো না।
 কিন্তু ঈশ্বরের অনুগ্রহ দান (৩)
 (আমাদের) প্রভু খ্রীষ্টে অনন্ত জীবন। —রোমীয় ৬:২৩`
   },
-  {
+        {
     id: 1004,
     title: "কারণ ঈশ্বর জগৎকে এমন প্রেম করিলেন",
-    transliteration: "Karon Ishwar Jogotke Emon Prem Korilen",
+    transliteration: "Karn Ishbr Jgtke Emn Prem Krilen",
     category: "কোরাস",
     lyrics: `কারণ ঈশ্বর জগৎকে এমন প্রেম করিলেন যে,
 আপনার একজাত পুত্রকে দান করিলেন,
@@ -48,20 +48,20 @@ export const CHORUS_DB: Song[] = [
 কিন্তু অনন্ত জীবন পায়।
 —যোহন ৩:১৬`
   },
-  {
+        {
     id: 1005,
     title: "শান্তি আমি তোমাদের কাছে রাখিয়া যাইতেছি",
-    transliteration: "Shanti Ami Tomader Kache Rakhiya Jaittechi",
+    transliteration: "Shanti Ami Tomader Kachhe Rakhiya Jaitechhi",
     category: "কোরাস",
     lyrics: `শান্তি আমি তোমাদের কাছে রাখিয়া যাইতেছি,
 আমারই শান্তি তোমাদিগকে দান করিতেছি।
 জগৎ যেরূপ দান করে, আমি সেরূপ দান করি না।
 —যোহন ১৪:২৭`
   },
-  {
+        {
     id: 1006,
     title: "তোমার দয়া জীবন হইতেও উত্তম",
-    transliteration: "Tomar Doya Jibon Hoiteo Uttom",
+    transliteration: "Tomar Dya Jibn Hiteo Uttm",
     category: "কোরাস",
     lyrics: `তোমার দয়া (৩)
 জীবন হইতেও উত্তম, আমার ওষ্ঠাধর তোমার প্রশংসা করিবে।
@@ -70,20 +70,20 @@ export const CHORUS_DB: Song[] = [
 আমার প্রাণ তৃপ্ত হইবে, যেমন মেদ ও মজ্জাতে হয়।
 —গীতসংহিতা ৬৩:৩,৪,৫`
   },
-  {
+        {
     id: 1007,
     title: "যিনি যুগপর্যায়ের রাজা",
-    transliteration: "Jini Jugoporjayer Raja",
+    transliteration: "Jini Jugprjayer Raja",
     category: "কোরাস",
     lyrics: `যিনি যুগপর্যায়ের রাজা, অক্ষয় অদৃশ্য একমাত্র ঈশ্বর,
 যুগপর্যায়ের যুগে যুগে তাঁহারই সমাদর ও মহিমা হউক।
 আমেন।
 —১তীমথিয় ১:১৭`
   },
-  {
+        {
     id: 1008,
     title: "তোমরা সদাপ্রভুর প্রশংসা কর",
-    transliteration: "Tomra Sodaprobhur Proshongsha Koro",
+    transliteration: "Tomra Sdaprbhur Prshngsa Kr",
     category: "কোরাস",
     lyrics: `তোমরা সদাপ্রভুর প্রশংসা কর;
 হে আমার প্রাণ সদাপ্রভুর প্রশংসা কর।
@@ -92,10 +92,10 @@ export const CHORUS_DB: Song[] = [
 আমার ঈশ্বরের প্রশংসা গান করিব।
 —গীতসংহিতা ১৪৬:১,২`
   },
-  {
+        {
     id: 1009,
     title: "তোমার বাক্য আমার চরণের প্রদীপ",
-    transliteration: "Tomar Bakko Amar Choroner Prodip",
+    transliteration: "Tomar Bakj Amar Chrner Prdip",
     category: "কোরাস",
     lyrics: `তোমার বাক্য আমার চরণের প্রদীপ, আমার পথের আলোক।
 আমি শপথ করিয়াছি, স্থির করিয়াছি,
@@ -104,10 +104,10 @@ export const CHORUS_DB: Song[] = [
 তোমার বাক্যানুসারে আমাকে সঞ্জীবিত কর।
 —গীতসংহিতা ১১৯:১০৫-১০৭`
   },
-  {
+        {
     id: 1010,
     title: "সদাপ্রভু আমি তোমার প্রশংসা করিব",
-    transliteration: "Sodaprobhu Ami Tomar Proshongsha Koribo",
+    transliteration: "Sdaprbhu Ami Tomar Prshngsa Krib",
     category: "কোরাস",
     lyrics: `সদাপ্রভু, আমি তোমার প্রশংসা করিব,
 কেননা তুমি আমাকে উঠাইয়াছ,
@@ -120,20 +120,20 @@ export const CHORUS_DB: Song[] = [
 তাঁহার পবিত্র নামের ধন্যবাদ কর।
 —গীতসংহিতা ৩০:১-৪`
   },
-  {
+        {
     id: 1011,
     title: "তুমি আমাদিগকে সঞ্জীবিত কর",
-    transliteration: "Tumi Amadige Sonjibito Koro",
+    transliteration: "Tumi Amadigke Snjibit Kr",
     category: "কোরাস",
     lyrics: `তুমি আমাদিগকে সঞ্জীবিত কর, আমরা তোমার নামে ডাকিব।
 হে সদাপ্রভু, বাহিনীগণের ঈশ্বর, আমাদিগকে ফিরাও;
 তোমার মুখ উজ্জ্বল কর, তাহাতে আমরা পরিত্রাণ পাইব।
 —গীতসংহিতা ৮০:১৮, ১৯`
   },
-  {
+        {
     id: 1012,
     title: "হে সদাপ্রভু! মম বল!",
-    transliteration: "He Sodaprobhu Momo Bolo",
+    transliteration: "He Sdaprbhu! Mm Bl!",
     category: "কোরাস",
     lyrics: `হে সদাপ্রভু! মম বল! আমি তোমাতে অনুরক্ত।
 সদাপ্রভু মম শৈল, মম দুর্গ ও মম রক্ষা কর্ত্তা;
@@ -144,30 +144,30 @@ export const CHORUS_DB: Song[] = [
 তিনি নিজ শরণাগত সকলের ঢাল।
 —গীতসংহিতা ১৮:১,২,৩০`
   },
-  {
+        {
     id: 1013,
     title: "সদাপ্রভু আমার পালক",
-    transliteration: "Sodaprobhu Amar Palok",
+    transliteration: "Sdaprbhu Amar Palk",
     category: "কোরাস",
     lyrics: `সদাপ্রভু আমার পালক, আমার অভাব হইবে না।
 তিনি তৃণভূষিত চরাণীতে আমাকে শয়ন করান,
 তিনি বিশ্রাম জলের ধারে ধারে আমাকে চালান।
 —গীতসংহিতা ২৩:১,২`
   },
-  {
+        {
     id: 1014,
     title: "তোমরা আর নিজের নও",
-    transliteration: "Tomra Ar Nijer Nao",
+    transliteration: "Tomra Ar Nijer No",
     category: "কোরাস",
     lyrics: `তোমরা আর নিজের নও, (২)
 কারণ মূল্য দ্বারা ক্রীত হইয়াছ,
 অতএব তোমাদের দেহে ঈশ্বরের গৌরব কর।
 —১করিন্থীয় ৬:২০`
   },
-  {
+        {
     id: 1015,
     title: "আইস আমরা তাঁহার আবাসে যাই",
-    transliteration: "Aisho Amra Tahar Abashe Jai",
+    transliteration: "Ais Amra Tanhar Abase Jai",
     category: "কোরাস",
     lyrics: `আইস, আমরা তাঁহার আবাসে যাই,
 তাঁহার পাদপীঠে প্রণিপাত করি।
@@ -178,20 +178,20 @@ export const CHORUS_DB: Song[] = [
 (হাল্লেলুইয়া হোশন্না হাল্লেলুইয়া)
 —গীতসংহিতা ১৩২:৭-৯`
   },
-  {
+        {
     id: 1016,
     title: "সতত আনন্দ কর",
-    transliteration: "Sototo Anondo Koro",
+    transliteration: "Stt Annd Kr",
     category: "কোরাস",
     lyrics: `সতত আনন্দ কর; অবিরত প্রার্থনা কর;
 সর্ব্ববিষয়ে ধন্যবাদ কর;
 সর্ব্বপ্রকার মন্দ বিষয় হইতে দূরে থাক।
 —১ থিষলনীকীয় ৫:১৬,১৭,২২`
   },
-  {
+        {
     id: 1017,
     title: "হে পরাৎপর তোমার নামের উদ্দেশ্যে সঙ্গীত করা উত্তম",
-    transliteration: "He Poratpor Tomar Namer Uddeshe Songit Kora Uttom",
+    transliteration: "He Pratpr Tomar Namer Uddeshje Snggit Kra Uttm",
     category: "কোরাস",
     lyrics: `সদাপ্রভুর স্তব করা;
 হে পরাৎপর, তোমার নামের উদ্দেশ্যে সঙ্গীত করা উত্তম।
@@ -203,10 +203,10 @@ export const CHORUS_DB: Song[] = [
 তোমার সঙ্কল্প সকল অতি গভীর।
 —গীতসংহিতা ৯২:১,২,৩,৫`
   },
-  {
+        {
     id: 1018,
     title: "কারণ তোমরা ইহারই নিমিত্ত আহূত হইয়াছ",
-    transliteration: "Karon Tomra Ihar-i Nimitte Ahuto Hoiyacho",
+    transliteration: "Karn Tomra Ihari Nimitt Ahut Hiyachh",
     category: "কোরাস",
     lyrics: `কারণ তোমরা ইহারই নিমিত্ত আহূত হইয়াছ;
 কেননা খ্রীষ্টও তোমাদের নিমিত্ত দুঃখভোগ করিলেন;
@@ -214,10 +214,10 @@ export const CHORUS_DB: Song[] = [
 যেন তোমরা তাঁহার পদচিহ্নের অনুগমন কর।
 —১ পিতর ২:২১`
   },
-  {
+        {
     id: 1019,
     title: "খ্রীষ্ট যীশুতে যে ভাব ছিল",
-    transliteration: "Khristo Jishute Je Bhab Chilo",
+    transliteration: "Khrisht Jishute Je Bhab Chhil",
     category: "কোরাস",
     lyrics: `খ্রীষ্ট যীশুতে যে ভাব ছিল, তাহা তোমাদিগেতেও হউক।
 ঈশ্বরের স্বরূপবিশিষ্ট থাকিতে তিনি ঈশ্বরের সহিত সমান থাকা
@@ -235,20 +235,20 @@ export const CHORUS_DB: Song[] = [
 যে, যীশু খ্রীষ্টই প্রভু।
 —ফিলিপীয় ২:৫-১১`
   },
-  {
+        {
     id: 1020,
     title: "অল্প কাল বাকী আছে",
-    transliteration: "Olpo Kal Baki Ache",
+    transliteration: "Olp Kal Baki Achhe",
     category: "কোরাস",
     lyrics: `অল্প কাল (৩) বাকী আছে,
 য যিনি আসিতেছেন, তিনি আসিবেন, বিলম্ব করিলেন না।
 কিন্তু আমার ধার্ম্মিক ব্যক্তি বিশ্বাস হেতু্ই বাঁচিবে।
 —ইব্রীয় ১০:৩৭, ৩৮`
   },
-  {
+        {
     id: 1021,
     title: "যে ব্যক্তি পরাৎপরের অন্তরালে থাকে",
-    transliteration: "Je Bekti Poratporer Ontorale Thake",
+    transliteration: "Je Bjkti Pratprer Ontrale Thake",
     category: "কোরাস",
     lyrics: `যে ব্যক্তি পরাৎপরের অন্তরালে থাকে,
 সে সর্ব্বশক্তিমানের ছায়াতে বসতি করে,
@@ -256,19 +256,19 @@ export const CHORUS_DB: Song[] = [
 আমার ঈশ্বর, আমি তাহাতে নির্ভর করবেন।
 —গীতসংহিতা ৯১:১,২`
   },
-  {
+        {
     id: 1022,
     title: "হে পরিশ্রান্ত ভারাক্রান্ত লোক সকলে",
-    transliteration: "He Porishranto Bharakranto Lok Sokole",
+    transliteration: "He Prishrant Bharakrant Lok Skle",
     category: "কোরাস",
     lyrics: `হে পরিশ্রান্ত ভারাক্রান্ত লোক সকলে, আমার নিকটে আইস।
 আমি তোমাদিগকে বিশ্রাম দিব, আমার নিকটে আইস।
 —মথি ১১:২৮`
   },
-  {
+        {
     id: 1023,
     title: "প্রভুতে যে আনন্দ (The joy of the Lord)",
-    transliteration: "Prabhute je Anando",
+    transliteration: "Prbhute Je Annd (The Joy Of The Lord)",
     category: "কোরাস",
     lyrics: `প্রভুতে যে আনন্দ, তাতে পাই শক্তি (৩)
 প্রভুতে আনন্দ তাই আছে শক্তি।
@@ -277,19 +277,19 @@ export const CHORUS_DB: Song[] = [
 আমার মুখে দেন হাসি হা হা হা হা হা হা (৩)
 প্রভুতে আনন্দ তাই আছে শক্তি।`
   },
-  {
+        {
     id: 1024,
     title: "হে নিদ্রাগত ব্যক্তি জাগ্রত হও",
-    transliteration: "He Nidragoto Bekti Jagroto Hou",
+    transliteration: "He Nidragt Bjkti Jagrt Ho",
     category: "কোরাস",
     lyrics: `হে নিদ্রাগত ব্যক্তি জাগ্রত হও এবং মৃতগণের মধ্য হইতে উঠ,
 তাহাতে খ্রীষ্ট তোমার উপরে আলোক উদয় করিবেন।
 —ইফিষীয় ৫:১৪`
   },
-  {
+        {
     id: 1025,
     title: "সদাপ্রভুর বিবিধ দয়ার গুণে",
-    transliteration: "Sodaprobhur Bibidho Doyar Gune",
+    transliteration: "Sdaprbhur Bibidh Dyar Gune",
     category: "কোরাস",
     lyrics: `সদাপ্রভুর বিবিধ দয়ার গুণে আমরা নষ্ট হই নাই;
 কেননা তাঁহার বিবিধ করুণা শেষ হয় নাই।
@@ -298,30 +298,30 @@ export const CHORUS_DB: Song[] = [
 এইজন্য আমি তাঁহাতে প্রত্যাশা করিব।
 —বিলাপ ৩:২২-২৪`
   },
-  {
+        {
     id: 1026,
     title: "হে লোক সকল সতত তাহাতে নির্ভর কর",
-    transliteration: "He Lok Sokol Sototo Tahate Nirbhor Koro",
+    transliteration: "He Lok Skl Stt Tahate Nirbhr Kr",
     category: "কোরাস",
     lyrics: `হে লোক সকল, সতত তাহাতে নির্ভর কর,
 তাঁহারই সম্মুখে তোমাদের মনের কথা ভাঙ্গিয়া বল;
 ঈশ্বরই আমাদের আশ্রয়।
 —গীতসংহিতা ৬২:৮`
   },
-  {
+        {
     id: 1027,
     title: "হে ঈশ্বর সিয়োন প্রশংসা তোমার অপেক্ষা করে",
-    transliteration: "He Ishwar Siyon Proshongsha Tomar Opekkha Kore",
+    transliteration: "He Ishbr Siyon Prshngsa Tomar Opeksha Kre",
     category: "কোরাস",
     lyrics: `হে ঈশ্বর, সিয়োন প্রশংসা তোমার অপেক্ষা করে,
 তোমার উদ্দেশ্যে মানত পূর্ণ করা যাইবে।
 হে প্রার্থনা শ্রবণকারী, তোমারই কাছে মর্ত্যমাত্র আসিবে।
 —গীতসংহিতা ৬৫:১,২`
   },
-  {
+        {
     id: 1028,
     title: "হে ঈশ্বর আমার চিত্ত সুস্থির",
-    transliteration: "He Ishwar Amar Chitto Susthir",
+    transliteration: "He Ishbr Amar Chitt Susthir",
     category: "কোরাস",
     lyrics: `হে ঈশ্বর, আমার চিত্ত সুস্থির,
 আমি গান করিব, আমার গৌরবসহ স্তব করিব।
@@ -330,10 +330,10 @@ export const CHORUS_DB: Song[] = [
 আমি লোকবৃন্দের মধ্যে তোমার প্রশংসা গাহিব।
 —গীতসংহিতা ১০৮:১,২,৩`
   },
-  {
+        {
     id: 1029,
     title: "হে ঈশ্বর আমাকে অনুসন্ধান কর",
-    transliteration: "He Ishwar Amake Onushondhan Koro",
+    transliteration: "He Ishbr Amake Onusndhan Kr",
     category: "কোরাস",
     lyrics: `হে ঈশ্বর, আমাকে অনুসন্ধান কর, আমার অন্তঃকরণ জ্ঞাত হও।
 আমার পরীক্ষা কর, আমার চিন্তা সকল জ্ঞাত হও।
@@ -341,10 +341,10 @@ export const CHORUS_DB: Song[] = [
 এবং সনাতন পথে আমাকে গমন করাও।
 —গীতসংহিতা ১৩৯:২৩, ২৪`
   },
-  {
+        {
     id: 1030,
     title: "হে আমাদের প্রভু ও আমাদের ঈশ্বর",
-    transliteration: "He Amader Probhu O Amader Ishwar",
+    transliteration: "He Amader Prbhu O Amader Ishbr",
     category: "কোরাস",
     lyrics: `হে আমাদের প্রভু ও আমাদের ঈশ্বর,
 তুমিই প্রতাপ ও সমাদর ও পরাক্রম গ্রহণের যোগ্য,
@@ -353,10 +353,10 @@ export const CHORUS_DB: Song[] = [
 (হাল্লেলুইয়া) ৭
 —প্রকাশিত বাক্য ৪:১১`
   },
-  {
+        {
     id: 1031,
     title: "মেযশাবক যিনি হত হইয়াছিলেন",
-    transliteration: "Meshshabok Jini Hoto Hoiyachilen",
+    transliteration: "Mejshabk Jini Ht Hiyachhilen",
     category: "কোরাস",
     lyrics: `মেষশাবক, যিনি হত হইয়াছিলেন,
 তিনি পরাক্রম ও ধন ও জ্ঞান শক্তি ও সমাদর গৌরব
@@ -364,10 +364,10 @@ export const CHORUS_DB: Song[] = [
 (হাল্লেলুইয়া হোশন্না হাল্লেলুইয়া) ৪
 —প্রকাশিত বাক্য ৫:১২`
   },
-  {
+        {
     id: 1032,
     title: "বাইবেলের পুস্তকগুলি (পুরাতন নিয়ম)",
-    transliteration: "Baibeler Pustokguli Old Testament",
+    transliteration: "Baibeler Pustkguli (Puratn Nij়m)",
     category: "কোরাস",
     lyrics: `আদি, যাত্রা, লেবীয়, গণনা, দ্বিতীয় বিবরণ, যিহোশূয়,
 বিচারকর্ত্তৃগণ, রূতের বিবরণ, শমূয়েল, শমূয়েল, রাজাবলি,
@@ -379,10 +379,10 @@ export const CHORUS_DB: Song[] = [
 সফনিয়, হগয়, সখরিয়, মালাখি, এ সকল পুস্তক রাখ সদা আঁখি,
 ভাববাদীর বাণী, ভক্তগণের উক্তি, শিখাক সবারে বিশ্বাস ভক্তি।`
   },
-  {
+        {
     id: 1033,
     title: "বাইবেলের পুস্তকগুলি (নূতন নিয়ম)",
-    transliteration: "Baibeler Pustokguli New Testament",
+    transliteration: "Baibeler Pustkguli (Nutn Nij়m)",
     category: "কোরাস",
     lyrics: `সাধু মথি, মার্ক, লূক, যোহন, প্রেরিত, রোমীয়,
 করিন্থীয়, করিন্থীয়, গালাতীয়, ইফিষীয়, ফিলিপীয়, কলসীয়,
@@ -391,19 +391,19 @@ export const CHORUS_DB: Song[] = [
 প্রকাশিত বাক্য, এ সকল পুস্তক করি অধ্যয়ন,
 খ্রীষ্টের প্রেমে বাঁধি দেহ আত্মা ও মন।`
   },
-  {
+        {
     id: 1034,
     title: "ঈশ্বর আত্মা",
-    transliteration: "Ishwar Atma",
+    transliteration: "Ishbr Atma",
     category: "কোরাস",
     lyrics: `ঈশ্বর আত্মা; আর যাহারা তাঁহার আরাধনা করে,
 তাহাদিগকে আত্মায় ও সত্যে আরাধনা করিতে হইবে।
 —যোহন ৪:২৪`
   },
-  {
+        {
     id: 1035,
     title: "প্রভু আমাদের আলো ও পরিত্রাণ",
-    transliteration: "Probhu Amader Alo O Poritran",
+    transliteration: "Prbhu Amader Alo O Pritran",
     category: "কোরাস",
     lyrics: `প্রভু আমাদের আলো ও পরিত্রাণ, কাহার ভয় করিব আমরা?
 প্রভু আমাদের জীবনের দুর্গ, কাহা হইতে ত্রাসিত হইব?
@@ -411,103 +411,18 @@ export const CHORUS_DB: Song[] = [
 তখন তাহারাই হোঁচট খাইয়া পড়ে।
 —গীতসংহিতা ২৭:১-২`
   },
-  {
+        {
     id: 1036,
-    title: "প্রভু, তোমার মহিমা বর্ণনা করা নাহি যায়",
+    title: "সদাপ্রভু আমার পালক",
+    transliteration: "Sdaprbhu Amar Palk",
     category: "কোরাস",
-    lyrics: `প্রভু, তোমার মহিমা, বর্ণনা করা নাহি যায়,
-আলোকে আঁধারে ভুবন মাঝারে, পাই তব কত পরিচয়।
-দিবানিশি ভরি, প্রশংসা করি, শেষ কভু হবে নাকো তায়।
-তব দয়া স্মরি, প্রণাম করি, ওই পদে ওহে দয়াময়।
-ক্রুশের উপরে, যে প্রেম দেখালে, মোহিত হয়েছি তায়।`
+    lyrics: `সদাপ্রভু আমার পালক, আমার অভাব হইবে না।
+তিনি আমাকে চালান শান্তি ও আশার পথ ধরে।`
   },
-  {
-    id: 1037,
-    title: "সাবধান ছোট কান যা শুন",
-    category: "কোরাস",
-    lyrics: `১ সাবধান ছোট কান যা শুন।
-স্বর্গে ত্রাতা এক আছেন, কত ভালো যে বাসেন।
-সাবধান সাবধান যা শুন।
-
-২ সাবধান ছোট চোখ যা দেখ।
-স্বর্গে ত্রাতা এক আছেন, কত ভালো যে বাসেন।
-সাবধান সাবধান যা দেখ।
-
-৩ সাবধান ছোট মুখ যা বল।
-স্বর্গে ত্রাতা এক আছেন, কত ভালো যে বাসেন।
-সাবধান সাবধান যা বল।
-
-৪ সাবধান ছোট হাত যা কর।
-স্বর্গে ত্রাতা এক আছেন, কত ভালো যে বাসেন।
-সাবধান সাবধান যা কর।
-
-৫ সাবধান ছোট পা যেথা যাও।
-স্বর্গে ত্রাতা এক আছেন, কত ভালো যে বাসেন।
-সাবধান ছোটপা যেথা যাও।`
-  },
-  {
-    id: 1038,
-    title: "আনন্দ আনন্দ আনন্দ রে",
-    category: "কোরাস",
-    lyrics: `আনন্দ আনন্দ আনন্দ রে (২)
-১ যীশুতে মোরা, আনন্দের ফোয়ারা, পেয়েছি রে।
-২ এই সংসার ছেড়ে আনন্দ নগরে, চলে যাব রে।`
-  },
-  {
-    id: 1039,
-    title: "রক্ত দিয়ে যীশু কিনেছেন আমায়",
-    category: "কোরাস",
-    lyrics: `রক্ত দিয়ে যীশু কিনেছেন আমায় (২)
-দাবী নেই কারো আর, দাবী নেই কারো আর,
-আমি যে তাঁর, আমি যে তাঁর, আমি যে তাঁর।
-অন্ধকারে চলতে পথ ভয় হবে না আর,
-আমি যে তাঁর, আমি যে তাঁর, আমি যে তাঁর।`
-  },
-  {
-    id: 1040,
-    title: "Rolled away (গিয়েছে গিয়েছে গিয়েছে)",
-    category: "কোরাস",
-    lyrics: `Rolled away
-গিয়েছে, গিয়েছে, গিয়েছে,
-আমার পাপের বোঝা চলে গিয়েছে,
-আমার পাপ গিয়েছে, কালভেরীর স্রোত নিচে,
-(হাল্লেলুইয়া) গিয়েছে, গিয়েছে, গিয়েছে,
-আমার পাপের বোঝা চলে গিয়েছে,
-ধন্য যীশুর নাম।`
-  },
-  {
-    id: 1041,
-    title: "I have decided (মনস্থ করেছি যীশুতে চলিব)",
-    category: "কোরাস",
-    lyrics: `I have decided
-মনস্থ করেছি, যীশুতে চলিব (৩) ফিরিব না (২)
-জগৎ পশ্চাতে ক্রুশ সম্মুখে (৩) ফিরিব না (২)
-যদিও কেহ না থাকে সঙ্গে (৩) ফিরিব না (২)`
-  },
-  {
-    id: 1042,
-    title: "যীশুর জয় জয় জয় জয়",
-    category: "কোরাস",
-    lyrics: `যীশুর জয় জয় জয় জয়
-অন্তরেতে হয় (৩)
-যীশুর জয় জয় জয় জয়
-অন্তরেতে হয়।
-ধন্য যীশুর নাম।`
-  },
-  {
-    id: 1043,
-    title: "তোমার প্রশংসা তোমার প্রশংসা",
-    category: "কোরাস",
-    lyrics: `তোমার প্রশংসা, তোমার প্রশংসা, তোমার প্রশংসা করি,
-হে যীশু ত্রাণকারী, হে যীশু ত্রাণকারী।
-তুমি হে ত্রাণধন, তুমি হে জীবন, তুমিই ঈশ্বর নন্দন,
-হে যীশু ত্রাণকারী, হে যীশু ত্রাণকারী।
-হাল্লেলুয়া (৪) হাল্লেলুয়া আমেন (৩)`
-  },
-  {
+        {
     id: 1044,
     title: "বুদ্ধিমান বাঁধিল পাষাণে তাঁর ঘর",
-    transliteration: "Buddhiman Badhilo Pashane Tar Ghor",
+    transliteration: "Buddhiman Bandhil Pashane Tanr Ghr",
     category: "কোরাস",
     lyrics: `(মথি ৭:২৪,২৫)
 বুদ্ধিমান বাঁধিল পাষাণে তাঁর ঘর (৩)
@@ -523,10 +438,10 @@ export const CHORUS_DB: Song[] = [
 বৃষ্টি নামিবে, বান আসিবে (৩)
 কিন্তু সেই ঘর পড়িবে না.`
   },
-  {
+        {
     id: 1045,
     title: "আমার এই ছোট দীপ উজ্জ্বল রাখিব",
-    transliteration: "Amar Ei Choto Dip Ujjal Rakhibo",
+    transliteration: "Amar Ei Chhot Dip Ujjbl Rakhib",
     category: "কোরাস",
     lyrics: `আমার এই ছোট দীপ উজ্জ্বল রাখিব (২)
 রাখিব, রাখিব, রাখিব.
@@ -535,19 +450,19 @@ export const CHORUS_DB: Song[] = [
 শয়তানকে ফুঁ দিতে দিব না (২)
 দিব না, দিব না, দিব না.`
   },
-  {
+        {
     id: 1046,
     title: "যীশু আমাকে ভালোবাসেন",
-    transliteration: "Jishu Amake Bhalobashen",
+    transliteration: "Jishu Amake Bhalobasen",
     category: "কোরাস",
     lyrics: `যীশু আমাকে ভালোবাসেন, জানি আমি বাইবেলে।
 আমি ছোট হলেও তাঁর, তাঁরই আমি শক্তিতে.
 হ্যাঁ, যীশু ভালোবাসেন, (৩) বাইবেলে তা জানি।`
   },
-  {
+        {
     id: 1047,
     title: "সদাপ্রভুর ধন্যবাদ কর কেননা তিনি মঙ্গলময়",
-    transliteration: "Sodaprobhur Dhonnyobad Koro Kenona Jini Monglomoy",
+    transliteration: "Sdaprbhur Dhnjbad Kr Kenna Tini Mngglmy",
     category: "কোরাস",
     lyrics: `সদাপ্রভুর ধন্যবাদ কর, কেননা তিনি মঙ্গলময়;
 তাঁহার করুণা অনন্তকালস্থায়ী।
@@ -555,28 +470,28 @@ export const CHORUS_DB: Song[] = [
 কেননা তাঁহার করুণা অনন্তকালস্থায়ী।
 —গীতসংহিতা ১৩৬:১-৩`
   },
-  {
+        {
     id: 1048,
     title: "আমার অন্তরের কথা",
-    transliteration: "Amar Ontorer Kotha",
+    transliteration: "Amar Ontrer Ktha",
     category: "কোরাস",
     lyrics: `হে সদাপ্রভু, আমার শৈল ও আমার মুক্তিদাতা,
 আমার মুখের বাক্য ও হৃদয়ের ধ্যান তোমার সম্মুখে গ্রাহ্য হউক।
 —গীতসংহিতা ১৯:১৪`
   },
-  {
+        {
     id: 1049,
     title: "আমি তাঁরই জন্য রাজত্ব করিব",
-    transliteration: "Ami Tari Jonno Rajotto Koribo",
+    transliteration: "Ami Tanri Jnj Rajtb Krib",
     category: "কোরাস",
     lyrics: `আমি তাঁরই জন্য রাজত্ব করিব, তাঁরই জন্য বাঁচিব।
 তিনিই আমার প্রভু ও রাজা, তাঁহাকেই ভজিব।
 হাল্লেলুইয়া যীশুর জয়, হাল্লেলুইয়া রাজার জয়।`
   },
-  {
+        {
     id: 1050,
     title: "আমরা তাঁহার স্তুতি গাহিব",
-    transliteration: "Amra Tahar Stuti Gahibo",
+    transliteration: "Amra Tanhar Stuti Gahib",
     category: "কোরাস",
     lyrics: `আমরা তাঁহার স্তুতি গাহিব,
 আজকের এই দিন ২ ঈশ্বর সৃষ্টি করেছেন।
@@ -587,10 +502,10 @@ We will rejoice and be glad in it,
 This is the day 2
 That the Lord had made.`
   },
-  {
+        {
     id: 1051,
     title: "আনন্দে করি গান কৃতজ্ঞ মান প্রাণ",
-    transliteration: "Anonde Kori Gaan Kritoggo Maan Pran",
+    transliteration: "Annde Kri Gan Kritjn Man Pran",
     category: "কোরাস",
     lyrics: `আনন্দে করি গান কৃতজ্ঞ মান প্রাণ
 ধন্যবাদ আর প্রশংসাতে।
@@ -601,10 +516,10 @@ That the Lord had made.`
 আবার এই দিনেতে জানি এই সভাতে
 পূর্ণ করেন মোদের পুণ্য আত্মাতে।`
   },
-  {
+        {
     id: 1052,
     title: "আমরা প্রভুর উপরে নির্ভর করি",
-    transliteration: "Amra Probhur Upor Nirbhor Kori",
+    transliteration: "Amra Prbhur Upre Nirbhr Kri",
     category: "কোরাস",
     lyrics: `আমরা প্রভুর উপরে নির্ভর করি, প্রভু মোদের ভরসা,
 যতই জীবনে ঝড় আসুক, বিপদ আসুক,
@@ -614,10 +529,10 @@ That the Lord had made.`
 সদাপ্রভু হইতে আমার সাহায্য আইসে,
 তিনি পৃথিবীর নির্ম্মাণ কৰ্ত্তা।`
   },
-  {
+        {
     id: 1053,
     title: "আমার অভাব মেটাও প্রভু",
-    transliteration: "Amar Obhab Metao Probhu",
+    transliteration: "Amar Obhab Metao Prbhu",
     category: "কোরাস",
     lyrics: `আমার অভাব মেটাও প্রভু, মেটাও এক্ষণি,
 নত হয়ে ধরি তোমার চরণ দুখানি।
@@ -625,20 +540,20 @@ That the Lord had made.`
 তাই মিটবে আমার সকল অভাব,
 জানি আমি জানি।`
   },
-  {
+        {
     id: 1054,
     title: "সকালে আমি তোমার গান গাই",
-    transliteration: "Sokale Ami Tomar Gaan Gai",
+    transliteration: "Skale Ami Tomar Gan Gai",
     category: "কোরাস",
     lyrics: `সকালে আমি তোমার গান গাই,
 তুমি অসীম তোমার মহিমা গাই।
 যে দিকে চাই, দেখি তোমায়, তোমার তুলনা নাই,
 তোমার গান গাই।`
   },
-  {
+        {
     id: 1055,
     title: "আমি ভোরবেলা দেব প্রশংসা",
-    transliteration: "Ami Bhorbela Debo Proshongsha",
+    transliteration: "Ami Bhorbela Deb Prshngsa",
     category: "কোরাস",
     lyrics: `আমি ভোরবেলা, দেব প্রশংসা,
 আমি গাব গান, তোমার গুণগান।
@@ -646,10 +561,10 @@ That the Lord had made.`
 দিয়েছি যে আমার জীবন তোমাকে।
 গৌরব প্রশংসা তোমারই (২)`
   },
-  {
+        {
     id: 1056,
     title: "প্রভু তোমার আলো দিয়ে আমায় জ্বালো",
-    transliteration: "Probhu Tomar Alo Diye Amay Jwalo",
+    transliteration: "Prbhu Tomar Alo Diye Amay Jbalo",
     category: "কোরাস",
     lyrics: `প্রভু, তোমার আলো দিয়ে আমায় জ্বালো, আমার জীবন পুণ্য কর।
 হাল্লেলুইয়া, হাল্লেলুইয়া, হাল্লেলুইয়া আমেন।
@@ -658,10 +573,10 @@ That the Lord had made.`
 প্রভু, তুমি আশা, আমার ভালোবাসা, তোমার ইচ্ছা পূর্ণ কর।
 হাল্লেলুইয়া, হাল্লেলুইয়া, হাল্লেলুইয়া আমেন।`
   },
-  {
+        {
     id: 1057,
     title: "হাল্লেলুইয়া বল সবে",
-    transliteration: "Hallelujah Bolo Sobe",
+    transliteration: "Halleluiya Bl Sbe",
     category: "কোরাস",
     lyrics: `হাল্লেলুইয়া বল সবে, প্রেমানন্দে বাহু তুলে,
 ধন্য ধন্য বলে তাই, প্রশংসা গাই,
@@ -670,10 +585,10 @@ That the Lord had made.`
 জানু পেতে সেবা করে, ভালবেসে আপন করে,
 যীশু যীশু বলে তাই, প্রশংসা গাই।`
   },
-  {
+        {
     id: 1058,
     title: "রব তোমার সনে আশা এ জীবনে",
-    transliteration: "Rob Tomar Sone Asha E Jibone",
+    transliteration: "Rb Tomar Sne Asha E Jibne",
     category: "কোরাস",
     lyrics: `(রব তোমার সনে আশা এ জীবনে)
 আমার হৃদয় নাচে ২
@@ -685,7 +600,7 @@ That the Lord had made.`
 আছ তুমি প্রভু হৃদাসনে,
 সেই আনন্দে আমার হৃদয় নাচে।`
   },
-  {
+        {
     id: 1059,
     title: "যীশু আমার মুক্তিদাতা",
     transliteration: "Jishu Amar Muktidata",
@@ -696,10 +611,10 @@ That the Lord had made.`
 তাই আমি যেখানে যাই, তাই আমার কোন ভয় নাই।
 যীশু আমার, যীশু আমার, যীশু আমার, যীশু আমার।`
   },
-  {
+        {
     id: 1060,
     title: "অবনত হয়ে প্রভু প্রণমি তোমায়",
-    transliteration: "Obonoto Hoye Probhu Pronomi Tomay",
+    transliteration: "Obnt Hj়e Prbhu Prnmi Tomaj়",
     category: "কোরাস",
     lyrics: `অবনত হয়ে, প্রভু, প্রণমি তোমায়,
 তুমি প্রভু যীশু, বড় দয়াময়,
@@ -709,10 +624,10 @@ That the Lord had made.`
 হৃদয় বীণার তারে বাজুক সদাই,
 জয় যীশুর, জয় যীশুর, জয় যীশুর জয়।`
   },
-  {
+        {
     id: 1061,
     title: "পবিত্র আত্মা পবিত্র আত্মা",
-    transliteration: "Pobitro Atma Pobitro Atma",
+    transliteration: "Pbitr Atma Pbitr Atma",
     category: "কোরাস",
     lyrics: `পবিত্র আত্মা, পবিত্র আত্মা,
 আমায় নিয়ে চল যীশুর কাছে, পবিত্র আত্মা।
@@ -721,10 +636,10 @@ That the Lord had made.`
 আমাকে জ্ঞান দাও, আমাকে তোমার করে নাও,
 তোমার বাক্যের মধ্য দিয়ে আমায়, চলতে তুমি দাও।`
   },
-  {
+        {
     id: 1062,
     title: "ঈশ্বরের আত্মা আমায় যখন চালায়",
-    transliteration: "When the Spirit of the Lord",
+    transliteration: "Ishbrer Atma Amay Jkhn Chalay",
     category: "কোরাস",
     lyrics: `When the Spirit of the Lord
 ১ ঈশ্বরের আত্মা আমায় যখন চালায়, আমি দাউদের মত গান গাই।
@@ -734,10 +649,10 @@ That the Lord had made.`
 ৩ ঈশ্বরের আত্মা আমায় যখন চালায়, আমি দাউদের মত স্তুতি গাই,
 স্তুতি গাই, স্তুতি গাই, আমি দাউদের মত স্তুতি গাই।`
   },
-  {
+        {
     id: 1063,
     title: "স্তুতি আরাধনা উপর দিকে যায়",
-    transliteration: "Stuti Aradhona Upor Dike Jay",
+    transliteration: "Stuti Aradhna Upr Dike Jay",
     category: "কোরাস",
     lyrics: `স্তুতি আরাধনা উপর দিকে যায়,
 আশীষ নিয়ে আসে হেথায়,
@@ -745,10 +660,10 @@ That the Lord had made.`
 দেখ, তিনি প্রেম করেন দান।
 হাল্লেলু—হাল্লেলুইয়া।`
   },
-  {
+        {
     id: 1064,
     title: "যীশু নাম মহা নাম",
-    transliteration: "Jishu Naam Moha Naam",
+    transliteration: "Jishu Nam Mha Nam",
     category: "কোরাস",
     lyrics: `যীশু নাম, মহা নাম, মধুমাখা নাম,
 মনের আনন্দে গাও অবিরাম।
@@ -758,10 +673,10 @@ That the Lord had made.`
 ঐ নামে পূর্ণ মনস্কাম, নামে এ ধরণী হবে শান্তিধাম,
 মনের আনন্দে জপো অবিরাম।`
   },
-  {
+        {
     id: 1065,
     title: "প্রভু যীশু তোমার তুল্য আর কেউ আছে কি",
-    transliteration: "Probhu Jishu Tomar Tullo Ar Keu Ache Ki",
+    transliteration: "Prbhu Jishu Tomar Tulj Ar Keu Achhe Ki",
     category: "কোরাস",
     lyrics: `প্রভু যীশু, তোমার তুল্য আর কেউ আছে কি,
 তোমার চরণ ছুঁয়েছে আকাশ, আর মহিমা গায় ধরণী।
@@ -770,10 +685,10 @@ That the Lord had made.`
 প্রেমী পিতা, তুমি আমায় কত ভালোবেসেছো,
 আমার পাপ থেকে, মুক্তি দিতে, নিজ পুত্রকে বলিদান করেছ।`
   },
-  {
+        {
     id: 1066,
     title: "ঈশ্বরের ধন্যবাদ হোশান্না হোশান্না",
-    transliteration: "Ishwarer Dhonnyobad Hosanna Hosanna",
+    transliteration: "Ishbrer Dhnjbad Hoshanna Hoshanna",
     category: "কোরাস",
     lyrics: `ঈশ্বরের ধন্যবাদ, হোশান্না, হোশান্না,
 ঈশ্বরের ধন্যবাদ, গীতি আমি গাই
@@ -782,10 +697,10 @@ That the Lord had made.`
 মোরা বেঁচে আছি, তাঁরই করুণায়,
 প্রভু যীশুর নামে গাহি তাঁরই জয়।`
   },
-  {
+        {
     id: 1067,
     title: "গাও হাল্লেলুইয়া",
-    transliteration: "Gao Hallelujah",
+    transliteration: "Gao Halleluiya",
     category: "কোরাস",
     lyrics: `গাও হাল্লেলুইয়া! (২)
 গাও হাল্লেলুইয়া প্রভুতে।
@@ -799,10 +714,10 @@ Sing Christ is risen from the dead! (2)
 Sing Christ is risen! (2)
 Sing Christ is risen from the dead!`
   },
-  {
+        {
     id: 1068,
     title: "প্রেমী পিতা তুমি অন্তর্যামী",
-    transliteration: "Premi Pita Tumi Ontorjami",
+    transliteration: "Premi Pita Tumi Ontrjami",
     category: "কোরাস",
     lyrics: `প্রেমী পিতা তুমি অন্তর্যামী, তোমার সম্মুখে আসি আমি।
 ১ তুমি প্রভু সবল, আমি দুর্বল, সবলে মোর হৃদে এস নামি!
@@ -811,19 +726,19 @@ Sing Christ is risen from the dead!`
 ৪ ব্যাধিতে খ্রীষ্ট দয়া কর খ্রীষ্ট, সুস্থ কর মোরে যীশু তুমি।
 ৫ কর তব আত্মায় পূর্ণ আমায়, তব গুণ গাব দিন ও যামী।`
   },
-  {
+        {
     id: 1069,
     title: "যীশু জানেন পথ প্রান্তরের মাঝে",
-    transliteration: "My Lord knows the way",
+    transliteration: "Jishu Janen Pth Prantrer Majhe",
     category: "কোরাস",
     lyrics: `My Lord knows the way
 যীশু জানেন পথ প্রান্তরের মাঝে, আমরা চলি তাঁর পিছে পিছে।
 আজকের শক্তি আমার তো আছে, কালকের পাব প্রভুরই কাছে।`
   },
-  {
+        {
     id: 1070,
     title: "সক্কেয় নামে এক লোক ছিল",
-    transliteration: "Sokkeyo Name Ek Lok Chilo",
+    transliteration: "Skkey Name Ek Lok Chhil",
     category: "কোরাস",
     lyrics: `(লূক ১৯:১-১০)
 সক্কেয় নামে এক লোক ছিল, (সে) খুব খাটো লোক ছিল,
@@ -832,10 +747,10 @@ Sing Christ is risen from the dead!`
 সক্কেয়কে ডেকে বললেন, শীঘ্র নেমে এস,
 (আজ) তোমার বাড়িতে যাই, তোমার বাড়িতে যাই।`
   },
-  {
+        {
     id: 1071,
     title: "তোমার দ্বারে প্রবেশ করি ধন্যবাদ নিয়ে",
-    transliteration: "I will enter His gates",
+    transliteration: "Tomar Dbare Prbesh Kri Dhnjbad Niye",
     category: "কোরাস",
     lyrics: `I will enter His gates
 তোমার দ্বারে প্রবেশ করি ধন্যবাদ নিয়ে,
@@ -845,10 +760,10 @@ Sing Christ is risen from the dead!`
 খুশি করেছেন (২)
 আমায় আজ তিনি খুশি করেছেন।`
   },
-  {
+        {
     id: 1072,
     title: "যীশুর কাছে কিছুই কঠিন নয়",
-    transliteration: "Jishur Kache Kichui Kothin Noy",
+    transliteration: "Jishur Kachhe Kichhui Kthin Ny",
     category: "কোরাস",
     lyrics: `যীশুর কাছে কিছুই কঠিন নয়,
 (ও ভাই) কিছুই কঠিন নয়
@@ -859,28 +774,28 @@ Sing Christ is risen from the dead!`
 প্রাণ খুলে বলরে ও ভাই, প্রভু যীশুর জয়
 প্রভু যীশুর জয়।`
   },
-  {
+        {
     id: 1073,
     title: "প্রশংস হে মোর প্রাণ গৌরব হাল্লিলুয়া",
-    transliteration: "Proshongsho He Mor Pran Gourov Hallelujah",
+    transliteration: "Prshngs He Mor Pran Gourb Halliluya",
     category: "কোরাস",
     lyrics: `প্রশংস হে মোর প্রাণ, গৌরব হাল্লিলুয়া,
 প্রশংস হে মোর প্রাণ, প্রশংস তায়।`
   },
-  {
+        {
     id: 1074,
     title: "না কখনও না না কখনও না",
-    transliteration: "Na Kokhono Na Na Kokhono Na",
+    transliteration: "Na Kkhno Na Na Kkhno Na",
     category: "কোরাস",
     lyrics: `না কখনও না, না কখনও না,
 প্রতিজ্ঞা করেছেন যীশু আমাকে ছাড়িবেন না।
 না কখনও না, না কখনও না,
 প্রতিজ্ঞা করেছি আমি, যীশুকে ছাড়িব না।`
   },
-  {
+        {
     id: 1075,
     title: "পাপাআত্মার দুর্গ ভেঙ্গে কর নাশ",
-    transliteration: "Papatmar Durgo Bhenge Koro Nash",
+    transliteration: "Papaatmar Durg Bhengge Kr Nash",
     category: "কোরাস",
     lyrics: `পাপাআত্মার দুর্গ ভেঙ্গে কর নাশ (২)
 শক্তি ও রাজ্য তার কর হে চুরমার,
@@ -889,30 +804,30 @@ Sing Christ is risen from the dead!`
 গৌরব, স্তুতি, সম্মান, শক্তি,
 চিরতরে প্রভু যীশুর।`
   },
-  {
+        {
     id: 1076,
     title: "প্রভুর যীশু কভু বদলান না",
-    transliteration: "Probhu Jishu Kobhu Bodlan Na",
+    transliteration: "Prbhur Jishu Kbhu Bdlan Na",
     category: "কোরাস",
     lyrics: `প্রভু যীশু, কভু বদলান না,
 কভু বদলান না, কভু বদলান না,
 প্রভু যীশু কভু, কভু বদলান না।
 সদা সেই আছেন, (হাল্লেলুয়া ৭)।`
   },
-  {
+        {
     id: 1077,
     title: "জীবন জ্যোতি প্রেমের বাতি জ্বালিয়ে নে রে অন্তরে",
-    transliteration: "Jibon Jyoti Premer Bati Jwaliye Ne Re Ontore",
+    transliteration: "Jibn Jjoti Premer Bati Jbalij়e Ne Re Ontre",
     category: "কোরাস",
     lyrics: `জীবন জ্যোতি, প্রেমের বাতি, জ্বালিয়ে নে রে অন্তরে,
 পথ চলতে ভয় হবে না, এই মরু প্রান্তরে,
 খ্রীষ্ট হবেন সাথী, রবেন দিবারাতি,
 উদ্ধারিতে সব বিপদে, সকল পথে। জীবনজ্যোতি।`
   },
-  {
+        {
     id: 1078,
     title: "ফিঙ্গে ঘুরিয়ে মারলো",
-    transliteration: "Phinge Ghuriye Marlo",
+    transliteration: "Fingge Ghuriye Marlo",
     category: "কোরাস",
     lyrics: `(১ শমূয়েল ১৭:১-৫৪)
 ফিঙ্গে ঘুরিয়ে মারলো (২)
@@ -922,20 +837,20 @@ Sing Christ is risen from the dead!`
 বলেতে নয়, শক্তিতে নয়, বুদ্ধিতে নয়, জ্ঞানেতে নয়,
 জীবিত ঈশ্বরের নামে তাঁর শত্রুকে মারলো।`
   },
-  {
+        {
     id: 1079,
     title: "পাঁচটি রুটি মাছ দুটো খেল পাঁচ হাজার লোক যত",
-    transliteration: "Panchti Ruti Maach Duto Khelo Panch Hajar Lok Joto",
+    transliteration: "Panchti Ruti Machh Duto Khel Panch Hajar Lok Jt",
     category: "কোরাস",
     lyrics: `(মথি ১৪:১৫-২১)
 পাঁচটি রুটি, মাছ দুটো, খেল পাঁচ হাজার লোক যত।
 সারি সারি বসে গেল, খাবার দিল বারো শিষ্য,
 যে বারো ডালা বেঁচে গেল, ঈশ্বরের মহিমা তারা দেখলো।`
   },
-  {
+        {
     id: 1080,
     title: "তেল দাও প্রদীপে রাখ উজ্জ্বল",
-    transliteration: "Tel Dao Prodipe Rakho Ujjal",
+    transliteration: "Tel Dao Prdipe Rakh Ujjbl",
     category: "কোরাস",
     lyrics: `তেল দাও প্রদীপে রাখ উজ্জ্বল,
 তেল দাও প্রদীপে আমার,
@@ -943,18 +858,18 @@ Sing Christ is risen from the dead!`
 যেন পারি জ্বলিতে অনিবার,
 গাও হোশন্না (৩) রাজাধিরাজার।`
   },
-  {
+        {
     id: 1081,
     title: "সুন্দর সুন্দর এই সংসার",
-    transliteration: "Sundor Sundor Ei Songsar",
+    transliteration: "Sundr Sundr Ei Sngsar",
     category: "কোরাস",
     lyrics: `১ সুন্দর সুন্দর এই সংসার, যেখানে দেখ সবই সুন্দর।
 যেখানে দেখ সবই ভালো, জগৎ কে প্রভু সৃষ্টি করেছেন।`
   },
-  {
+        {
     id: 1082,
     title: "সোনা কী রূপা তো নাই (Silver and Gold have I none)",
-    transliteration: "Sona Ki Rupa To Nai",
+    transliteration: "Sona Ki Rupa To Nai (Silbher And Gold Habhe I None)",
     category: "কোরাস",
     lyrics: `Silver and Gold have I none (প্রেরিত ৩:১-১০)
 সোনা কী রূপা তো নাই, যা আছে দিই তোমাকে তাই,
@@ -962,10 +877,10 @@ Sing Christ is risen from the dead!`
 উঠ আর লাফাও প্রশংসা গাও (২)
 নাসরতীয় যীশু নামে উঠ আর হেটে বেড়াও।`
   },
-  {
+        {
     id: 1083,
     title: "পাঁচ দুই এক তালন্তু (মথি ২৫:১৪-৩০)",
-    transliteration: "Panch Dui Ek Talontu",
+    transliteration: "Panch Dui Ek Talntu (Mthi 25:14-30)",
     category: "কোরাস",
     lyrics: `(মথি ২৫:১৪-৩০)
 পাঁচ দুই এক তালন্তু, প্রভু দিলেন খুশিমত।
@@ -979,10 +894,10 @@ Sing Christ is risen from the dead!`
 একটি আনল যে, প্রভু তাকে ধমক দিয়ে
 শাস্তি দিলেন বেশ।`
   },
-  {
+        {
     id: 1084,
     title: "এলরে এক বীজবপনকারী (মথি ১৩:৪-৯)",
-    transliteration: "Elore Ek Bijboponkari",
+    transliteration: "Elre Ek Bijbpnkari (Mthi 13:4-9)",
     category: "কোরাস",
     lyrics: `(মথি ১৩:৪-৯; ১৮-২৩)
 এলরে এক বীজবপনকারী (২)
@@ -995,12 +910,12 @@ Sing Christ is risen from the dead!`
 ৪ কতক বীজ পড়ল উত্তম ভূমিতে
 ফলল ত্রিশগুণ, ষাটগুণ, শতগুণ।`
   },
-  {
-    "id": 1085,
-    "title": "এই ছোট জীবন গাড়িটি তুমি চালাও",
-    "transliteration": "Ei Choto Jibon Gariti Tumi Chalao",
-    "category": "কোরাস",
-    "lyrics": `এই ছোট জীবন গাড়িটি তুমি চালাও, হে প্রভু!
+        {
+    id: 1085,
+    title: "এই ছোট জীবন গাড়িটি তুমি চালাও",
+    transliteration: "Ei Choto Jibon Gariti Tumi Chalao",
+    category: "কোরাস",
+    lyrics: `এই ছোট জীবন গাড়িটি তুমি চালাও, হে প্রভু!
 এই ছোট মন মন্দিরে তুমি বাস কর, হে প্রভু!
 এই ছোট মুখে (২) তোমার কথা বলতে শিখাও।
 এই ছোট কানে (২) তোমার কথা শুনতে শিখাও।
@@ -1009,9 +924,9 @@ Sing Christ is risen from the dead!`
   },
   {
     "id": 1086,
-    "title": "আমি খুশি আজক",
+    "title": "I am happy today",
     "transliteration": "Ami Khushi Ajke",
-    "category": "জয়ধ্বনি",
+    "category": "কোরাস",
     "lyrics": `I am happy today
 ১. আমি খুশি আজকে (২)
 যীশুতে আমি খুশি আজকে।
@@ -1030,7 +945,7 @@ Sing Christ is risen from the dead!`
     "id": 1087,
     "title": "চালাও প্রভু তোমার নদীর ধারে",
     "transliteration": "Chalao Probhu Tomar Nodir Dhare",
-    "category": "জয়ধ্বনি",
+    "category": "কোরাস",
     "lyrics": `১. চালাও প্রভু তোমার নদীর ধারে (৩)
 চালাও মোরে (৩)।
 ২. পান করতে দাও তোমার নদীর ধারে (৩)
@@ -1078,9 +993,9 @@ Sing Christ is risen from the dead!`
   },
   {
     "id": 1091,
-    "title": "মোর প্রিয় যীশু শীঘ্রই আসিবেন",
+    "title": "হাল্লিলুইয়া মোর প্রিয় যীশু শীঘ্রই আসিবেন।",
     "transliteration": "Halleluia Mor Priyo Jishu Shighro Ashiben",
-    "category": "জয়ধ্বনি",
+    "category": "কোরাস",
     "lyrics": `My Jesus will be coming very soon
 হাল্লিলুইয়া, হাল্লিলুইয়া, হাল্লিলুইয়া (৩)
 মোর প্রিয় যীশু শীঘ্রই আসিবেন।
@@ -1093,7 +1008,7 @@ Sing Christ is risen from the dead!`
     "id": 1092,
     "title": "যীশু তুমি কত সুন্দর",
     "transliteration": "Jishu Tumi Koto Sundor",
-    "category": "জয়ধ্বনি",
+    "category": "কোরাস",
     "lyrics": `যীশু তুমি কত সুন্দর, কত মধুর, পবিত্র,
 দয়ালু, তুমি উজ্জ্বল শুকতারা,
 যীশু তুমি কত সুন্দর।`
@@ -1102,7 +1017,7 @@ Sing Christ is risen from the dead!`
     "id": 1093,
     "title": "যীশু আসিবেন আমায় নিতে আসিবেন",
     "transliteration": "Jishu Ashiben Amay Nite Ashiben",
-    "category": "জয়ধ্বনি",
+    "category": "কোরাস",
     "lyrics": `যীশু আসিবেন, আমায় নিতে আসিবেন,
 হাল্লিলুইয়া, হাল্লিলুইয়া শীঘ্রই আসিবেন।
 হাল্লিলুইয়া, হাল্লিলুইয়া সবে প্রস্তুত হও,
@@ -1112,7 +1027,7 @@ Sing Christ is risen from the dead!`
     "id": 1094,
     "title": "মনরে আমার কর",
     "transliteration": "Monre Amar Kor",
-    "category": "জয়ধ্বনি",
+    "category": "কোরাস",
     "lyrics": `মনরে আমার কর, মনরে আমার কর,
 প্রভু যীশুর ধ্যান, প্রভু যীশুর গান।`
   },
@@ -1156,7 +1071,7 @@ Sing Christ is risen from the dead!`
     "id": 1098,
     "title": "আমি যীশুর হাত কভু ছাড়ব না",
     "transliteration": "Ami Jishur Hat Kobhu Chharbo Na",
-    "category": "জয়ধ্বনি",
+    "category": "কোরাস",
     "lyrics": `১. আমি যীশুর হাত কভু ছাড়ব না (২)
 রাতের ঘন আঁধারে, জীবন তুফান ঝড়ে
 আমি যীশুর হাত কভু ছাড়ব না।
@@ -1166,9 +1081,9 @@ Sing Christ is risen from the dead!`
   },
   {
     "id": 1099,
-    "title": "O, Glory to God",
+    "title": "ও গৌরব যীশু, তিনি তুললেন আমায়",
     "transliteration": "O Gorob Jishu Tini Tulilen Amay",
-    "category": "জয়ধ্বনি",
+    "category": "কোরাস",
     "lyrics": `O, Glory to God
 ও গৌরব যীশু, তিনি তুললেন আমায়,
 তিনি তুললেন আমায় জানি,
@@ -1181,14 +1096,14 @@ Sing Christ is risen from the dead!`
   {
     id: 1100,
     title: "তোমার যা কিছু তোমারে দিতেছি",
-    transliteration: "Tomar Ja Kichu Tomare Ditechi",
+    transliteration: "Tomar Ja Kichhu Tomare Ditechhi",
     category: "কোরাস",
     lyrics: `তোমার যা কিছু তোমারে দিতেছি,
 বেশি তো কিছু দিই না,
 যা কিছু আমার সকলই তোমার,
 কভু যেন ভুলে না যাই।`
   },
-  {
+        {
     id: 1101,
     title: "দিন ও রাতে যীশু মোর ত্রাতা",
     transliteration: "Din O Rate Jishu Mor Trata",
@@ -1198,20 +1113,20 @@ Sing Christ is risen from the dead!`
 কালভেরি আমি করি স্মরণ,
 যীশু তো আমার বন্ধু পরম।`
   },
-  {
+        {
     id: 1102,
     title: "ওহে পিতঃ প্রাতে খুঁজি তোমাকে",
-    transliteration: "Ohe Pita Prate Khunji Tomake",
+    transliteration: "Ohe Pith Prate Khunji Tomake",
     category: "কোরাস",
     lyrics: `ওহে পিতঃ প্রাতে খুঁজি তোমাকে,
 তোমার ইচ্ছামতে চালাও আমাকে।
 পাপ ও শয়তান হইতে রক্ষ আমাকে,
 তোমার দয়া লইতে শিখাও আমাকে।`
   },
-  {
+        {
     id: 1103,
     title: "ধন্যবাদ, ধন্যবাদ, ধন্যবাদ",
-    transliteration: "Dhonnyobad Dhonnyobad Dhonnyobad",
+    transliteration: "Dhnjbad, Dhnjbad, Dhnjbad",
     category: "কোরাস",
     lyrics: `ধন্যবাদ, ধন্যবাদ, ধন্যবাদ,
 এ সব আশীর্বাদের জন্য ধন্যবাদ,
@@ -1219,10 +1134,10 @@ Sing Christ is risen from the dead!`
 হালেলুইয়া ধন্যবাদ, ধন্যবাদ, ধন্যবাদ,
 এ সব আশীর্বাদের জন্য ধন্যবাদ।`
   },
-  {
+        {
     id: 1104,
     title: "প্রার্থনা কর তুমি অতি প্রত্যুষে",
-    transliteration: "Prarthona Koro Tumi Ati Prottyushe",
+    transliteration: "Prarthna Kr Tumi Oti Prtjushe",
     category: "কোরাস",
     lyrics: `প্রার্থনা কর তুমি অতি প্রত্যুষে,
 প্রার্থনা কর তুমি দুপুর দিবসে,
@@ -1233,10 +1148,10 @@ Sing Christ is risen from the dead!`
 (তিনি) প্রার্থনার উত্তর দেন রাত্রিতে,
 বিশ্বস্ত ঈশ্বর তাঁর প্রতিজ্ঞাতে।`
   },
-  {
+        {
     id: 1105,
     title: "মনুষ্যধারী করব তোমায় (I will make you fishers)",
-    transliteration: "I will make you fishers",
+    transliteration: "Mnushjdhari Krb Tomay (I Will Make You Fishers)",
     category: "কোরাস",
     lyrics: `I will make you fishers
 মনুষ্যধারী করব তোমায়
@@ -1246,10 +1161,10 @@ Sing Christ is risen from the dead!`
 মনুষ্যধারী করব তোমায়
 মম পশ্চাৎ লও।`
   },
-  {
+        {
     id: 1106,
     title: "প্রসংসা গাও হাল্লেলুইয়া (Praise ye the Lord)",
-    transliteration: "Hallelu...Praise ye the Lord",
+    transliteration: "Prsngsa Gao Halleluiya (Praise Ye The Lord)",
     category: "কোরাস",
     lyrics: `Hallelu........Praise ye the Lord
 হাল্লেলু, হাল্লেলু, হাল্লেলু, হাল্লেলুইয়া
@@ -1257,10 +1172,10 @@ Sing Christ is risen from the dead!`
 প্রসংসা গাও হাল্লেলুইয়া (৩)
 প্রসংসা গাও।`
   },
-  {
+        {
     id: 1107,
     title: "ঐ রক্তের নদী বহিছে",
-    transliteration: "Oi Rokter Nodi Bohiche",
+    transliteration: "Oi Rkter Ndi Bhichhe",
     category: "কোরাস",
     lyrics: `ঐ রক্তের নদী বহিছে
 যীশুর ক্রুশ হইতে
@@ -1271,40 +1186,40 @@ Sing Christ is risen from the dead!`
 ক্রুশে হইলেন বলিদান
 বঁাচাতে মোরে।`
   },
-  {
+        {
     id: 1108,
     title: "ধন্য যীশুর নাম",
-    transliteration: "Dhonyo Jishur Naam",
+    transliteration: "Dhnj Jishur Nam",
     category: "কোরাস",
     lyrics: `ধন্য যীশুর নাম, ধন্য যীশুর নাম,
 ধন্য প্রভু যীশুর নাম,
 হাল্লেলুইয়া (২)
 ধন্য প্রভু যীশুর নাম।`
   },
-  {
+        {
     id: 1109,
     title: "তুমি দয়া করে দিয়াছ আহার",
-    transliteration: "Tumi Doya Kore Diacho Ahar",
+    transliteration: "Tumi Dya Kre Diyachh Ahar",
     category: "কোরাস",
     lyrics: `তুমি দয়া করে দিয়াছ আহার, ওহে জগৎ পিতা দয়াধার,
 তোমার পায়ে জানাই নমস্কার, তুমি আশীর্বাদ কর এ খাদ্যে.
 দান কর আত্মার আহার, পূর্ণ কর এই গৃহের ভাণ্ডার,
 দিয়া সুখাদ্য আজ ক্ষুধিত জনে, বাঁচাও দুঃখী নারী-নর. আমেন.`
   },
-  {
+        {
     id: 1110,
     title: "সারাদিন প্রভু রক্ষা করিলে",
-    transliteration: "Saradin Probhu Rokkha Korile",
+    transliteration: "Saradin Prbhu Rksha Krile",
     category: "কোরাস",
     lyrics: `সারাদিন প্রভু রক্ষা করিলে, তোমারি চরণে জানাই প্রণাম।
 আঁধার রাতে জাগিয়া থাকো, দাও মোদের শান্তি ও বিশ্রাম।
 বিপদে আপদে থেকো সাথে, প্রভু তুমি পরম সাথী,
 তোমার আলোয় দূর হয়ে যাক, সকল আঁধার কালো রাতি।`
   },
-  {
+        {
     id: 1111,
     title: "যীশু রাজার জয়গান করি",
-    transliteration: "Jishu Rajar Joygaan Kori",
+    transliteration: "Jishu Rajar Jygan Kri",
     category: "কোরাস",
     lyrics: `যীশু রাজার জয়গান করি, আনন্দে মেতে উঠি।
 তাঁরই দয়ায় বেঁচে আছি, পাই মুক্তির ছুটি।
