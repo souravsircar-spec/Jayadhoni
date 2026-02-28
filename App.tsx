@@ -183,7 +183,9 @@ const App: React.FC = () => {
         {activeTab !== 'info' && (
           <div className="px-4 pt-2 max-w-2xl mx-auto">
             <div className="relative group">
-              <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-300 group-focus-within:text-emerald-500 transition-colors pointer-events-none" />
+              <div className="absolute left-5 inset-y-0 flex items-center pointer-events-none">
+                <Search className="w-5 h-5 text-slate-300 group-focus-within:text-emerald-500 transition-colors" />
+              </div>
               <input 
                 ref={searchInputRef}
                 type="text" 
@@ -193,13 +195,15 @@ const App: React.FC = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
               {searchQuery && (
-                <button 
-                  onClick={handleClearSearch}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-1 text-slate-300 hover:text-rose-500 hover:bg-rose-50 rounded-lg transition-all animate-in fade-in zoom-in duration-200"
-                  aria-label="Clear search"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+                <div className="absolute right-4 inset-y-0 flex items-center">
+                  <button 
+                    onClick={handleClearSearch}
+                    className="p-1 text-slate-300 hover:text-rose-500 hover:bg-rose-50 rounded-lg transition-all animate-in fade-in zoom-in duration-200"
+                    aria-label="Clear search"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
               )}
             </div>
           </div>

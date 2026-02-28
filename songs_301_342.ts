@@ -3,8 +3,9 @@ import { Song } from './types';
 export const HYMNS_301_342: Song[] = [
         {
     id: 301,
-    title: "সকল পথের শেষে এসে পেয়েছি প্রভু তোমার দেখা",
+    title: "সকল পথের শেষে এসে",
     transliteration: "Skl Pther Sheshe Ese Peyechhi Prbhu Tomar Dekha",
+    composer: "নির্মলানন্দ সরকার (১৯৪৫)",
     category: "পরলোক",
     lyrics: `সকল পথের শেষে এসে পেয়েছি প্রভু তোমার দেখা,
 সকল সাথী গেছে ফিরে, তুমি শুধু দাঁড়িয়ে একা.
@@ -20,8 +21,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 302,
-    title: "বাড়ি যাইতে বুঝি আমার সাথে, সাথী মিলিল না",
+    title: "বাড়ি যাইতে বুঝি আমার সাথে",
     transliteration: "Bari Jaite Bujhi Amar Sathe, Sathi Milil Na",
+    composer: "মুক্তারাম বাড়ৈ",
     category: "পরলোক",
     lyrics: `বাড়ি যাইতে বুঝি আমার সাথে, সাথী মিলিল না.
 ১ ছিল যখন বাল্যবেলা, করতেম কত ধূলা-খেলা,
@@ -38,8 +40,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 303,
-    title: "আয় মন চল যাই সেই নিত্যানন্দ ধামে",
+    title: "আয় মন চল যাই",
     transliteration: "Aj় Mn Chl Jai Sei Nitjannd Dhame",
+    composer: "বিন্দুনাথ সরকার",
     category: "পরলোক",
     lyrics: `আয় মন চল যাই সেই নিত্যানন্দ ধামে,
 যথা শান্তি নদী উথলিছে সদা যীশুর নামে.
@@ -62,8 +65,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 304,
-    title: "যীশুর আলো কি উজ্জ্বল দেখাই খুলে প্রাণ করে!",
+    title: "যীশুর আলো কি উজ্জ্বল",
     transliteration: "Jishur Alo Ki Ujjbl Dekhai Khule Pran Kre!",
+    composer: "রাজেন্দ্রলাল মুখোপাধ্যায় (১৮৯২)",
     category: "পরলোক",
     lyrics: `যীশুর আলো কি উজ্জ্বল দেখাই খুলে প্রাণ করে!
 দেখ সূর্য লাগে কোথায়, তঁার আলোর কাছে সব হারে.
@@ -79,8 +83,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 305,
-    title: "ঐ শোনা যায় ওপারের গান, সঙ্গীত-ধ্বনি অমরপুরে",
+    title: "ঐ শোনা যায় ওপারের গান",
     transliteration: "Oi Shona Jaj় Oparer Gan, Snggit-dhbni Omrpure",
+    composer: "প্রিয়নাথ বৈরাগী",
     category: "পরলোক",
     lyrics: `ঐ শোনা যায় ওপারের গান, সঙ্গীত-ধ্বনি অমরপুরে.
 স্বর্গে দূতের বীণায় তান উঠেছে ভাই,
@@ -110,6 +115,7 @@ export const HYMNS_301_342: Song[] = [
     id: 306,
     title: "পেলাম জীবন যীশুর করুণায়",
     transliteration: "Pelam Jibn Jishur Krunaj়",
+    composer: "বিন্দুনাথ সরকার (১৮৮৪)",
     category: "পরলোক",
     lyrics: `পেলাম জীবন যীশুর করুণায়,
 আমি মরণে কি আর করি ভয়.
@@ -124,8 +130,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 307,
-    title: "ভব সাগরের কূলে, ওহে দয়াল যীশু, তোমার পথ পানে চেয়ে",
+    title: "ভব সাগরের কূলে",
     transliteration: "Bhb Sagrer Kule, Ohe Dj়al Jishu, Tomar Pth Pane Chej়e",
+    composer: "প্রিয়নাথ বৈরাগী",
     category: "পরলোক",
     lyrics: `ভব সাগরের কূলে, ওহে দয়াল যীশু, তোমার পথ পানে চেয়ে,
 আমি বসে আছি একা একা, পারে যাবার আশায়.
@@ -149,8 +156,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 308,
-    title: "সুরক্ষা যীশুর কোলে! (Safe in the arms of Jesus)",
+    title: "সুরক্ষা যীশুর কোলে!",
     transliteration: "Surksha Jishur Kole! (Safe In The Arms Of Jesus)",
+    composer: "ফ্যানী ক্রস্বী",
     category: "সমাধি ও সান্ত্বনা",
     lyrics: `১ সুরক্ষা যীশুর কোলে! তঁার বক্ষ আশ্রয় স্থান,
 তঁার প্রেমে হইয়া মগ্ন, পায় বিশ্রাম তথায় প্রাণ;
@@ -171,6 +179,7 @@ export const HYMNS_301_342: Song[] = [
     id: 309,
     title: "কেন রে ভাবনা? কিসের ভাবনা?",
     transliteration: "Ken Re Bhabna? Kiser Bhabna?",
+    composer: "মথুরা নাথ বোস (১৮৮৪)",
     category: "সমাধি ও সান্ত্বনা",
     lyrics: `কেন রে ভাবনা? কিসের ভাবনা?
 পিতা সর্ব্বাধিপ তাহা কি জান না?
@@ -189,8 +198,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 310,
-    title: "যীশুর নামটি সঙ্গে রাখ (Take the name of Jesus)",
+    title: "যীশুর নামটি সঙ্গে রাখ",
     transliteration: "Jishur Namti Sngge Rakh (Take The Name Of Jesus)",
+    composer: "নৃপাল চন্দ্র বিশ্বাস (১৮৮৫)",
     category: "সমাধি ও সান্ত্বনা",
     lyrics: `১ যীশুর নামটি সঙ্গে রাখ দুঃখী খ্রীষ্ট যেই জন;
 কোন শঙ্কা রবে নাকে পাইবে তাতে শান্ত মন.
@@ -211,8 +221,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 311,
-    title: "যীশু মোদের কেমন বন্ধু (What a Friend we have in Jesus)",
+    title: "যীশু মোদের কেমন বন্ধু",
     transliteration: "Jishu Moder Kemn Bndhu (What A Friend We Habhe In Jesus)",
+    composer: "মদনমোহন বিশ্বাস (১৮৯১)",
     category: "সমাধি ও সান্ত্বনা",
     lyrics: `১ যীশু মোদের কেমন বন্ধু, বহেন পাপ ও তাপের ভার,
 মনের কথা ঈশ্বর সনে বলিলে, হয় সুখ অপার,
@@ -231,8 +242,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 312,
-    title: "বন্ধু কি আর আছে যীশুর মত? (There is not a friend)",
+    title: "বন্ধু কি আর আছে যীশুর মত?",
     transliteration: "Bndhu Ki Ar Achhe Jishur Mt? (There Is Not A Friend)",
+    composer: "মদন মোহন বিশ্বাস (১৮৮৪)",
     category: "সমাধি ও সান্ত্বনা",
     lyrics: `১ বন্ধু কি আর আছে যীশুর মত? কেহই নাই, কেহই নাই!
 আছে কেউ সারিতে প্রাণের ক্ষত? কেহই নাই, কেহই নাই!
@@ -251,8 +263,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 313,
-    title: "এক স্রোত আছে শোণিতের (There is a fountain)",
+    title: "এক স্রোত আছে শোণিতের",
     transliteration: "Ek Srot Achhe Shoniter (There Is A Fountain)",
+    composer: "উইলিয়াম কেরী",
     category: "সমাধি ও সান্ত্বনা",
     lyrics: `১ এক স্রোতঃ আছে শোণিতের, তায় পাপী ডুবিলে
 যায় সব কলঙ্ক পাতকের—সেই স্রোতঃ ইমানুয়েলে!
@@ -274,8 +287,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 314,
-    title: "ওহে ক্ষুদ্র মেষপাল, ভেবে ব্যাকুল হইও না",
+    title: "ওহে ক্ষুদ্র মেষপাল",
     transliteration: "Ohe Kshudr Meshpal, Bhebe Bjakul Hio Na",
+    composer: "মধুসূদন সরকার",
     category: "সমাধি ও সান্ত্বনা",
     lyrics: `ওহে ক্ষুদ্র মেষপাল, ভেবে ব্যাকুল হইও না,
 তোমারে রাজ্যটি দিতে, পিতার আছে বাসনা.
@@ -294,8 +308,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 315,
-    title: "ক্রুশের সৈনিক তব, এ ভাব কেমন",
+    title: "ক্রুশের সৈনিক তব",
     transliteration: "Krusher Soinik Tb, E Bhab Kemn",
+    composer: "অমৃতলাল নাথ",
     category: "সমাধি ও সান্ত্বনা",
     lyrics: `১ ক্রুশের সৈনিক তব, এ ভাব কেমন,
 বহিতে চাহ না ক্রুশ, এ কি মহা বিড়ম্বন.
@@ -314,8 +329,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 316,
-    title: "সদা তুমি আছ কাছে, এ বিশ্বাস দেহ দাসে",
+    title: "সদা তুমি আছ কাছে",
     transliteration: "Sda Tumi Achh Kachhe, E Bishbas Deh Dase",
+    composer: "কালীপ্রসন্ন মুখোপাধ্যায় (১১০৯)",
     category: "সমাধি ও সান্ত্বনা",
     lyrics: `১ সদা তুমি আছ কাছে, এ বিশ্বাস দেহ দাসে,
 কি আলোকে কি আঁধারে, কি রজনী কি দিবসে.
@@ -331,8 +347,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 317,
-    title: "এমন মধুর প্রভাতে, কে ঘুমে মগন রয়?",
+    title: "এমন মধুর প্রভাতে",
     transliteration: "Emn Mdhur Prbhate, Ke Ghume Mgn Rj়?",
+    composer: "মাইকেল রঞ্জন বিশ্বাস",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `এমন মধুর প্রভাতে, কে ঘুমে মগন রয়?
 এসেছেন যীশু প্রেম ডালি নিয়ে — খুলে দাও হৃদয়.
@@ -349,8 +366,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 318,
-    title: "তুমি নিশি ভোরে এস প্রভু মোর প্রাণে।",
+    title: "তুমি নিশি ভোরে এস প্রভু মোর প্রাণে",
     transliteration: "Tumi Nishi Bhore Es Prbhu Mor Prane।",
+    composer: "প্রিয়নাথ বৈরাগী (১৯৫৫)",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `তুমি নিশি ভোরে এস প্রভু মোর প্রাণে.
 এস মোর প্রাণে, নিশি অবসানে.
@@ -365,8 +383,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 319,
-    title: "প্রাতে দর্শন দাও হে প্রাণ-নাথ।",
+    title: "প্রাতে দর্শন দাও হে প্রাণ-নাথ",
     transliteration: "Prate Drshn Dao He Pran-nath।",
+    composer: "রামচরণ ঘোষ (১৮৯৮)",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `প্রাতে দর্শন দাও.
 প্রাতে দর্শন দাও হে প্রাণ-নাথ.
@@ -387,6 +406,7 @@ export const HYMNS_301_342: Song[] = [
     id: 320,
     title: "গাও রে প্রাতে যীশু-সঙ্কীর্তন",
     transliteration: "Gao Re Prate Jishu-sngkirtn",
+    composer: "বিন্দুনাথ সরকার (১৮১৬)",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `গাও রে প্রাতে যীশু-সঙ্কীর্তন,
 রসনাতে যীশু নাম কর উচ্চারণ.
@@ -407,6 +427,7 @@ export const HYMNS_301_342: Song[] = [
     id: 321,
     title: "উদিল তপন তমোবিনাশন",
     transliteration: "Udil Tpn Tmobinashn",
+    composer: "যাকোব বিশ্বাস",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `উদিল তপন তমোবিনাশন
 জাগ জাগ ওরে মন.
@@ -433,6 +454,7 @@ export const HYMNS_301_342: Song[] = [
     id: 322,
     title: "এমন মধু মাখা ঐ যীশু নাম",
     transliteration: "Emn Mdhu Makha Oi Jishu Nam",
+    composer: "প্রিয়নাথ বৈরাগী",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `এমন মধু মাখা ঐ যীশু নাম,
 ঐ নাম বল সদানন্দে নিশিভোরে.
@@ -458,8 +480,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 323,
-    title: "প্রভত হইল, হইল হায় মন, যীশুর গুণ একবার গাও রে।",
+    title: "প্রভত হইল, হইল হায় মন",
     transliteration: "Prbht Hil, Hil Haj় Mn, Jishur Gun Ekbar Gao Re।",
+    composer: "দেবেন্দ্রনাথ চট্টোপাধ্যায় (১৮৯৬)",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `প্রভাত হইল, হইল হায় মন, যীশুর গুণ একবার গাও রে.
 
@@ -477,8 +500,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 324,
-    title: "তুমি এসেছ প্রভাতে, রাজার সাজে সেজে যীশু দয়াময়।",
+    title: "তুমি এসেছ প্রভাতে",
     transliteration: "Tumi Esechh Prbhate, Rajar Saje Seje Jishu Dj়amj়।",
+    composer: "প্রিয়নাথ বৈরাগী",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `তুমি এসেছ প্রভাতে, রাজার সাজে সেজে যীশু দয়মায়.
 শ্রীমুখের আলোকে, ভয়ে নিশির আঁধার দূরে পলায়.
@@ -499,8 +523,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 325,
-    title: "ভোরের সোনার আলো, তোমার কথা বলে",
+    title: "ভোরের সোনার আলো",
     transliteration: "Bhorer Sonar Alo, Tomar Ktha Ble",
+    composer: "সুনীল দত্ত",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `ভোরের সোনার আলো, তোমার কথা বলে,
 (প্রভু) তোমার কথা বলে.
@@ -520,8 +545,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 326,
-    title: "আলো ফোটে আঁধার নামে, দিনের পরে দিন যে যায়",
+    title: "আলো ফোটে আঁধার নামে",
     transliteration: "Alo Fote Andhar Name, Diner Pre Din Je Jaj়",
+    composer: "সুনীল দত্ত",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `আলো ফোটে আঁধার নামে, দিনের পরে দিন যে যায়,
 তোমারই প্রেম নূতন করে, নূতন ভাবে প্রকাশ পায়.
@@ -531,8 +557,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 327,
-    title: "দিবসের হইল অন্ত প্রভু হে (Abide with me)",
+    title: "দিবসের হইল অন্ত প্রভু হে",
     transliteration: "Dibser Hil Ont Prbhu He (Abide With Me)",
+    composer: "আর. পি. গ্রীভস্ (১৮৬৫)",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `১ দিবসের হইল অন্ত প্রভু হে,
 না ছেড়ো তুমি আপন ভৃত্যকে
@@ -558,6 +585,7 @@ export const HYMNS_301_342: Song[] = [
     id: 328,
     title: "গেল সন্ধ্যা-এল আঁধার রজনী",
     transliteration: "Gel Sndhja-el Andhar Rjni",
+    composer: "প্রিয়নাথ বৈরাগী",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `গেল সন্ধ্যা-এল আঁধার রজনী,
 ভবের অন্ধকারে শঙ্কা নাই আমার, সাথে থাকলে আপনি.
@@ -587,8 +615,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 329,
-    title: "প্রাতঃ পিতা গো, করি তোমার পায়ে আত্ম সমর্পণ।",
+    title: "প্রাতঃ পিতা গো",
     transliteration: "Prath Pita Go, Kri Tomar Paye Atm Smrpn।",
+    composer: "প্রিয়নাথ বৈরাগী",
     category: "প্রাতঃকালীন ও সায়ংকালীন",
     lyrics: `১ প্রাতঃ পিতা গো, করি তোমার পায়ে আত্ম সমর্পণ.
 তুমি সারা নিশি জেগে থাক, তোমার সন্তানদের রক্ষা করণ.
@@ -613,8 +642,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 330,
-    title: "বিপদে পড়িয়া ডাকি— (দেখা দাও এই কাঙ্গাল দীনহীনে হে।)",
+    title: "বিপদে পড়িয়া ডাকি—",
     transliteration: "Bipde Priya Daki— (Dekha Dao Ei Kanggal Dinhine He।)",
+    composer: "প্রিয়নাথ বৈরাগী",
     category: "বিবিধ",
     lyrics: `বিপদে পড়িয়া ডাকি— (দেখা দাও এই কাঙ্গাল দীনহীনে হে.)
 
@@ -636,8 +666,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 331,
-    title: "আমার দেখতে দেখতে ফুরাল যে দিন, হবার সময় হল।",
+    title: "আমার দেখতে দেখতে ফুরাল যে দিন",
     transliteration: "Amar Dekhte Dekhte Fural Je Din, Hbar Smy Hl।",
+    composer: "প্রিয়নাথ বৈরাগী (১৯২২)",
     category: "বিবিধ",
     lyrics: `১ আমার দেখতে দেখতে ফুরাল যে দিন, হবার সময় হল.
 ঐ দেখ সূর্য বসে পাটে, বুঝি সন্ধ্যা হয়ে এল.
@@ -664,8 +695,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 332,
-    title: "খেজুর পাতা হাতে মোরা, আনন্দে গান গাই,",
+    title: "খেজুর পাতা হাতে মোরা",
     transliteration: "Khejur Pata Hate Mora, Annde Gan Gai,",
+    composer: "মানিক নাথ",
     category: "বিবিধ",
     lyrics: `খেজুর পাতা হাতে মোরা, আনন্দে গান গাই,
 হোসান্না হোসান্না বলে, পথে পথে যাই.
@@ -679,8 +711,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 333,
-    title: "আমি তোমাকে ভালোবাসি,",
+    title: "আমি তোমাকে ভালোবাসি",
     transliteration: "Ami Tomake Bhalobasi,",
+    composer: "মানিক নাথ",
     category: "বিবিধ",
     lyrics: `আমি তোমাকে ভালোবাসি,
 প্রভু, তোমাকে ভালোবাসি,
@@ -702,8 +735,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 334,
-    title: "হে সদাপ্রভু, আমি তোমারই প্রশংসার গান গাইব,",
+    title: "হে সদাপ্রভু",
     transliteration: "He Sdaprbhu, Ami Tomari Prshngsar Gan Gaib,",
+    composer: "মানিক নাথ",
     category: "বিবিধ",
     lyrics: `হে সদাপ্রভু, আমি তোমারই প্রশংসার গান গাইব,
 তুমিই মহান, তুমিই মহান, তোমারি মতন আর কেহ নাই.
@@ -716,8 +750,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 335,
-    title: "আমার বঁাচাতে প্রভু প্রাণ ত্যাজিলে হায়,",
+    title: "আমার বঁাচাতে প্রভু",
     transliteration: "Amar Bnachate Prbhu Pran Tjajile Hay,",
+    composer: "মানিক নাথ",
     category: "বিবিধ",
     lyrics: `আমার বঁাচাতে প্রভু প্রাণ ত্যাজিলে হায়,
 তোমার মত পরিত্রাতা নেই তো দুনিয়ায়.
@@ -733,8 +768,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 336,
-    title: "শোন হে যাত্রী, ক্লান্ত যাত্রী,",
+    title: "শোন হে যাত্রী, ক্লান্ত যাত্রী",
     transliteration: "Shon He Jatri, Klant Jatri,",
+    composer: "মানিক নাথ",
     category: "বিবিধ",
     lyrics: `শোন হে যাত্রী, ক্লান্ত যাত্রী,
 কালভেরী শিলা কাঁদছে নীরবে, যীশুর রক্তে রাঙি,
@@ -749,8 +785,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 337,
-    title: "অদ্য তুমি আমার সাথে পরম দেশে যাবে,",
+    title: "অদ্য তুমি আমার সাথে পরম দেশে যাবে",
     transliteration: "Odj Tumi Amar Sathe Prm Deshe Jabe,",
+    composer: "মানিক নাথ",
     category: "বিবিধ",
     lyrics: `অদ্য তুমি আমার সাথে পরম দেশে যাবে,
 অম্ভবিহীন শান্তি সুখের জীবন সেথা পাবে.
@@ -766,8 +803,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 338,
-    title: "সিয়োনের যাত্রা পথে, ভয় করো না বৃথা মন যে আমার।",
+    title: "সিয়োনের যাত্রা পথে",
     transliteration: "Sij়oner Jatra Pthe, Bhy Kro Na Britha Mn Je Amar।",
+    composer: "",
     category: "বিবিধ",
     lyrics: `সিয়োনের যাত্রা পথে, ভয় করো না বৃথা মন যে আমার.
 অব্রাহামের ঈশ্বর, ইসহাকের ঈশ্বর, যাকবের ঈশ্বর, সঙ্গে
@@ -784,8 +822,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 339,
-    title: "প্রণাম প্রভু দয়াল যীশু প্রেমের সাগর,",
+    title: "প্রণাম প্রভু দয়াল যীশু",
     transliteration: "Prnam Prbhu Dyal Jishu Premer Sagr,",
+    composer: "শম্ভু রঞ্জন মন্ডল (১৯৭০)",
     category: "বিবিধ",
     lyrics: `প্রণাম প্রভু দয়াল যীশু প্রেমের সাগর,
 তুমি আশীষ দানে পূর্ণ কর, ময়লা যত কর দূর.
@@ -801,8 +840,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 340,
-    title: "এই শুভক্ষণে আমি এসেছি, প্রভু তোমার চরণে এসেছি,",
+    title: "এই শুভক্ষণে আমি এসেছি",
     transliteration: "Ei Shubhkshne Ami Esechhi, Prbhu Tomar Chrne Esechhi,",
+    composer: "মানিক নাথ",
     category: "বিবিধ",
     lyrics: `এই শুভক্ষণে আমি এসেছি, প্রভু তোমার চরণে এসেছি,
 তোমায় আরো কাছে, পেতে এসেছি.
@@ -818,8 +858,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 341,
-    title: "আমারে নাও, আমার নাও প্রভু,",
+    title: "আমারে নাও",
     transliteration: "Amare Nao, Amar Nao Prbhu,",
+    composer: "ফাঃ অবনী সর্দার",
     category: "বিবিধ",
     lyrics: `আমারে নাও, আমারে নাও প্রভু,
 আমি তোমার যজ্ঞ পুটে একটি ফুল.
@@ -835,8 +876,9 @@ export const HYMNS_301_342: Song[] = [
   },
         {
     id: 342,
-    title: "ব্যথার পান পাত্র প্রভু, করলে তুমি পান,",
+    title: "ব্যথার পান পাত্র প্রভু",
     transliteration: "Bjthar Pan Patr Prbhu, Krle Tumi Pan,",
+    composer: "মানিক নাথ",
     category: "বিবিধ",
     lyrics: `ব্যথার পান পাত্র প্রভু, করলে তুমি পান,
 ভালবাসার বিনিময়ে সহিলে অপমান.

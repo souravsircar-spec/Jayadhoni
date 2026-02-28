@@ -96,7 +96,7 @@ const InfoView: React.FC = () => {
           <ShieldCheck className="w-4 h-4" />
         </div>
         <p className="text-[10px] font-bold text-slate-300 uppercase tracking-[0.4em]">
-          Digital Signature Verified • {toBengaliNumber('২০২৪')}
+          Digital Signature Verified • {toBengaliNumber('২০২৬')}
         </p>
       </div>
     </div>
