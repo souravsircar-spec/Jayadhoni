@@ -100,19 +100,19 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
           </h1>
           <div className="flex items-center justify-center gap-4">
             <div className="h-px w-10 bg-gradient-to-r from-transparent to-slate-200" />
-            <div className="flex items-center gap-2">
-              <Tag className="w-3 h-3 text-emerald-500" />
-              <span className="text-xs font-black text-slate-400 uppercase tracking-[0.3em]">{song.category}</span>
-            </div>
             {song.composer && (
               <>
-                <div className="h-px w-4 bg-slate-100" />
                 <div className="flex items-center gap-2">
                   <User className="w-3 h-3 text-slate-300" />
                   <span className="text-xs font-bold text-slate-400 tracking-tight">{song.composer}</span>
                 </div>
+                <div className="h-px w-4 bg-slate-100" />
               </>
             )}
+            <div className="flex items-center gap-2">
+              <Tag className="w-3 h-3 text-emerald-500" />
+              <span className="text-xs font-black text-slate-400 uppercase tracking-[0.3em]">{song.category}</span>
+            </div>
             <div className="h-px w-10 bg-gradient-to-l from-transparent to-slate-200" />
           </div>
         </div>

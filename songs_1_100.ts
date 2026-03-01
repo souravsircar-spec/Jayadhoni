@@ -615,7 +615,7 @@ export const HYMNS_1_100: Song[] = [
 },
 {
   id: 29,
-  title: "We praise The O God (হে পিতঃ নিরূপায় মানবে)",
+  title: "হে পিতঃ নিরূপায় মানবে(We praise The O God)",
   transliteration: "He Pitah Nirupay Manobe",
   category: "প্রশংসা ও ধন্যবাদ",
   composer: "যাকোব কান্তিনাথ বিশ্বাস",

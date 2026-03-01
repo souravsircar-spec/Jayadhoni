@@ -59,17 +59,17 @@ const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite,
         <h3 className="font-bold text-slate-800 font-bengali text-lg truncate group-hover:text-emerald-600 transition-colors">
           {renderTitle(song.title)}
         </h3>
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
-          <div className="flex items-center gap-1.5">
-            <Tag className="w-3 h-3 text-slate-300" />
-            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-none">{song.category}</span>
-          </div>
+        <div className="flex flex-col gap-1 mt-1">
           {song.composer && (
             <div className="flex items-center gap-1.5">
               <User className="w-3 h-3 text-slate-300" />
               <span className="text-[11px] font-medium text-slate-400 leading-none">{song.composer}</span>
             </div>
           )}
+          <div className="flex items-center gap-1.5">
+            <Tag className="w-3 h-3 text-slate-300" />
+            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-none">{song.category}</span>
+          </div>
         </div>
       </div>
     </div>

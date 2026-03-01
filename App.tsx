@@ -6,7 +6,8 @@ import Layout from './components/Layout';
 import SongCard from './components/SongCard';
 import SongDetail from './components/SongDetail';
 import InfoView from './components/InfoView';
-import { Search, ChevronLeft, Tag, Sparkles, X } from 'lucide-react';
+import { Search, ChevronLeft, Tag, Sparkles, X, Mic, MicOff } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { toBengaliNumber, latinizeBengali } from './utils/format';
 
 const ALL_SONGS = [...SONG_DB, ...CHORUS_DB];
@@ -16,6 +17,7 @@ const App: React.FC = () => {
   const [selectedSong, setSelectedSong] = useState<Song | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [isListening, setIsListening] = useState(false);
   const [favorites, setFavorites] = useState<number[]>(() => {
     try {
       const saved = localStorage.getItem('jayadhani_favs');
@@ -66,6 +68,7 @@ const App: React.FC = () => {
 
       if (idStr.startsWith(englishQuery)) return true;
       if (titleLower.includes(q)) return true;
+      if (s.lyrics.toLowerCase().includes(q)) return true;
       
       if (isPhoneticSearch) {
         if (s.transliteration) {
@@ -89,6 +92,30 @@ const App: React.FC = () => {
   const handleClearSearch = () => {
     setSearchQuery('');
     searchInputRef.current?.focus();
+  };
+
+  const startListening = () => {
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      alert('আপনার ব্রাউজার ভয়েস সার্চ সমর্থন করে না।');
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'bn-IN';
+    recognition.continuous = false;
+    recognition.interimResults = false;
+
+    recognition.onstart = () => setIsListening(true);
+    recognition.onend = () => setIsListening(false);
+    recognition.onerror = () => setIsListening(false);
+
+    recognition.onresult = (event: any) => {
+      const transcript = event.results[0][0].transcript;
+      setSearchQuery(transcript);
+    };
+
+    recognition.start();
   };
 
   useEffect(() => {
@@ -194,17 +221,42 @@ const App: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              {searchQuery && (
-                <div className="absolute right-4 inset-y-0 flex items-center">
+              <div className="absolute right-4 inset-y-0 flex items-center gap-1">
+                <div className="relative">
+                  <AnimatePresence>
+                    {isListening && (
+                      <motion.div
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        animate={{ scale: 1.5, opacity: 0.3 }}
+                        exit={{ scale: 0.8, opacity: 0 }}
+                        transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+                        className="absolute inset-0 bg-rose-500 rounded-full"
+                      />
+                    )}
+                  </AnimatePresence>
+                  <button
+                    onClick={startListening}
+                    className={`relative p-1.5 rounded-lg transition-all z-10 ${
+                      isListening 
+                        ? 'bg-rose-500 text-white shadow-lg shadow-rose-500/30' 
+                        : 'text-slate-300 hover:text-emerald-500 hover:bg-emerald-50'
+                    }`}
+                    aria-label="Voice search"
+                    title="ভয়েস সার্চ"
+                  >
+                    {isListening ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
+                  </button>
+                </div>
+                {searchQuery && (
                   <button 
                     onClick={handleClearSearch}
-                    className="p-1 text-slate-300 hover:text-rose-500 hover:bg-rose-50 rounded-lg transition-all animate-in fade-in zoom-in duration-200"
+                    className="p-1.5 text-slate-300 hover:text-rose-500 hover:bg-rose-50 rounded-lg transition-all animate-in fade-in zoom-in duration-200"
                     aria-label="Clear search"
                   >
                     <X className="w-5 h-5" />
                   </button>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </div>
         )}
