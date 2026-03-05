@@ -32,17 +32,18 @@ const MainLogo = ({ className }: { className?: string }) => (
 
 const PortraitPhoto = ({ className }: { className?: string }) => {
   const [hasError, setHasError] = React.useState(false);
-  const imageUrl = "/portrait.jpg";
+  const imageUrl = "https://i.postimg.cc/tJNKMtB4/portrait.jpg";
 
   return (
     <div className={`relative group ${className}`}>
       <div className="absolute -inset-4 bg-emerald-600/10 blur-2xl rounded-sm opacity-50" />
-      <div className="relative border-4 border-white shadow-xl overflow-hidden bg-slate-50 w-full h-full aspect-[3/4] flex items-center justify-center rounded-sm">
+      <div className="relative border-4 border-white shadow-xl overflow-hidden bg-slate-50 rounded-sm inline-block">
         {!hasError ? (
           <img 
             src={imageUrl} 
             alt="স্বর্গীয় বিভু রঞ্জন সরকার"
-            className="w-full h-full object-cover grayscale brightness-[1.05] hover:grayscale-0 transition-all duration-700"
+            referrerPolicy="no-referrer"
+            className="max-w-full h-auto grayscale brightness-[1.05] hover:grayscale-0 transition-all duration-700 block"
             onError={() => setHasError(true)}
           />
         ) : (
@@ -71,7 +72,7 @@ const InfoView: React.FC = () => {
 
       <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-10">
         <h3 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-2">উৎসর্গ</h3>
-        <PortraitPhoto className="w-48 md:w-56" />
+        <PortraitPhoto className="" />
         <div className="space-y-6">
           <div className="space-y-2">
             <p className="text-2xl font-black text-slate-900">স্বর্গীয় বিভু রঞ্জন সরকার</p>
