@@ -2,7 +2,8 @@ const CACHE_NAME = 'jayadhani-v2';
 const ASSETS = [
   '/',
   '/index.html',
-  '/manifest.json'
+  '/manifest.json',
+  '/portrait.jpg'
 ];
 
 self.addEventListener('install', (event) => {
