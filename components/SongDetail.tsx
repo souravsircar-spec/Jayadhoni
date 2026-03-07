@@ -73,7 +73,7 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
                 </span>
               </div>
               <div className="min-w-0 flex-1">
-                <h1 className="text-sm font-bold text-slate-800 leading-tight line-clamp-2">
+                <h1 className="text-[17px] font-bold text-slate-800 leading-tight line-clamp-2">
                   {renderStyledTitle(song.title)}
                 </h1>
               </div>
@@ -95,25 +95,20 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
         className="max-w-2xl mx-auto px-6 pt-12 pb-12 md:pt-16 md:pb-16 text-center cursor-pointer min-h-screen"
       >
         <div className="mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <h1 className="text-[17px] md:text-[25px] font-black text-slate-900 leading-[1.2] mb-6 tracking-tight">
+          <h1 className="text-[20px] md:text-[28px] font-black text-slate-900 leading-[1.2] mb-6 tracking-tight">
             {renderStyledTitle(song.title, true)}
           </h1>
-          <div className="flex items-center justify-center gap-4">
-            <div className="h-px w-10 bg-gradient-to-r from-transparent to-slate-200" />
+          <div className="flex flex-col items-center justify-center gap-2">
             {song.composer && (
-              <>
-                <div className="flex items-center gap-2">
-                  <User className="w-3 h-3 text-slate-300" />
-                  <span className="text-xs font-bold text-slate-400 tracking-tight">{song.composer}</span>
-                </div>
-                <div className="h-px w-4 bg-slate-100" />
-              </>
+              <div className="flex items-center gap-2">
+                <User className="w-3 h-3 text-slate-300" />
+                <span className="text-xs font-bold text-slate-400 tracking-tight">{song.composer}</span>
+              </div>
             )}
             <div className="flex items-center gap-2">
               <Tag className="w-3 h-3 text-emerald-500" />
-              <span className="text-xs font-black text-slate-400 uppercase tracking-[0.3em]">{song.category}</span>
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">{song.category}</span>
             </div>
-            <div className="h-px w-10 bg-gradient-to-l from-transparent to-slate-200" />
           </div>
         </div>
 
@@ -128,7 +123,7 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
               <div key={index} className="flex flex-col items-center group animate-in fade-in duration-1000" style={{ animationDelay: `${index * 100}ms` }}>
                 {displayMarker && (
                   <div 
-                    className={`mb-3 font-black transition-colors duration-500 ${isChorus ? 'text-rose-400 italic' : 'text-slate-200 group-hover:text-emerald-300'}`}
+                    className={`mb-3 font-black transition-colors duration-500 ${isChorus ? 'text-rose-400 italic' : 'text-emerald-500/50'}`}
                     style={{ fontSize: `${Math.max(14, fontSize * 0.75)}px` }}
                   >
                     {displayMarker}

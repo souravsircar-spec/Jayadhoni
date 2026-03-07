@@ -7,7 +7,7 @@ export const HYMNS_1_100: Song[] = [
   transliteration: "Prabhu Tomari Name Hethay Somagoto Hoi",
   category: "আবাহন ও আরাধনা",
   composer: "বিনয় কুমার পাত্র",
-  lyrics: `প্রভু তোমারি নামে হেথায় সমাগত হই,
+  lyrics: `১ প্রভু তোমারি নামে হেথায় সমাগত হই,
 চালাও মোদের আত্মাতে।
 যীশু দয়াবান, করেন শান্তি দান,
 জয় হে, জয় হে, জয় হে,
@@ -55,7 +55,7 @@ export const HYMNS_1_100: Song[] = [
 },
 {
   id: 3,
-  title: "পুণ্য, পুণ্য, পুণ্য!! সর্ব্বশক্তিমান! (Holy, Holy, Holy! Lord God Almighty!)",
+  title: "পুণ্য, পুণ্য, পুণ্য! সর্ব্বশক্তিমান! (Holy, Holy, Holy! Lord God Almighty!)",
   transliteration: "Punyo, Punyo, Punyo! Sorbo-shaktiman!",
   category: "আবাহন ও আরাধনা",
   composer: "জে. এ. ডি. ম্যাকডোনাল্ড",
@@ -222,6 +222,7 @@ export const HYMNS_1_100: Song[] = [
   composer: "মথুরা নাথ বোস (১৮৯৫)",
   lyrics: `চল সকলে যাই যীশুর সদনে,
 ডাকিতেছেন দয়াল যীশু মধুর বচনে।
+
 ১ ওহে পরিশ্রান্ত ভারাক্রান্ত সর্ব পাপী জন,
 আমার নিকটে আইস পাবে শান্ত মন;
 মোর জোঁয়ালি সহজ ভার লঘু-বহনে।
@@ -231,7 +232,7 @@ export const HYMNS_1_100: Song[] = [
 বহে আনন্দ অমৃত নদী সতত মনে।
 
 ৩ যে জন সতত যীশুর বচন মানে,
-তাঁহার প্রেমের মাহাত্ম্য কেবল সে জানে,
+তাঁহার প্রেমের মাহাত্ম্য কেবল সে জানে;
 যীশু নিরন্তর করেন স্থিতি তাহার মনে।`
 },
 {
@@ -519,7 +520,7 @@ export const HYMNS_1_100: Song[] = [
 },
 {
   id: 25,
-  title: "জয় জয় যীশুর জয় (২)",
+  title: "জয় জয় যীশুর জয়",
   transliteration: "Joy Joy Jishur Joy",
   category: "প্রশংসা ও ধন্যবাদ",
   composer: "",

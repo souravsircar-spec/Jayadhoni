@@ -56,7 +56,7 @@ const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite,
       </div>
 
       <div className="flex-1 min-w-0">
-        <h3 className="font-bold text-slate-800 font-bengali text-lg truncate group-hover:text-emerald-600 transition-colors">
+        <h3 className="font-bold text-slate-800 font-bengali text-[21px] truncate group-hover:text-emerald-600 transition-colors">
           {renderTitle(song.title)}
         </h3>
         <div className="flex flex-col gap-1 mt-1">
