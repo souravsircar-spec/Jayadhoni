@@ -6,11 +6,26 @@ import Layout from './components/Layout';
 import SongCard from './components/SongCard';
 import SongDetail from './components/SongDetail';
 import InfoView from './components/InfoView';
-import { Search, ChevronLeft, Tag, Sparkles, X, Mic, MicOff } from 'lucide-react';
+import { Search, ChevronLeft, Tag, Sparkles, X, Mic, MicOff, Home, List, Info, Heart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { toBengaliNumber, latinizeBengali } from './utils/format';
+import { MainLogo } from './components/Logo';
 
 const ALL_SONGS = [...SONG_DB, ...CHORUS_DB];
+
+const HeaderNavButton = ({ active, onClick, icon, label }: { active: boolean, onClick: () => void, icon: React.ReactNode, label: string }) => (
+  <button 
+    onClick={onClick} 
+    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+      active 
+        ? 'bg-white text-emerald-600 shadow-sm' 
+        : 'text-slate-400 hover:text-slate-600 hover:bg-white/50'
+    }`}
+  >
+    {icon}
+    <span>{label}</span>
+  </button>
+);
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>('home');
@@ -202,9 +217,21 @@ const App: React.FC = () => {
   return (
     <Layout activeTab={activeTab} setActiveTab={setActiveTab}>
       <header className="bg-white border-b border-slate-100 sticky top-0 z-30 pb-4">
-        <div className="p-8 pb-4 max-w-2xl mx-auto flex flex-col items-center text-center relative">
-          <h1 className="text-4xl font-black text-emerald-600 font-bengali tracking-tight">জয়ধ্বনি</h1>
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mt-1">বাংলা খ্রীষ্টিয় সংগীত</p>
+        <div className="px-6 py-8 pb-4 max-w-2xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative">
+          <div className="flex items-center gap-5">
+            <MainLogo className="w-14 h-14 shadow-xl rounded-[1.25rem] overflow-hidden shrink-0" />
+            <div className="text-left">
+              <h1 className="text-4xl font-black text-emerald-600 font-bengali tracking-tight leading-none">জয়ধ্বনি</h1>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.25em] mt-1.5">বাংলা খ্রীষ্টিয় সংগীত</p>
+            </div>
+          </div>
+          
+          <div className="hidden md:flex items-center gap-1 bg-slate-50 p-1 rounded-2xl border border-slate-100">
+            <HeaderNavButton active={activeTab === 'home'} onClick={() => setActiveTab('home')} icon={<Home className="w-4 h-4" />} label="সূচী" />
+            <HeaderNavButton active={activeTab === 'category'} onClick={() => setActiveTab('category')} icon={<List className="w-4 h-4" />} label="বিষয়" />
+            <HeaderNavButton active={activeTab === 'fav'} onClick={() => setActiveTab('fav')} icon={<Heart className="w-4 h-4" />} label="প্রিয়" />
+            <HeaderNavButton active={activeTab === 'info'} onClick={() => setActiveTab('info')} icon={<Info className="w-4 h-4" />} label="তথ্য" />
+          </div>
         </div>
         
         {activeTab !== 'info' && (
