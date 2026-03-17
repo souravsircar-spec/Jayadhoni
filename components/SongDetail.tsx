@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Song } from '../types';
-import { ChevronLeft, Minus, Plus, Heart, Tag, Home, User } from 'lucide-react';
+import { ChevronLeft, Minus, Plus, Heart, Tag, Home, User, Youtube } from 'lucide-react';
 import { toBengaliNumber } from '../utils/format';
 
 interface SongDetailProps {
@@ -149,33 +149,49 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
         }`}
       >
         <div className="max-w-2xl mx-auto flex items-center justify-end pointer-events-auto">
-          <div className="flex items-center gap-1.5 p-1.5 bg-white/95 backdrop-blur-2xl rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-slate-200/60">
+          <div className="flex items-center gap-1 p-1.5 bg-white/95 backdrop-blur-2xl rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-slate-200/60">
             <button 
               onClick={(e) => { e.stopPropagation(); onBack(); }}
-              className="p-3 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90 flex items-center gap-2 pr-4"
+              className="p-2.5 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90 flex items-center gap-1.5 pr-3"
               title="সূচী"
             >
               <Home className="w-5 h-5" />
               <span className="text-[10px] font-black uppercase tracking-widest hidden sm:inline">সূচী</span>
             </button>
 
-            <div className="w-px h-6 bg-slate-200/60 mx-0.5" />
+            <div className="w-px h-6 bg-slate-200/60 mx-0" />
 
             <button 
               onClick={(e) => { e.stopPropagation(); setFontSize(f => Math.max(14, f - 2)); }} 
-              className="p-3 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90"
+              className="p-2.5 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90"
               title="Font Decrease"
             >
               <Minus className="w-5 h-5" />
             </button>
-            <div className="w-px h-6 bg-slate-200/60 mx-0.5" />
+            <div className="w-px h-6 bg-slate-200/60 mx-0" />
             <button 
               onClick={(e) => { e.stopPropagation(); setFontSize(f => Math.min(40, f + 2)); }} 
-              className="p-3 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90"
+              className="p-2.5 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90"
               title="Font Increase"
             >
               <Plus className="w-5 h-5" />
             </button>
+
+            {song.youtubeId && (
+              <>
+                <div className="w-px h-6 bg-slate-200/60 mx-0" />
+                <button 
+                  onClick={(e) => { 
+                    e.stopPropagation(); 
+                    window.open(`https://www.youtube.com/watch?v=${song.youtubeId}`, '_blank');
+                  }} 
+                  className="p-2.5 text-rose-500 hover:bg-rose-50 rounded-full transition-all active:scale-90"
+                  title="Watch on YouTube"
+                >
+                  <Youtube className="w-5 h-5" />
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
