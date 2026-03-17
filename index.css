@@ -3,6 +3,7 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-bengali: "Noto Serif Bengali", "Hind Siliguri", serif;
+  --color-brand: #358C5D;
 }
 
 @layer base {

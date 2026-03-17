@@ -221,7 +221,7 @@ const App: React.FC = () => {
           <div className="flex items-center gap-5">
             <MainLogo className="w-14 h-14 shadow-xl rounded-[1.25rem] overflow-hidden shrink-0" />
             <div className="text-left">
-              <h1 className="text-4xl font-black text-emerald-600 font-bengali tracking-tight leading-none">জয়ধ্বনি</h1>
+              <h1 className="text-4xl font-black text-brand font-bengali tracking-tight leading-none">জয়ধ্বনি</h1>
               <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.25em] mt-1.5">বাংলা খ্রীষ্টিয় সংগীত</p>
             </div>
           </div>
