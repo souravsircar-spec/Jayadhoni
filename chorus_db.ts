@@ -483,7 +483,7 @@ export const CHORUS_DB: Song[] = [
   },
   {
     id: 1041,
-    title: "I have decided",
+    title: "মনস্থ করেছি, যীশুতে চলিব",
     transliteration: "Monostho Korechi Jishute Cholibo",
     category: "কোরাস",
     lyrics: `I have decided
@@ -1243,10 +1243,17 @@ Sing Christ is risen from the dead!`
     title: "ওহে পিতঃ প্রাতে খুঁজি তোমাকে",
     transliteration: "Ohe pitoh prate khunji tomake",
     category: "কোরাস",
-    lyrics: `ওহে পিতঃ প্রাতে খুঁজি তোমাকে,
+    lyrics: `১ ওহে পিতঃ প্রাতে খুঁজি তোমাকে,
 তোমার ইচ্ছামতে চালাও আমাকে।
-পাপ ও শয়তান হইতে রক্ষ আমাকে,
-তোমার দয়া লইতে শিখাও আমাকে।`
+
+২ পাপ ও শয়তান হইতে রক্ষ আমাকে,
+তোমার দয়া লইতে শিখাও আমাকে।
+
+৩ আজি তব সেবায়, রত থাক মন,
+আশীষ দেও আমায়, পুঁজিতে চরণ।
+
+৪ তব প্রেমের কথা, বলি যাকে পাই,
+শক্তি দিও তথা, যখন জেথা যাই।`
   },
   {
     id: 1103,
