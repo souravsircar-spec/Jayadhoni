@@ -87,7 +87,7 @@ export const HYMNS_1_100: Song[] = [
   transliteration: "Eso He Korunamoy, Birajo Hridoyasone",
   category: "আবাহন ও আরাধনা",
   composer: "ঈশানচন্দ্র দাস (১৮৯৪)",
-  youtubeId: "bIGJiKU9S8c",
+  youtubeId: "xOE_u9pjVeo",
   lyrics: `এস হে করুণাময়, বিরাজ হৃদয়াসনে,
 পুজিতে তোমারে আজি, বাসনা সবার মনে।
 

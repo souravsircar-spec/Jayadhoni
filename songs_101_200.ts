@@ -518,6 +518,7 @@ export const HYMNS_101_200: Song[] = [
     transliteration: "Bhai Anonde Jishu Nam Hridoy Khule Bolo",
     composer: "প্রিয়নাথ বৈরাগী",
     category: "দুঃখভোগ, ক্রুশীয় মৃত্যু",
+    youtubeId: "m5U_muWQvmM",
     lyrics: `(ভাই) আনন্দে যীশু নাম হৃদয় খুলে বল,
 (যীশু নাম হৃদয় খুলে বল)
 
