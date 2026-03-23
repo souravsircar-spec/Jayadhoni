@@ -43,6 +43,51 @@ const App: React.FC = () => {
   });
   const searchInputRef = useRef<HTMLInputElement>(null);
 
+  // Handle back button and history
+  useEffect(() => {
+    // Initial state setup
+    if (!window.history.state) {
+      window.history.replaceState({ view: 'home' }, '');
+    } else {
+      // Restore state from history on load/refresh
+      const state = window.history.state;
+      if (state.view === 'song') {
+        const song = ALL_SONGS.find(s => s.id === state.songId);
+        if (song) setSelectedSong(song);
+      } else if (state.view === 'category') {
+        setSelectedCategory(state.category);
+        setActiveTab('category');
+      } else if (state.view === 'tab') {
+        setActiveTab(state.tab);
+      }
+    }
+
+    const onPopState = (e: PopStateEvent) => {
+      const state = e.state;
+      if (!state) return;
+
+      if (state.view === 'song') {
+        const song = ALL_SONGS.find(s => s.id === state.songId);
+        setSelectedSong(song || null);
+      } else if (state.view === 'category') {
+        setSelectedSong(null);
+        setSelectedCategory(state.category);
+        setActiveTab('category');
+      } else if (state.view === 'tab') {
+        setSelectedSong(null);
+        setSelectedCategory(null);
+        setActiveTab(state.tab);
+      } else if (state.view === 'home') {
+        setSelectedSong(null);
+        setSelectedCategory(null);
+        setActiveTab('home');
+      }
+    };
+
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, []);
+
   // Scroll to top on navigation
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -137,11 +182,39 @@ const App: React.FC = () => {
     if (activeTab !== 'category') setSelectedCategory(null);
   }, [activeTab]);
 
+  const handleTabChange = (tab: TabType) => {
+    if (tab === activeTab && !selectedSong && !selectedCategory) return;
+    window.history.pushState({ view: 'tab', tab }, '');
+    setActiveTab(tab);
+    setSelectedSong(null);
+    setSelectedCategory(null);
+  };
+
+  const handleSelectSong = (song: Song) => {
+    window.history.pushState({ view: 'song', songId: song.id }, '');
+    setSelectedSong(song);
+  };
+
+  const handleSelectCategory = (catName: string) => {
+    window.history.pushState({ view: 'category', category: catName }, '');
+    setSelectedCategory(catName);
+  };
+
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      setSelectedSong(null);
+      setSelectedCategory(null);
+      setActiveTab('home');
+    }
+  };
+
   if (selectedSong) {
     return (
       <SongDetail 
         song={selectedSong} 
-        onBack={() => setSelectedSong(null)} 
+        onBack={handleBack} 
         isFavorite={favorites.includes(selectedSong.id)}
         onToggleFavorite={() => toggleFavorite(undefined, selectedSong.id)}
       />
@@ -157,7 +230,7 @@ const App: React.FC = () => {
           {categories.map(cat => (
             <button
               key={cat.name}
-              onClick={() => setSelectedCategory(cat.name)}
+              onClick={() => handleSelectCategory(cat.name)}
               className="bg-white p-6 rounded-[2.5rem] border border-slate-100 text-left hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/5 transition-all group active:scale-[0.98]"
             >
               <div className="flex items-center justify-between mb-2">
@@ -182,7 +255,7 @@ const App: React.FC = () => {
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
             {activeTab === 'category' && selectedCategory && !searchQuery && (
-              <button onClick={() => setSelectedCategory(null)} className="p-1 hover:bg-slate-100 rounded-lg text-slate-400">
+              <button onClick={handleBack} className="p-1 hover:bg-slate-100 rounded-lg text-slate-400">
                 <ChevronLeft className="w-4 h-4" />
               </button>
             )}
@@ -200,7 +273,7 @@ const App: React.FC = () => {
                 song={song} 
                 isFavorite={favorites.includes(song.id)}
                 onToggleFavorite={(e) => toggleFavorite(e, song.id)}
-                onClick={() => setSelectedSong(song)}
+                onClick={() => handleSelectSong(song)}
               />
             ))}
           </div>
@@ -215,7 +288,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <Layout activeTab={activeTab} setActiveTab={setActiveTab}>
+    <Layout activeTab={activeTab} setActiveTab={handleTabChange}>
       <header className="bg-white border-b border-slate-100 sticky top-0 z-30 pb-4">
         <div className="px-6 py-8 pb-4 max-w-2xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative">
           <div className="flex items-center gap-5">
@@ -227,10 +300,10 @@ const App: React.FC = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-1 bg-slate-50 p-1 rounded-2xl border border-slate-100">
-            <HeaderNavButton active={activeTab === 'home'} onClick={() => setActiveTab('home')} icon={<Home className="w-4 h-4" />} label="সূচী" />
-            <HeaderNavButton active={activeTab === 'category'} onClick={() => setActiveTab('category')} icon={<List className="w-4 h-4" />} label="বিষয়" />
-            <HeaderNavButton active={activeTab === 'fav'} onClick={() => setActiveTab('fav')} icon={<Heart className="w-4 h-4" />} label="প্রিয়" />
-            <HeaderNavButton active={activeTab === 'info'} onClick={() => setActiveTab('info')} icon={<Info className="w-4 h-4" />} label="তথ্য" />
+            <HeaderNavButton active={activeTab === 'home'} onClick={() => handleTabChange('home')} icon={<Home className="w-4 h-4" />} label="সূচী" />
+            <HeaderNavButton active={activeTab === 'category'} onClick={() => handleTabChange('category')} icon={<List className="w-4 h-4" />} label="বিষয়" />
+            <HeaderNavButton active={activeTab === 'fav'} onClick={() => handleTabChange('fav')} icon={<Heart className="w-4 h-4" />} label="প্রিয়" />
+            <HeaderNavButton active={activeTab === 'info'} onClick={() => handleTabChange('info')} icon={<Info className="w-4 h-4" />} label="তথ্য" />
           </div>
         </div>
         
