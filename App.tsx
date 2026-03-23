@@ -11,7 +11,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { toBengaliNumber, latinizeBengali } from './utils/format';
 import { MainLogo } from './components/Logo';
 
-const ALL_SONGS = [...SONG_DB, ...CHORUS_DB];
+const ALL_SONGS: Song[] = [...SONG_DB, ...CHORUS_DB].map(s => ({
+  ...s,
+  categories: s.categories || (s.category ? [s.category] : [])
+}));
 
 const HeaderNavButton = ({ active, onClick, icon, label }: { active: boolean, onClick: () => void, icon: React.ReactNode, label: string }) => (
   <button 
@@ -88,6 +91,40 @@ const App: React.FC = () => {
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
+  // Copy protection
+  useEffect(() => {
+    const handleContextMenu = (e: MouseEvent) => {
+      e.preventDefault();
+    };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Disable Ctrl+C, Ctrl+X, Ctrl+U, Ctrl+S, Ctrl+P, Ctrl+A, F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+      if (
+        (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's' || e.key === 'p' || e.key === 'a')) ||
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C'))
+      ) {
+        e.preventDefault();
+      }
+    };
+
+    const handleCopy = (e: ClipboardEvent) => {
+      e.preventDefault();
+    };
+
+    document.addEventListener('contextmenu', handleContextMenu);
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('copy', handleCopy);
+    document.addEventListener('cut', handleCopy);
+
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('copy', handleCopy);
+      document.removeEventListener('cut', handleCopy);
+    };
+  }, []);
+
   // Scroll to top on navigation
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -100,7 +137,9 @@ const App: React.FC = () => {
   const categories = useMemo(() => {
     const counts: Record<string, number> = {};
     ALL_SONGS.forEach(s => {
-      counts[s.category] = (counts[s.category] || 0) + 1;
+      (s.categories || []).forEach(cat => {
+        counts[cat] = (counts[cat] || 0) + 1;
+      });
     });
     return Object.entries(counts).map(([name, count]) => ({ name, count }));
   }, []);
@@ -110,7 +149,7 @@ const App: React.FC = () => {
     let base = ALL_SONGS;
     
     if (activeTab === 'category' && selectedCategory) {
-      base = ALL_SONGS.filter(s => s.category === selectedCategory);
+      base = ALL_SONGS.filter(s => (s.categories || []).includes(selectedCategory));
     } else if (activeTab === 'fav') {
       base = ALL_SONGS.filter(s => favorites.includes(s.id));
     }
@@ -226,7 +265,7 @@ const App: React.FC = () => {
     
     if (activeTab === 'category' && !selectedCategory && !searchQuery) {
       return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500 px-4">
           {categories.map(cat => (
             <button
               key={cat.name}
@@ -266,7 +305,7 @@ const App: React.FC = () => {
         </div>
 
         {filteredSongs.length > 0 ? (
-          <div className="space-y-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredSongs.map(song => (
               <SongCard 
                 key={song.id} 
@@ -290,7 +329,7 @@ const App: React.FC = () => {
   return (
     <Layout activeTab={activeTab} setActiveTab={handleTabChange}>
       <header className="bg-white border-b border-slate-100 sticky top-0 z-30 pb-4">
-        <div className="px-6 py-8 pb-4 max-w-2xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative">
+        <div className="px-6 py-8 pb-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative">
           <div className="flex items-center gap-5">
             <MainLogo className="w-14 h-14 shadow-xl rounded-[1.25rem] overflow-hidden shrink-0" />
             <div className="text-left">
@@ -308,7 +347,7 @@ const App: React.FC = () => {
         </div>
         
         {activeTab !== 'info' && (
-          <div className="px-4 pt-2 max-w-2xl mx-auto">
+          <div className="px-4 pt-2 max-w-6xl mx-auto">
             <div className="relative group">
               <div className="absolute left-5 inset-y-0 flex items-center pointer-events-none">
                 <Search className="w-5 h-5 text-slate-300 group-focus-within:text-emerald-500 transition-colors" />
@@ -362,7 +401,7 @@ const App: React.FC = () => {
         )}
       </header>
 
-      <main className="max-w-2xl mx-auto py-6 font-bengali">
+      <main className="max-w-6xl mx-auto py-6 font-bengali">
         {renderContent()}
       </main>
     </Layout>

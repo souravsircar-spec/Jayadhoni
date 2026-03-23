@@ -45,7 +45,7 @@ const FeatureItem = ({ icon, title, desc }: { icon: React.ReactNode, title: stri
 
 const InfoView: React.FC = () => {
   return (
-    <div className="max-w-2xl mx-auto p-6 pt-10 space-y-10 animate-in fade-in duration-1000 font-bengali pb-32">
+    <div className="max-w-4xl mx-auto p-6 pt-10 space-y-10 animate-in fade-in duration-1000 font-bengali pb-32">
       {/* Dedication Section */}
       <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-10">
         <h3 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-2">উৎসর্গ</h3>
@@ -94,7 +94,7 @@ const InfoView: React.FC = () => {
           অ্যাপের প্রধান বৈশিষ্ট্যসমূহ
         </h2>
         
-        <div className="grid gap-8 sm:grid-cols-1">
+        <div className="grid gap-8 sm:grid-cols-2">
           <FeatureItem 
             icon={<Music className="w-5 h-5" />}
             title="বিশাল ভাণ্ডার"

@@ -1,7 +1,8 @@
 export interface Song {
   id: number;
   title: string;
-  category: string;
+  category?: string;
+  categories?: string[];
   lyrics: string;
   transliteration?: string;
   composer?: string;

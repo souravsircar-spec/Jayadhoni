@@ -6,7 +6,7 @@ export const HYMNS_301_343: Song[] = [
     title: "সকল পথের শেষে এসে পেয়েছি প্রভু তোমার দেখা",
     transliteration: "Shokol Pother Sheshe Ese Peyechi Probhu Tomar Dekha",
     composer: "নির্মলানন্দ সরকার (১৯৪৫)",
-    category: "পরলোক",
+    categories: ["পরলোক", "আরাধনা"],
     lyrics: `১ সকল পথের শেষে এসে পেয়েছি প্রভু তোমার দেখা,
 সকল সাথী গেছে ফিরে, তুমি শুধু দাঁড়িয়ে একা।
 
@@ -25,7 +25,7 @@ export const HYMNS_301_343: Song[] = [
     title: "বাড়ী যাইতে বুঝি আমার সাথে, সাথী মিলিল না",
     transliteration: "Bari Jaite Bujhi Amar Sathe Sathi Mililo Na",
     composer: "মুক্তারাম বাড়ৈ",
-    category: "পরলোক",
+    categories: ["পরলোক"],
     lyrics: `বাড়ী যাইতে বুঝি আমার সাথে, সাথী মিলিল না।
 
     ১ ছিল যখন বাল্যবেলা, করতেম কত ধুলা-খেলা,
@@ -45,7 +45,7 @@ export const HYMNS_301_343: Song[] = [
     title: "আয় মন চল যাই সেই নিত্যানন্দ ধামে",
     transliteration: "Ay Mon Chol Jai Shei Nityananda Dhame",
     composer: "বিন্দুনাথ সরকার",
-    category: "পরলোক",
+    categories: ["পরলোক"],
     lyrics: `আয় মন চল যাই সেই নিত্যানন্দ ধামে,
     যথা শান্তি নদী উথলিছে সদা যীশুর নামে।
 (আনন্দের আর সীমা নাইরে।)
@@ -69,7 +69,7 @@ export const HYMNS_301_343: Song[] = [
     title: "যীশুর আলো কি উজ্জ্বল দেখাই খুলে প্রাণ কারে",
     transliteration: "Jishur Alo Ki Ujjol Dekhai Khule Pran Kare",
     composer: "রাজেন্দ্রলাল মুখোপাধ্যায় (১৮৯২)",
-    category: "পরলোক",
+    categories: ["পরলোক"],
     lyrics: `যীশুর আলো কি উজ্জ্বল দেখাই খুলে প্রাণ করে!
 দেখ সূর্য লাগে কোথায়, তাঁর আলোর কাছে সব হারে।
 ১ ঐ আলো মোর অন্তরে, ভালো মন্দের বিচার করে,
@@ -86,7 +86,7 @@ export const HYMNS_301_343: Song[] = [
     title: "ঐ শোনা যায় ওপারের গান",
     transliteration: "Oi Shona Jay Opater Gan",
     composer: "প্রিয়নাথ বৈরাগী",
-    category: "পরলোক",
+    categories: ["পরলোক"],
     lyrics: `ঐ শোনা যায় ওপারের গান, সঙ্গীত-ধ্বনি অমরপুরে.
 স্বর্গে দূতের বীণায় তান উঠেছে ভাই,
 মধুর যীশু নামে আকাশ জুড়ে।
@@ -912,7 +912,7 @@ export const HYMNS_301_343: Song[] = [
     id: 343,
     title: "মোরা চলবো সমুখপানে মুক্তি যেথা",
     transliteration: "Mora Cholbo Somukhpane Mukti Jetha",
-    category: "খ্রীষ্টীয় জীবন ও সাক্ষ্য",
+    categories: ["খ্রীষ্টীয় জীবন ও সাক্ষ্য"],
     lyrics: `মোরা চলবো সমুখপানে মুক্তি যেথা, 
 কভু ফিরবোনা পিছু অযথা
 যত বাধা আসুক সব পেরিয়ে যাবো, 
