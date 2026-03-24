@@ -29,17 +29,17 @@ const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite,
   return (
     <div 
       onClick={onClick}
-      className="group relative bg-white p-3.5 rounded-3xl border border-slate-100 flex items-center gap-3.5 cursor-pointer transition-all hover:shadow-xl hover:shadow-emerald-500/5 active:scale-[0.99]"
+      className="group relative bg-white p-1.5 rounded-xl border border-slate-100 flex items-center gap-2 cursor-pointer transition-all hover:shadow-xl hover:shadow-emerald-500/5 active:scale-[0.99]"
     >
       {/* Integrated ID Badge with transparent heart background */}
       <div 
         onClick={onToggleFavorite}
-        className="relative shrink-0 w-12 h-12 bg-emerald-50/50 border border-emerald-100/50 rounded-2xl flex items-center justify-center overflow-hidden transition-transform hover:scale-105 active:scale-95 group/heart"
+        className="relative shrink-0 w-10 h-10 bg-emerald-50/50 border border-emerald-100/50 rounded-xl flex items-center justify-center overflow-hidden transition-transform hover:scale-105 active:scale-95 group/heart"
         title={isFavorite ? "পছন্দ থেকে সরান" : "পছন্দ হিসেবে রাখুন"}
       >
         {/* Transparent Heart Shape behind the number */}
         <Heart 
-          className={`absolute w-8 h-8 transition-all duration-300 ${
+          className={`absolute w-7 h-7 transition-all duration-300 ${
             isFavorite 
               ? 'text-rose-500/20 fill-rose-500/10 scale-125' 
               : 'text-emerald-200/40 fill-emerald-100/20 scale-100 group-hover/heart:scale-110'
@@ -48,7 +48,7 @@ const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite,
         />
         
         {/* Song Number: Turns red (rose-600) when favorite */}
-        <span className={`relative z-10 font-black font-sans text-lg transition-colors duration-300 ${
+        <span className={`relative z-10 font-black font-sans text-base transition-colors duration-300 ${
           isFavorite ? 'text-rose-600' : 'text-emerald-700'
         }`}>
           {toBengaliNumber(song.id)}
@@ -56,7 +56,10 @@ const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite,
       </div>
 
       <div className="flex-1 min-w-0">
-        <h3 className="font-bold text-slate-800 font-bengali text-lg truncate group-hover:text-emerald-600 transition-colors">
+        <h3 
+          className="font-bold text-slate-800 font-bengali truncate group-hover:text-emerald-600 transition-colors"
+          style={{ fontSize: 'var(--index-font-size)' }}
+        >
           {renderTitle(song.title)}
         </h3>
         <div className="flex flex-col gap-1 mt-1">

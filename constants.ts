@@ -14,3 +14,12 @@ export const SONG_DB: Song[] = [
 
 // Re-export sorted to ensure reliable indexing
 SONG_DB.sort((a, b) => a.id - b.id);
+
+export const BENGALI_FONTS = [
+  { id: 'noto', name: 'Noto Serif Bengali', family: '"Noto Serif Bengali", serif' },
+  { id: 'hind', name: 'Hind Siliguri', family: '"Hind Siliguri", sans-serif' },
+  { id: 'atma', name: 'Atma', family: '"Atma", cursive' },
+  { id: 'mina', name: 'Mina', family: '"Mina", sans-serif' },
+  { id: 'galada', name: 'Galada', family: '"Galada", cursive' },
+  { id: 'baloo', name: 'Baloo Da 2', family: '"Baloo Da 2", cursive' },
+];

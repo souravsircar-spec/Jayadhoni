@@ -6,15 +6,25 @@ import Layout from './components/Layout';
 import SongCard from './components/SongCard';
 import SongDetail from './components/SongDetail';
 import InfoView from './components/InfoView';
-import { Search, ChevronLeft, Tag, Sparkles, X, Mic, MicOff, Home, List, Info, Heart } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Search, ChevronLeft, Tag, Sparkles, X, Mic, MicOff, Home, List, Info, Heart, ArrowDownAZ, Hash } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import { toBengaliNumber, latinizeBengali } from './utils/format';
 import { MainLogo } from './components/Logo';
 
-const ALL_SONGS: Song[] = [...SONG_DB, ...CHORUS_DB].map(s => ({
-  ...s,
-  categories: s.categories || (s.category ? [s.category] : [])
-}));
+import CollectionView from './components/CollectionView';
+import SettingsView from './components/SettingsView';
+
+const ALL_SONGS: Song[] = [...SONG_DB, ...CHORUS_DB].map(s => {
+  let categories: string[] = [];
+  if (Array.isArray(s.categories)) {
+    categories = s.categories;
+  } else if (typeof s.categories === 'string') {
+    categories = [s.categories];
+  } else if (s.category) {
+    categories = [s.category];
+  }
+  return { ...s, categories };
+});
 
 const HeaderNavButton = ({ active, onClick, icon, label }: { active: boolean, onClick: () => void, icon: React.ReactNode, label: string }) => (
   <button 
@@ -33,9 +43,23 @@ const HeaderNavButton = ({ active, onClick, icon, label }: { active: boolean, on
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>('home');
   const [selectedSong, setSelectedSong] = useState<Song | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isListening, setIsListening] = useState(false);
+  const [sortBy, setSortBy] = useState<'number' | 'alphabetical'>('number');
+  
+  // Settings State
+  const [fontSize, setFontSize] = useState(() => {
+    const saved = localStorage.getItem('jayadhani_lyrics_font_size');
+    if (saved) {
+      return Math.max(15, parseInt(saved, 10));
+    }
+    // Default based on screen size: 24px for larger screens, 20px for mobile
+    return typeof window !== 'undefined' && window.innerWidth >= 768 ? 24 : 20;
+  });
+  const [currentFont, setCurrentFont] = useState(() => {
+    return localStorage.getItem('jayadhani_font_family') || '"Noto Serif Bengali", "Hind Siliguri", serif';
+  });
+
   const [favorites, setFavorites] = useState<number[]>(() => {
     try {
       const saved = localStorage.getItem('jayadhani_favs');
@@ -45,6 +69,27 @@ const App: React.FC = () => {
     }
   });
   const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Apply Settings
+  useEffect(() => {
+    localStorage.setItem('jayadhani_lyrics_font_size', fontSize.toString());
+    document.documentElement.style.setProperty('--lyrics-font-size', `${fontSize}px`);
+    
+    // Scale UI font size proportionally but less aggressively
+    // Base UI size is roughly 16px when lyrics are 20px
+    const uiScale = fontSize / 20;
+    const systemFontSize = Math.max(14, Math.min(20, 16 * uiScale));
+    document.documentElement.style.setProperty('--system-font-size', `${systemFontSize}px`);
+    
+    // For the index (song list titles), we can scale it a bit more
+    const indexFontSize = Math.max(16, Math.min(24, 18 * uiScale));
+    document.documentElement.style.setProperty('--index-font-size', `${indexFontSize}px`);
+  }, [fontSize]);
+
+  useEffect(() => {
+    localStorage.setItem('jayadhani_font_family', currentFont);
+    document.documentElement.style.setProperty('--current-font-family', currentFont);
+  }, [currentFont]);
 
   // Handle back button and history
   useEffect(() => {
@@ -57,9 +102,6 @@ const App: React.FC = () => {
       if (state.view === 'song') {
         const song = ALL_SONGS.find(s => s.id === state.songId);
         if (song) setSelectedSong(song);
-      } else if (state.view === 'category') {
-        setSelectedCategory(state.category);
-        setActiveTab('category');
       } else if (state.view === 'tab') {
         setActiveTab(state.tab);
       }
@@ -72,17 +114,11 @@ const App: React.FC = () => {
       if (state.view === 'song') {
         const song = ALL_SONGS.find(s => s.id === state.songId);
         setSelectedSong(song || null);
-      } else if (state.view === 'category') {
-        setSelectedSong(null);
-        setSelectedCategory(state.category);
-        setActiveTab('category');
       } else if (state.view === 'tab') {
         setSelectedSong(null);
-        setSelectedCategory(null);
         setActiveTab(state.tab);
       } else if (state.view === 'home') {
         setSelectedSong(null);
-        setSelectedCategory(null);
         setActiveTab('home');
       }
     };
@@ -128,7 +164,7 @@ const App: React.FC = () => {
   // Scroll to top on navigation
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
-  }, [activeTab, selectedSong, selectedCategory]);
+  }, [activeTab, selectedSong]);
 
   useEffect(() => {
     localStorage.setItem('jayadhani_favs', JSON.stringify(favorites));
@@ -146,40 +182,41 @@ const App: React.FC = () => {
 
   const filteredSongs = useMemo(() => {
     const q = searchQuery.toLowerCase().trim();
-    let base = ALL_SONGS;
+    let base = [...ALL_SONGS];
     
-    if (activeTab === 'category' && selectedCategory) {
-      base = ALL_SONGS.filter(s => (s.categories || []).includes(selectedCategory));
-    } else if (activeTab === 'fav') {
-      base = ALL_SONGS.filter(s => favorites.includes(s.id));
+    if (q) {
+      const bengaliMap: Record<string, string> = { '০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4', '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9' };
+      const englishQuery = q.split('').map(char => bengaliMap[char] || char).join('');
+      const isPhoneticSearch = /^[a-z0-9\s]+$/i.test(q);
+      const normalizedPhoneticQuery = q.replace(/\s/g, '').replace(/v/g, 'bh').replace(/ph/g, 'f').replace(/ee/g, 'i').replace(/oo/g, 'u').replace(/z/g, 'j');
+      
+      base = base.filter(s => {
+        const titleLower = s.title.toLowerCase();
+        const idStr = s.id.toString();
+
+        if (idStr.startsWith(englishQuery)) return true;
+        if (titleLower.includes(q)) return true;
+        if (s.lyrics.toLowerCase().includes(q)) return true;
+        
+        if (isPhoneticSearch) {
+          if (s.transliteration) {
+            const transNormalized = s.transliteration.toLowerCase().replace(/\s/g, '');
+            if (transNormalized.includes(normalizedPhoneticQuery)) return true;
+          }
+          const latinTitleNormalized = latinizeBengali(s.title).replace(/\s/g, '');
+          return latinTitleNormalized.includes(normalizedPhoneticQuery);
+        }
+        return false;
+      });
     }
 
-    if (!q) return base;
-    
-    const bengaliMap: Record<string, string> = { '০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4', '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9' };
-    const englishQuery = q.split('').map(char => bengaliMap[char] || char).join('');
-    const isPhoneticSearch = /^[a-z0-9\s]+$/i.test(q);
-    const normalizedPhoneticQuery = q.replace(/\s/g, '').replace(/v/g, 'bh').replace(/ph/g, 'f').replace(/ee/g, 'i').replace(/oo/g, 'u').replace(/z/g, 'j');
-    
-    return base.filter(s => {
-      const titleLower = s.title.toLowerCase();
-      const idStr = s.id.toString();
-
-      if (idStr.startsWith(englishQuery)) return true;
-      if (titleLower.includes(q)) return true;
-      if (s.lyrics.toLowerCase().includes(q)) return true;
-      
-      if (isPhoneticSearch) {
-        if (s.transliteration) {
-          const transNormalized = s.transliteration.toLowerCase().replace(/\s/g, '');
-          if (transNormalized.includes(normalizedPhoneticQuery)) return true;
-        }
-        const latinTitleNormalized = latinizeBengali(s.title).replace(/\s/g, '');
-        return latinTitleNormalized.includes(normalizedPhoneticQuery);
-      }
-      return false;
-    });
-  }, [searchQuery, activeTab, selectedCategory, favorites]);
+    // Sorting
+    if (sortBy === 'alphabetical') {
+      return base.sort((a, b) => a.title.localeCompare(b.title, 'bn'));
+    } else {
+      return base.sort((a, b) => a.id - b.id);
+    }
+  }, [searchQuery, sortBy]);
 
   const toggleFavorite = (e: React.MouseEvent | undefined, id: number) => {
     if (e) e.stopPropagation();
@@ -218,15 +255,14 @@ const App: React.FC = () => {
   };
 
   useEffect(() => {
-    if (activeTab !== 'category') setSelectedCategory(null);
+    // No-op for category cleanup as it's handled in CollectionView
   }, [activeTab]);
 
   const handleTabChange = (tab: TabType) => {
-    if (tab === activeTab && !selectedSong && !selectedCategory) return;
+    if (tab === activeTab && !selectedSong) return;
     window.history.pushState({ view: 'tab', tab }, '');
     setActiveTab(tab);
     setSelectedSong(null);
-    setSelectedCategory(null);
   };
 
   const handleSelectSong = (song: Song) => {
@@ -234,17 +270,11 @@ const App: React.FC = () => {
     setSelectedSong(song);
   };
 
-  const handleSelectCategory = (catName: string) => {
-    window.history.pushState({ view: 'category', category: catName }, '');
-    setSelectedCategory(catName);
-  };
-
   const handleBack = () => {
     if (window.history.length > 1) {
       window.history.back();
     } else {
       setSelectedSong(null);
-      setSelectedCategory(null);
       setActiveTab('home');
     }
   };
@@ -254,58 +284,60 @@ const App: React.FC = () => {
       <SongDetail 
         song={selectedSong} 
         onBack={handleBack} 
+        onOpenSettings={() => {
+          // This will now be handled internally in SongDetail as a popup
+        }}
         isFavorite={favorites.includes(selectedSong.id)}
         onToggleFavorite={() => toggleFavorite(undefined, selectedSong.id)}
+        globalFontSize={fontSize}
+        globalFontFamily={currentFont}
+        setFontSize={setFontSize}
+        setCurrentFont={setCurrentFont}
       />
     );
   }
 
   const renderContent = () => {
-    if (activeTab === 'info') return <InfoView />;
-    
-    if (activeTab === 'category' && !selectedCategory && !searchQuery) {
+    if (activeTab === 'settings') {
       return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500 px-4">
-          {categories.map(cat => (
-            <button
-              key={cat.name}
-              onClick={() => handleSelectCategory(cat.name)}
-              className="bg-white p-6 rounded-[2.5rem] border border-slate-100 text-left hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/5 transition-all group active:scale-[0.98]"
-            >
-              <div className="flex items-center justify-between mb-2">
-                <div className="p-3 bg-emerald-50 rounded-2xl text-emerald-500 group-hover:scale-110 transition-transform">
-                  <Tag className="w-5 h-5" />
-                </div>
-                <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest font-sans">
-                  {toBengaliNumber(cat.count)} Songs
-                </span>
-              </div>
-              <h3 className="text-xl font-bold text-slate-800 font-bengali group-hover:text-emerald-600 transition-colors">
-                {cat.name}
-              </h3>
-            </button>
-          ))}
-        </div>
+        <SettingsView 
+          fontSize={fontSize}
+          setFontSize={setFontSize}
+          currentFont={currentFont}
+          setCurrentFont={setCurrentFont}
+        />
+      );
+    }
+    
+    if (activeTab === 'collection' && !searchQuery) {
+      return (
+        <CollectionView 
+          songs={ALL_SONGS}
+          favorites={favorites}
+          categories={categories}
+          onSelectSong={handleSelectSong}
+          onToggleFavorite={toggleFavorite}
+        />
       );
     }
 
     return (
-      <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500 px-4">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-2">
-            {activeTab === 'category' && selectedCategory && !searchQuery && (
-              <button onClick={handleBack} className="p-1 hover:bg-slate-100 rounded-lg text-slate-400">
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-            )}
-            <h2 className="text-xs font-black text-slate-400 uppercase tracking-[0.2em]">
-              {activeTab === 'fav' ? 'সংরক্ষিত গান' : activeTab === 'category' && selectedCategory ? selectedCategory : 'সংকলন'}
-            </h2>
-          </div>
+      <div className="space-y-2 animate-in fade-in slide-in-from-bottom-4 duration-500 px-4">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-1.5 font-bengali">
+            {searchQuery ? 'অনুসন্ধানের ফলাফল' : 'সূচী'}
+          </h2>
+          <button 
+            onClick={() => setSortBy(prev => prev === 'number' ? 'alphabetical' : 'number')}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-bold hover:bg-slate-200 transition-all font-bengali"
+          >
+            {sortBy === 'number' ? <ArrowDownAZ className="w-4 h-4" /> : <Hash className="w-4 h-4" />}
+            <span>{sortBy === 'number' ? 'বর্ণানুক্রমিক' : 'নম্বর অনুযায়ী'}</span>
+          </button>
         </div>
 
         {filteredSongs.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
             {filteredSongs.map(song => (
               <SongCard 
                 key={song.id} 
@@ -328,35 +360,34 @@ const App: React.FC = () => {
 
   return (
     <Layout activeTab={activeTab} setActiveTab={handleTabChange}>
-      <header className="bg-white border-b border-slate-100 sticky top-0 z-30 pb-4">
-        <div className="px-6 py-8 pb-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative">
-          <div className="flex items-center gap-5">
-            <MainLogo className="w-14 h-14 shadow-xl rounded-[1.25rem] overflow-hidden shrink-0" />
+      <header className="bg-white border-b border-slate-100 sticky top-0 z-30 pb-2 transition-colors">
+        <div className="px-6 py-2 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 relative">
+          <div className="flex items-center gap-4">
+            <MainLogo className="w-12 h-12 shadow-lg rounded-[1.1rem] overflow-hidden shrink-0" />
             <div className="text-left">
-              <h1 className="text-4xl font-black text-brand font-bengali tracking-tight leading-none">জয়ধ্বনি</h1>
+              <h1 className="text-4xl font-black text-brand font-logo tracking-tight leading-none">জয়ধ্বনি</h1>
               <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.25em] mt-1.5">বাংলা খ্রীষ্টিয় সংগীত</p>
             </div>
           </div>
           
           <div className="hidden md:flex items-center gap-1 bg-slate-50 p-1 rounded-2xl border border-slate-100">
             <HeaderNavButton active={activeTab === 'home'} onClick={() => handleTabChange('home')} icon={<Home className="w-4 h-4" />} label="সূচী" />
-            <HeaderNavButton active={activeTab === 'category'} onClick={() => handleTabChange('category')} icon={<List className="w-4 h-4" />} label="বিষয়" />
-            <HeaderNavButton active={activeTab === 'fav'} onClick={() => handleTabChange('fav')} icon={<Heart className="w-4 h-4" />} label="প্রিয়" />
-            <HeaderNavButton active={activeTab === 'info'} onClick={() => handleTabChange('info')} icon={<Info className="w-4 h-4" />} label="তথ্য" />
+            <HeaderNavButton active={activeTab === 'collection'} onClick={() => handleTabChange('collection')} icon={<List className="w-4 h-4" />} label="সংগ্রহ" />
+            <HeaderNavButton active={activeTab === 'settings'} onClick={() => handleTabChange('settings')} icon={<Info className="w-4 h-4" />} label="সেটিংস" />
           </div>
         </div>
         
-        {activeTab !== 'info' && (
+        {activeTab !== 'settings' && (
           <div className="px-4 pt-2 max-w-6xl mx-auto">
             <div className="relative group">
-              <div className="absolute left-5 inset-y-0 flex items-center pointer-events-none">
-                <Search className="w-5 h-5 text-slate-300 group-focus-within:text-emerald-500 transition-colors" />
+              <div className="absolute left-4 inset-y-0 flex items-center pointer-events-none">
+                <Search className="w-4 h-4 text-slate-300 group-focus-within:text-emerald-500 transition-colors" />
               </div>
               <input 
                 ref={searchInputRef}
                 type="text" 
                 placeholder="গানের নাম বা নম্বর দিয়ে খুঁজুন..." 
-                className="w-full bg-slate-50 border border-slate-200 py-3 pl-14 pr-12 rounded-2xl text-sm font-medium outline-none focus:border-emerald-300 focus:bg-white transition-all font-bengali"
+                className="w-full bg-slate-50 border border-slate-200 py-2 pl-12 pr-10 rounded-xl text-sm font-medium outline-none focus:border-emerald-300 focus:bg-white transition-all font-bengali text-slate-800"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />

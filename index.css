@@ -1,15 +1,34 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+Bengali:wght@400;500;600;700;900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Atma:wght@300;400;500;600;700&family=Mina:wght@400;700&family=Galada&family=Baloo+Da+2:wght@400;500;600;700;800&display=swap');
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-bengali: "Noto Serif Bengali", "Hind Siliguri", serif;
+  --font-bengali: var(--current-font-family, "Noto Serif Bengali", "Hind Siliguri", serif);
   --color-brand: #358C5D;
+  
+  /* Redefine font sizes to be relative to system font size */
+  --font-size-xs: calc(var(--system-font-size) * 0.75);
+  --font-size-sm: calc(var(--system-font-size) * 0.875);
+  --font-size-base: var(--system-font-size);
+  --font-size-lg: calc(var(--system-font-size) * 1.125);
+  --font-size-xl: calc(var(--system-font-size) * 1.25);
+  --font-size-2xl: calc(var(--system-font-size) * 1.5);
+  --font-size-3xl: calc(var(--system-font-size) * 1.875);
+  --font-size-4xl: calc(var(--system-font-size) * 2.25);
 }
 
 @layer base {
+  :root {
+    --current-font-family: "Noto Serif Bengali", "Hind Siliguri", serif;
+    --lyrics-font-size: 1.125rem;
+    --system-font-size: 1rem;
+    --index-font-size: 1.125rem;
+  }
+
   body {
-    @apply bg-slate-50 text-slate-900 overflow-x-hidden select-none;
+    @apply bg-slate-50 text-slate-900 overflow-x-hidden select-none transition-colors duration-300;
     font-family: var(--font-sans);
+    font-size: var(--system-font-size);
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -21,6 +40,20 @@
 @layer components {
   .font-bengali {
     font-family: var(--font-bengali);
+  }
+
+  .font-logo {
+    font-family: "Noto Serif Bengali", serif;
+  }
+
+  .lyrics-text {
+    font-size: var(--lyrics-font-size);
+    line-height: 1.8;
+  }
+
+  /* Android TV Focus Styles */
+  :focus-visible {
+    @apply outline-4 outline-emerald-500 outline-offset-4 ring-4 ring-emerald-500/20;
   }
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, ShieldCheck, Cpu, User, Music, Search, Mic, Type, Youtube, Smartphone, Sparkles, Mail } from 'lucide-react';
+import { Heart, ShieldCheck, Cpu, User, Music, Search, Mic, Type, Youtube, Smartphone, Mail, Info } from 'lucide-react';
 import { toBengaliNumber } from '../utils/format';
 
 const PortraitPhoto = ({ className }: { className?: string }) => {
@@ -45,9 +45,9 @@ const FeatureItem = ({ icon, title, desc }: { icon: React.ReactNode, title: stri
 
 const InfoView: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6 pt-10 space-y-10 animate-in fade-in duration-1000 font-bengali pb-32">
+    <div className="max-w-4xl mx-auto p-4 pt-6 space-y-6 animate-in fade-in duration-1000 font-bengali pb-32">
       {/* Dedication Section */}
-      <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-10">
+      <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-8">
         <h3 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-2">উৎসর্গ</h3>
         <PortraitPhoto className="" />
         <div className="space-y-6">
@@ -68,14 +68,9 @@ const InfoView: React.FC = () => {
       </div>
 
       {/* Introduction Section */}
-      <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/40 border border-slate-100 space-y-6">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="p-2 bg-emerald-50 rounded-xl">
-            <Sparkles className="w-5 h-5 text-emerald-600" />
-          </div>
-          <h2 className="text-2xl font-black text-slate-900 tracking-tight">ভূমিকা</h2>
-        </div>
-        <div className="space-y-5 text-slate-700 leading-relaxed font-medium">
+      <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-6">
+        <h3 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-2">ভূমিকা</h3>
+        <div className="space-y-5 text-slate-700 leading-relaxed font-medium max-w-2xl">
           <p className="text-emerald-600 font-bold italic text-lg border-l-4 border-emerald-500 pl-4 py-1 bg-emerald-50/30 rounded-r-xl">
             সব গৌরব, প্রশংসা ও স্তুতি কেবল আমাদের প্রেমময় পিতা ঈশ্বর ও ত্রাণকর্তা প্রভু যীশু খ্রীষ্টেরই প্রাপ্য।
           </p>
@@ -86,15 +81,10 @@ const InfoView: React.FC = () => {
       </div>
 
       {/* Features Section */}
-      <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/40 border border-slate-100 space-y-8">
-        <h2 className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-3">
-          <div className="p-2 bg-emerald-50 rounded-xl">
-            <ShieldCheck className="w-5 h-5 text-emerald-600" />
-          </div>
-          অ্যাপের প্রধান বৈশিষ্ট্যসমূহ
-        </h2>
+      <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-8">
+        <h3 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-2">অ্যাপের প্রধান বৈশিষ্ট্যসমূহ</h3>
         
-        <div className="grid gap-8 sm:grid-cols-2">
+        <div className="grid gap-8 sm:grid-cols-2 text-left w-full">
           <FeatureItem 
             icon={<Music className="w-5 h-5" />}
             title="বিশাল ভাণ্ডার"
@@ -128,20 +118,15 @@ const InfoView: React.FC = () => {
           <FeatureItem 
             icon={<Smartphone className="w-5 h-5" />}
             title="অফলাইন সুবিধা"
-            desc="এটি একটি প্রগ্রেসিভ ওয়েব অ্যাপ (PWA), যা মোবাইল বা ডেক্সটপে ইনস্টল করা যায় এবং অফলাইনেও ব্যবহারযোগ্য।"
+            desc="এটি একটি প্রগ্রেসিভ ওয়েব অ্যাপ (PWA), যা মোবাইল বা ডেক্সটপে ইনস্টল করা যায় এবং অফলাইনেও গান ও লিরিক্স দেখা সম্ভব।"
           />
         </div>
       </div>
 
       {/* Contact Section */}
-      <div className="bg-emerald-600 p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-emerald-200/40 text-white space-y-4">
-        <h2 className="text-xl font-black tracking-tight flex items-center gap-3">
-          <div className="p-2 bg-white/20 rounded-xl">
-            <Mail className="w-5 h-5 text-white" />
-          </div>
-          যোগাযোগ
-        </h2>
-        <p className="text-sm font-medium opacity-90 leading-relaxed">
+      <div className="bg-emerald-600 p-6 md:p-8 rounded-3xl shadow-xl shadow-emerald-200/40 text-white flex flex-col items-center text-center space-y-5">
+        <h3 className="text-xl font-bold text-white border-b-2 border-white/20 pb-2">যোগাযোগ</h3>
+        <p className="text-lg font-medium opacity-90 leading-relaxed max-w-md">
           আপনার কোনো পরামর্শ থাকলে বা নতুন কোনো গান যুক্ত করতে চাইলে আমাদের সাথে যোগাযোগ করতে পারেন।
         </p>
         <div className="pt-2">

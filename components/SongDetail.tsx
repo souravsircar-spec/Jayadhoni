@@ -1,26 +1,35 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Song } from '../types';
-import { ChevronLeft, Minus, Plus, Heart, Tag, Home, User, Youtube } from 'lucide-react';
+import { ChevronLeft, Settings, Heart, Tag, Home, User, Youtube, X, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import { toBengaliNumber } from '../utils/format';
+import { BENGALI_FONTS } from '../constants';
 
 interface SongDetailProps {
   song: Song;
   onBack: () => void;
+  onOpenSettings: () => void;
   isFavorite: boolean;
   onToggleFavorite: () => void;
+  globalFontSize: number;
+  globalFontFamily: string;
+  setFontSize: (size: number) => void;
+  setCurrentFont: (font: string) => void;
 }
 
-const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onToggleFavorite }) => {
-  const [fontSize, setFontSize] = useState(() => {
-    const saved = localStorage.getItem('jayadhani_lyrics_font_size');
-    return saved ? parseInt(saved, 10) : 20;
-  });
-
+const SongDetail: React.FC<SongDetailProps> = ({ 
+  song, 
+  onBack, 
+  onOpenSettings,
+  isFavorite, 
+  onToggleFavorite,
+  globalFontSize,
+  globalFontFamily,
+  setFontSize,
+  setCurrentFont
+}) => {
   const [showControls, setShowControls] = useState(true);
-
-  useEffect(() => {
-    localStorage.setItem('jayadhani_lyrics_font_size', fontSize.toString());
-  }, [fontSize]);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const stanzas = useMemo(() => {
     return song.lyrics.split(/\n\n+/).filter(s => s.trim().length > 0);
@@ -54,9 +63,9 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
   };
 
   return (
-    <div className="min-h-screen bg-slate-50/30 font-bengali pb-40 relative">
+    <div className="min-h-screen bg-slate-50/30 font-bengali pb-24 relative transition-colors duration-300" style={{ fontFamily: globalFontFamily }}>
       <header className="bg-white/80 backdrop-blur-xl border-b border-slate-100 sticky top-0 left-0 right-0 z-50 shadow-sm shadow-slate-200/5">
-        <div className="max-w-3xl mx-auto px-4 py-2 flex items-center justify-between relative min-h-[64px]">
+        <div className="max-w-3xl mx-auto px-4 py-1.5 flex items-center justify-between relative min-h-[56px]">
           <button 
             onClick={onBack} 
             className="p-2.5 bg-slate-50 text-slate-600 hover:bg-slate-100 rounded-2xl transition-all active:scale-90 z-10 shrink-0"
@@ -92,9 +101,9 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
 
       <main 
         onClick={toggleControls}
-        className="max-w-3xl mx-auto px-6 pt-12 pb-12 md:pt-16 md:pb-16 text-center cursor-pointer min-h-screen"
+        className="max-w-3xl mx-auto px-4 pt-6 pb-4 md:pt-8 md:pb-6 text-center cursor-pointer min-h-screen"
       >
-        <div className="mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <div className="mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <h1 className="text-[20px] md:text-[28px] font-black text-slate-900 leading-[1.2] mb-6 tracking-tight">
             {renderStyledTitle(song.title, true)}
           </h1>
@@ -112,7 +121,7 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
           </div>
         </div>
 
-        <div className="space-y-10">
+        <div className="space-y-4">
           {stanzas.map((stanzaText, index) => {
             const { marker, content } = parseStanza(stanzaText);
             const isChorus = marker === 'ধুয়া' || marker === 'ধুয়া' || marker === 'Chorus' || marker === 'অন্তরা' || marker === 'ধ্রুব';
@@ -124,7 +133,7 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
                 {displayMarker && (
                   <div 
                     className={`mb-3 font-black transition-colors duration-500 ${isChorus ? 'text-rose-400 italic' : 'text-emerald-500/50'}`}
-                    style={{ fontSize: `${Math.max(14, fontSize * 0.75)}px` }}
+                    style={{ fontSize: `${Math.max(14, globalFontSize * 0.75)}px` }}
                   >
                     {displayMarker}
                   </div>
@@ -132,7 +141,7 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
                 <div className="w-full">
                   <p 
                     className={`leading-[1.9] font-medium whitespace-pre-wrap transition-all duration-500 mx-auto max-w-[90%] md:max-w-[80%] text-slate-700 ${isChorus ? 'italic' : ''}`} 
-                    style={{ fontSize: `${fontSize}px` }}
+                    style={{ fontSize: `${globalFontSize}px` }}
                   >
                     {content}
                   </p>
@@ -140,6 +149,17 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
               </div>
             );
           })}
+        </div>
+
+        {/* Traditional End Design */}
+        <div className="mt-4 mb-4 flex items-center justify-center gap-4 opacity-20 select-none animate-in fade-in duration-1000 delay-700">
+          <div className="h-px w-16 bg-gradient-to-r from-transparent to-slate-400" />
+          <div className="flex items-center gap-2">
+            <div className="w-1 h-1 rounded-full bg-slate-500" />
+            <div className="w-3 h-3 rotate-45 border-2 border-slate-500 rounded-sm" />
+            <div className="w-1 h-1 rounded-full bg-slate-500" />
+          </div>
+          <div className="h-px w-16 bg-gradient-to-l from-transparent to-slate-400" />
         </div>
       </main>
 
@@ -162,19 +182,12 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
             <div className="w-px h-6 bg-slate-200/60 mx-0" />
 
             <button 
-              onClick={(e) => { e.stopPropagation(); setFontSize(f => Math.max(14, f - 2)); }} 
-              className="p-2.5 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90"
-              title="Font Decrease"
+              onClick={(e) => { e.stopPropagation(); setIsSettingsOpen(true); }} 
+              className="p-2.5 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90 flex items-center gap-1.5 pr-3"
+              title="সেটিংস"
             >
-              <Minus className="w-5 h-5" />
-            </button>
-            <div className="w-px h-6 bg-slate-200/60 mx-0" />
-            <button 
-              onClick={(e) => { e.stopPropagation(); setFontSize(f => Math.min(40, f + 2)); }} 
-              className="p-2.5 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90"
-              title="Font Increase"
-            >
-              <Plus className="w-5 h-5" />
+              <Settings className="w-5 h-5" />
+              <span className="text-[10px] font-black uppercase tracking-widest hidden sm:inline">সেটিংস</span>
             </button>
 
             {song.youtubeId && (
@@ -195,6 +208,76 @@ const SongDetail: React.FC<SongDetailProps> = ({ song, onBack, isFavorite, onTog
           </div>
         </div>
       </div>
+
+      {/* Floating Settings Popup (Ultra Compact PiP Style) */}
+      <AnimatePresence>
+        {isSettingsOpen && (
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            transition={{ type: 'spring', damping: 25, stiffness: 350 }}
+            className="fixed bottom-24 right-6 w-[180px] z-[70] font-bengali"
+          >
+            {/* Close button outside the box */}
+            <button 
+              onClick={() => setIsSettingsOpen(false)}
+              className="absolute -top-2 -right-2 p-1.5 bg-white border border-slate-200 text-slate-400 hover:text-rose-500 rounded-full shadow-lg transition-all active:scale-90 z-10"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+
+            <div className="bg-white/95 border border-slate-200 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3.5 space-y-4">
+              <div className="space-y-4">
+                {/* Font Size */}
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between px-0.5">
+                    <span className="text-[9px] font-black text-slate-400 uppercase tracking-wider">আকার</span>
+                    <span className="text-[9px] font-black text-emerald-600">
+                      {toBengaliNumber(globalFontSize)}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <input 
+                      type="range" 
+                      min="15" 
+                      max="32" 
+                      value={globalFontSize}
+                      onChange={(e) => setFontSize(parseInt(e.target.value))}
+                      className="flex-grow h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                    />
+                  </div>
+                </div>
+
+                {/* Font Family */}
+                <div className="space-y-1.5">
+                  <span className="text-[9px] font-black text-slate-400 uppercase tracking-wider px-0.5">ফন্ট</span>
+                  <div className="relative">
+                    <select
+                      value={BENGALI_FONTS.find(f => f.family === globalFontFamily)?.id || 'noto'}
+                      onChange={(e) => {
+                        const selected = BENGALI_FONTS.find(f => f.id === e.target.value);
+                        if (selected) setCurrentFont(selected.family);
+                      }}
+                      className="w-full pl-2 pr-6 py-1.5 rounded-lg border border-slate-100 bg-slate-50/50 text-slate-700 font-bengali text-[11px] appearance-none focus:ring-1 focus:ring-emerald-500 outline-none cursor-pointer"
+                      style={{ fontFamily: globalFontFamily }}
+                    >
+                      {BENGALI_FONTS.map(font => (
+                        <option key={font.id} value={font.id} style={{ fontFamily: font.family }}>
+                          {font.name}
+                        </option>
+                      ))}
+                    </select>
+                    <div className="absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-300">
+                      <ChevronRight className="w-3 h-3 rotate-90" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

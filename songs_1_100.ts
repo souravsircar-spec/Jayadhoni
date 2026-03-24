@@ -883,8 +883,8 @@ export const HYMNS_1_100: Song[] = [
   },
 {
     id: 40,
-    title: "(যীশু) তোমা ছাড়ি আমি কোথা' যাব?",
-    transliteration: "(Jishu) Toma Chari Ami Kotha Jabo?",
+    title: "যীশু তোমা ছাড়ি আমি কোথা' যাব?",
+    transliteration: "Jishu Toma Chari Ami Kotha Jabo?",
     category: "প্রশংসা ও ধন্যবাদ",
     composer: "প্রেমচাঁদ নাথ",
     lyrics: `(যীশু) তোমা ছাড়ি আমি কোথা' যাব?
