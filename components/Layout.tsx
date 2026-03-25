@@ -1,6 +1,7 @@
 import React from 'react';
 import { TabType } from '../types';
-import { Home, List, Settings } from 'lucide-react';
+import { Home, List, Settings, LogOut } from 'lucide-react';
+import { logout } from '../firebase';
 
 interface LayoutProps {
   children: React.ReactNode;

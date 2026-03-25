@@ -6,13 +6,16 @@ import Layout from './components/Layout';
 import SongCard from './components/SongCard';
 import SongDetail from './components/SongDetail';
 import InfoView from './components/InfoView';
-import { Search, ChevronLeft, Tag, Sparkles, X, Mic, MicOff, Home, List, Info, Heart, ArrowDownAZ, Hash } from 'lucide-react';
+import { Search, ChevronLeft, Tag, Sparkles, X, Mic, MicOff, Home, List, Info, Heart, ArrowDownAZ, Hash, LogOut } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { toBengaliNumber, latinizeBengali } from './utils/format';
 import { MainLogo } from './components/Logo';
 
 import CollectionView from './components/CollectionView';
 import SettingsView from './components/SettingsView';
+import AuthView from './components/AuthView';
+import { auth, trackAppOpen, trackSongView, logout, saveUserFavorites, getUserFavorites } from './firebase';
+import { onAuthStateChanged, User } from 'firebase/auth';
 
 const ALL_SONGS: Song[] = [...SONG_DB, ...CHORUS_DB].map(s => {
   let categories: string[] = [];
@@ -47,6 +50,10 @@ const App: React.FC = () => {
   const [isListening, setIsListening] = useState(false);
   const [sortBy, setSortBy] = useState<'number' | 'alphabetical'>('number');
   
+  // Auth State
+  const [user, setUser] = useState<User | null>(null);
+  const [isAuthReady, setIsAuthReady] = useState(false);
+  
   // Settings State
   const [fontSize, setFontSize] = useState(() => {
     const saved = localStorage.getItem('jayadhani_lyrics_font_size');
@@ -69,6 +76,24 @@ const App: React.FC = () => {
     }
   });
   const searchInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      setUser(currentUser);
+      setIsAuthReady(true);
+      if (currentUser) {
+        trackAppOpen();
+        // Load favorites from Firestore for registered users
+        if (!currentUser.isAnonymous) {
+          const cloudFavs = await getUserFavorites(currentUser.uid);
+          if (cloudFavs.length > 0) {
+            setFavorites(cloudFavs);
+          }
+        }
+      }
+    });
+    return () => unsubscribe();
+  }, []);
 
   // Apply Settings
   useEffect(() => {
@@ -220,9 +245,16 @@ const App: React.FC = () => {
 
   const toggleFavorite = (e: React.MouseEvent | undefined, id: number) => {
     if (e) e.stopPropagation();
-    setFavorites(prev => 
-      prev.includes(id) ? prev.filter(fid => fid !== id) : [...prev, id]
-    );
+    const newFavs = favorites.includes(id) 
+      ? favorites.filter(fid => fid !== id) 
+      : [...favorites, id];
+    
+    setFavorites(newFavs);
+    
+    // Sync with Firestore for registered users
+    if (user && !user.isAnonymous) {
+      saveUserFavorites(user.uid, newFavs);
+    }
   };
 
   const handleClearSearch = () => {
@@ -268,6 +300,7 @@ const App: React.FC = () => {
   const handleSelectSong = (song: Song) => {
     window.history.pushState({ view: 'song', songId: song.id }, '');
     setSelectedSong(song);
+    trackSongView(song.id);
   };
 
   const handleBack = () => {
@@ -278,6 +311,23 @@ const App: React.FC = () => {
       setActiveTab('home');
     }
   };
+
+  if (!isAuthReady) {
+    return (
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+        <motion.div 
+          animate={{ scale: [1, 1.1, 1] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+        >
+          <MainLogo className="w-16 h-16 opacity-20" />
+        </motion.div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <AuthView onAuthSuccess={() => {}} />;
+  }
 
   if (selectedSong) {
     return (
@@ -301,6 +351,7 @@ const App: React.FC = () => {
     if (activeTab === 'settings') {
       return (
         <SettingsView 
+          user={user}
           fontSize={fontSize}
           setFontSize={setFontSize}
           currentFont={currentFont}

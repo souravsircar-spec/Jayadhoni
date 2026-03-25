@@ -1,15 +1,21 @@
 import React from 'react';
 import { 
-  User, 
+  User as UserIcon, 
   Info, 
   ChevronRight, 
   Monitor, 
-  ArrowLeft
+  ArrowLeft,
+  LogOut,
+  Mail,
+  ShieldAlert
 } from 'lucide-react';
 import InfoView from './InfoView';
 import { BENGALI_FONTS } from '../constants';
+import { User } from 'firebase/auth';
+import { logout } from '../firebase';
 
 interface SettingsViewProps {
+  user: User | null;
   fontSize: number;
   setFontSize: (size: number) => void;
   currentFont: string;
@@ -18,6 +24,7 @@ interface SettingsViewProps {
 }
 
 const SettingsView: React.FC<SettingsViewProps> = ({
+  user,
   fontSize,
   setFontSize,
   currentFont,
@@ -50,15 +57,52 @@ const SettingsView: React.FC<SettingsViewProps> = ({
       </div>
 
       {/* Profile Section */}
-      <section className="bg-white p-4 rounded-3xl border border-slate-100 shadow-sm">
-        <div className="flex items-center gap-4">
-          <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600">
-            <User className="w-7 h-7" />
+      <section className="bg-white p-6 rounded-[2.5rem] border border-slate-100 shadow-sm space-y-6">
+        <div className="flex items-center gap-5">
+          <div className="relative">
+            {user?.photoURL ? (
+              <img 
+                src={user.photoURL} 
+                alt={user.displayName || ''} 
+                className="w-16 h-16 rounded-2xl object-cover shadow-md"
+                referrerPolicy="no-referrer"
+              />
+            ) : (
+              <div className="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600 shadow-sm">
+                <UserIcon className="w-8 h-8" />
+              </div>
+            )}
+            {user?.isAnonymous && (
+              <div className="absolute -bottom-1 -right-1 bg-amber-500 text-white p-1 rounded-full border-2 border-white">
+                <ShieldAlert className="w-3 h-3" />
+              </div>
+            )}
           </div>
-          <div>
-            <h3 className="text-lg font-bold text-slate-800 font-bengali">ব্যবহারকারী প্রোফাইল</h3>
-            <p className="text-sm text-slate-500">অতিথি ব্যবহারকারী</p>
+          <div className="flex-1 min-w-0">
+            <h3 className="text-xl font-bold text-slate-800 font-bengali truncate">
+              {user?.displayName || (user?.isAnonymous ? 'অতিথি ব্যবহারকারী' : 'ব্যবহারকারী')}
+            </h3>
+            <div className="flex items-center gap-1.5 text-slate-400 mt-0.5">
+              {user?.email ? (
+                <>
+                  <Mail className="w-3 h-3" />
+                  <span className="text-xs font-medium truncate">{user.email}</span>
+                </>
+              ) : (
+                <span className="text-xs font-medium">অতিথি হিসেবে প্রবেশ করেছেন</span>
+              )}
+            </div>
           </div>
+        </div>
+
+        <div className="pt-4 border-t border-slate-50">
+          <button 
+            onClick={() => logout()}
+            className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-rose-50 text-rose-500 font-bold text-sm hover:bg-rose-100 transition-all active:scale-[0.98]"
+          >
+            <LogOut className="w-4 h-4" />
+            লগ আউট করুন
+          </button>
         </div>
       </section>
 
