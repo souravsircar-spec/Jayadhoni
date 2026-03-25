@@ -1,6 +1,5 @@
 import React from 'react';
 import { 
-  User, 
   Info, 
   ChevronRight, 
   Monitor, 
@@ -48,19 +47,6 @@ const SettingsView: React.FC<SettingsViewProps> = ({
       <div className="flex items-center justify-center mb-4">
         <h2 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-1.5 font-bengali">সেটিংস</h2>
       </div>
-
-      {/* Profile Section */}
-      <section className="bg-white p-4 rounded-3xl border border-slate-100 shadow-sm">
-        <div className="flex items-center gap-4">
-          <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600">
-            <User className="w-7 h-7" />
-          </div>
-          <div>
-            <h3 className="text-lg font-bold text-slate-800 font-bengali">ব্যবহারকারী প্রোফাইল</h3>
-            <p className="text-sm text-slate-500">অতিথি ব্যবহারকারী</p>
-          </div>
-        </div>
-      </section>
 
       {/* Appearance Section */}
       <section className="space-y-3">

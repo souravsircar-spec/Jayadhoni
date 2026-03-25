@@ -6,13 +6,14 @@ import Layout from './components/Layout';
 import SongCard from './components/SongCard';
 import SongDetail from './components/SongDetail';
 import InfoView from './components/InfoView';
-import { Search, ChevronLeft, Tag, Sparkles, X, Mic, MicOff, Home, List, Info, Heart, ArrowDownAZ, Hash } from 'lucide-react';
+import { Search, ChevronLeft, Tag, Sparkles, X, Mic, MicOff, Home, List, Info, Heart, ArrowDownAZ, Hash, LogOut } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { toBengaliNumber, latinizeBengali } from './utils/format';
 import { MainLogo } from './components/Logo';
 
 import CollectionView from './components/CollectionView';
 import SettingsView from './components/SettingsView';
+import { trackAppOpen, trackSongView, testConnection } from './firebase';
 
 const ALL_SONGS: Song[] = [...SONG_DB, ...CHORUS_DB].map(s => {
   let categories: string[] = [];
@@ -69,6 +70,11 @@ const App: React.FC = () => {
     }
   });
   const searchInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    testConnection();
+    trackAppOpen();
+  }, []);
 
   // Apply Settings
   useEffect(() => {
@@ -268,6 +274,7 @@ const App: React.FC = () => {
   const handleSelectSong = (song: Song) => {
     window.history.pushState({ view: 'song', songId: song.id }, '');
     setSelectedSong(song);
+    trackSongView(song.id);
   };
 
   const handleBack = () => {

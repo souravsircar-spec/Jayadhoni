@@ -1,0 +1,119 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: users
+    // Document ID: {userId} (Firebase Auth UID)
+    // Fields:
+    //   - uid: string (required) - The user's unique ID
+    //   - email: string (optional) - The user's email address
+    //   - displayName: string (optional) - The user's display name
+    //   - photoURL: string (optional) - The user's photo URL
+    //   - isGuest: bool (required) - Whether the user is a guest
+    //   - favorites: list (optional) - Array of song IDs
+    //   - lastLogin: timestamp (required) - Last login time
+    //   - createdAt: timestamp (required) - Account creation time
+    //
+    // Collection: song_views
+    // Document ID: {songId} (Song ID as string)
+    // Fields:
+    //   - songId: int (required) - The song's ID
+    //   - viewCount: int (required) - Total view count
+    //   - lastViewed: timestamp (required) - Last viewed time
+    //
+    // Collection: app_usage
+    // Document ID: global
+    // Fields:
+    //   - openCount: int (required) - Total app open count
+    //   - lastOpened: timestamp (required) - Last opened time
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function hasOnlyAllowedFields(fields) {
+      return request.resource.data.keys().hasOnly(fields);
+    }
+
+    function hasRequiredFields(fields) {
+      return request.resource.data.keys().hasAll(fields);
+    }
+
+    // ===============================================================
+    // Domain Validators
+    // ===============================================================
+
+    function isValidUser(data) {
+      return hasRequiredFields(['uid', 'isGuest', 'lastLogin']) &&
+             hasOnlyAllowedFields(['uid', 'email', 'displayName', 'photoURL', 'isGuest', 'favorites', 'lastLogin', 'createdAt']) &&
+             data.uid is string &&
+             data.isGuest is bool &&
+             data.lastLogin is timestamp &&
+             (data.email == null || data.email is string) &&
+             (data.displayName == null || data.displayName is string) &&
+             (data.photoURL == null || data.photoURL is string) &&
+             (!('favorites' in data) || data.favorites is list);
+    }
+
+    function isValidSongStatUpdate() {
+      // Allow only viewCount increment and lastViewed update
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(['viewCount', 'lastViewed']) &&
+             request.resource.data.viewCount == resource.data.viewCount + 1 &&
+             request.resource.data.lastViewed is timestamp;
+    }
+
+    function isValidAppStatUpdate() {
+      // Allow only openCount increment and lastOpened update
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(['openCount', 'lastOpened']) &&
+             request.resource.data.openCount == resource.data.openCount + 1 &&
+             request.resource.data.lastOpened is timestamp;
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId) && isValidUser(request.resource.data);
+      allow update: if isOwner(userId) && isValidUser(request.resource.data);
+    }
+
+    match /song_views/{songId} {
+      allow read: if true;
+      // Allow creation if it doesn't exist
+      allow create: if hasRequiredFields(['songId', 'viewCount', 'lastViewed']) &&
+                    request.resource.data.viewCount == 1;
+      // Allow incrementing
+      allow update: if isValidSongStatUpdate();
+    }
+
+    match /app_usage/global {
+      allow read: if true;
+      // Allow creation if it doesn't exist
+      allow create: if hasRequiredFields(['openCount', 'lastOpened']) &&
+                    request.resource.data.openCount == 1;
+      // Allow incrementing
+      allow update: if isValidAppStatUpdate();
+    }
+
+    // Default deny
+    match /{path=**} {
+      allow read, write: if false;
+    }
+  }
+}

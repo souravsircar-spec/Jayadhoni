@@ -1,9 +1,11 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Song } from '../types';
-import { ChevronLeft, Settings, Heart, Tag, Home, User, Youtube, X, ChevronRight } from 'lucide-react';
+import { ChevronLeft, Settings, Heart, Tag, Home, User, Youtube, X, ChevronRight, Eye } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { toBengaliNumber } from '../utils/format';
 import { BENGALI_FONTS } from '../constants';
+import { db } from '../firebase';
+import { doc, onSnapshot } from 'firebase/firestore';
 
 interface SongDetailProps {
   song: Song;
@@ -30,6 +32,16 @@ const SongDetail: React.FC<SongDetailProps> = ({
 }) => {
   const [showControls, setShowControls] = useState(true);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [viewCount, setViewCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    const unsub = onSnapshot(doc(db, 'song_views', song.id.toString()), (doc) => {
+      if (doc.exists()) {
+        setViewCount(doc.data().viewCount);
+      }
+    });
+    return () => unsub();
+  }, [song.id]);
 
   const stanzas = useMemo(() => {
     return song.lyrics.split(/\n\n+/).filter(s => s.trim().length > 0);
@@ -116,8 +128,16 @@ const SongDetail: React.FC<SongDetailProps> = ({
             )}
             <div className="flex items-center gap-2">
               <Tag className="w-3 h-3 text-emerald-500" />
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">{(song.categories || []).join(', ')}</span>
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">{(song.categories || []).join(', ')}</span>
             </div>
+            {viewCount !== null && (
+              <div className="flex items-center gap-2 mt-1">
+                <Eye className="w-3 h-3 text-slate-300" />
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                  {toBengaliNumber(viewCount)} বার দেখা হয়েছে
+                </span>
+              </div>
+            )}
           </div>
         </div>
 
