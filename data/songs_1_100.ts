@@ -1,4 +1,4 @@
-import { Song } from './types';
+import { Song } from '../types';
 
 export const HYMNS_1_100: Song[] = [
         {
@@ -231,6 +231,7 @@ export const HYMNS_1_100: Song[] = [
   transliteration: "Chol Sokole Jai Jishur Sodone",
   category: "আবাহন ও আরাধনা",
   composer: "মথুরা নাথ বোস (১৮৯৫)",
+  youtubeId: "u66LQ8IYn_k",
   lyrics: `চল সকলে যাই যীশুর সদনে,
 ডাকিতেছেন দয়াল যীশু মধুর বচনে।
 
@@ -252,6 +253,7 @@ export const HYMNS_1_100: Song[] = [
   transliteration: "Sobe Anonde, Anonde Mohanonde Kor Gan",
   category: "আবাহন ও আরাধনা",
   composer: "শলোমন শান্তিনাথ বিশ্বাস (১৯০৫)",
+  youtubeId: "RTx2s9c6ess",
   lyrics: `(সুর: বল, পবিত্র, পবিত্র, পবিত্র)
 সবে-আনন্দে, আনন্দে মহানন্দে কর গান,
 অন্তরে, অধরে ধর ঐক্যতান।
@@ -284,6 +286,7 @@ export const HYMNS_1_100: Song[] = [
   transliteration: "Ami Jishu Jishu Bole Jobe Daki Tomay",
   category: "আবাহন ও আরাধনা",
   composer: "প্রিয়নাথ বৈরাগী (১৯৫২)",
+  youtubeId: "o9yeKVLlK0k",
   lyrics: `আমি যীশু যীশু বলে যবে ডাকি তোমায়,
 তুমি সাড়া দিও প্রাণে ওহে দয়াময়।
 
@@ -320,6 +323,7 @@ export const HYMNS_1_100: Song[] = [
   transliteration: "Doroshon Dao He Doyamoy",
   category: "আবাহন ও আরাধনা",
   composer: "দেবীপ্রসাদ রায়চৌধুরী",
+  youtubeId: "FRRveahRxWc",
   lyrics: `দরশন দাও হে দয়াময়,
 দীনে দয়া কর, ওগো মহাপ্রাণ।
 ১ পিতা, পুত্র, আত্মা ঈশ্বর মহান,
@@ -339,6 +343,7 @@ export const HYMNS_1_100: Song[] = [
   transliteration: "Nondito Mone Prabhur Bhovone",
   category: "আবাহন ও আরাধনা",
   composer: "মানিক নাথ (১৯৭২)",
+  youtubeId: "_jfBdUcLx7M",
   lyrics: `নন্দিত মনে প্রভুর ভবনে, মিলেছি সকলে এসে।
 কণ্ঠে মোদের আনন্দ গান, এ শুভ যাত্রা শেষে।
 
@@ -361,6 +366,7 @@ export const HYMNS_1_100: Song[] = [
   transliteration: "Tomar Joy Houk, Joy Houk He Moharaj",
   category: "আবাহন ও আরাধনা",
   composer: "প্রিয়নাথ বৈরাগী",
+  youtubeId: "I_Ilj6F2djM",
   lyrics: `তোমার জয় হউক, জয় হউক হে মহারাজ,
 হউক ঐ মহিমা কীর্তন মহীতলে।
 ভবে যত নরনারী এসে সারি সারি,
@@ -433,6 +439,7 @@ export const HYMNS_1_100: Song[] = [
   transliteration: "Ese Danrao, Amar Sommukhe",
   category: "আবাহন ও আরাধনা",
   composer: "প্রিয়নাথ বৈরাগী",
+  youtubeId: "Og2pEnOeXdE",
   lyrics: `এসে দাঁড়াও, আমার সম্মুখে।
 তাপিত জীবন শীতল করি — তোমার ভুবন মোহন রূপ দেখে।
 
@@ -457,6 +464,7 @@ export const HYMNS_1_100: Song[] = [
   transliteration: "Joy Jagadish Suto Jishu Premomoy",
   category: "আবাহন ও আরাধনা",
   composer: "বিন্দুনাথ সরকার",
+  youtubeId: "ih0FHTpaOyY",
   lyrics: `জয় জগদীশ সুত যীশু প্রেমময়।
 ঘোষিছে অমরবৃন্দ সদা তব জয়।
 
@@ -474,6 +482,7 @@ export const HYMNS_1_100: Song[] = [
   title: "সূর্যের আলোয়, আকাশের নীলিমায়",
   transliteration: "Surjer Aloy, Akasher Nilimay",
   category: "আবাহন ও আরাধনা",
+  youtubeId: "zA2ixwXGUYU",
   lyrics: `সূর্যের আলোয়, আকাশের নীলিমায়,
 দেখেছি তোমার মহিমা।
 চাঁদের ঐ জ্যোছনায়, আর তারায় তারায়,

@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+Bengali:wght@400;500;600;700;900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Atma:wght@300;400;500;600;700&family=Mina:wght@400;700&family=Galada&family=Baloo+Da+2:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -23,10 +23,24 @@
     --lyrics-font-size: 1.125rem;
     --system-font-size: 1rem;
     --index-font-size: 1.125rem;
+    
+    --bg-main: #f8fafc; /* slate-50 */
+    --bg-card: #ffffff;
+    --text-main: #0f172a; /* slate-900 */
+    --text-muted: #64748b; /* slate-500 */
+    --border-color: #f1f5f9; /* slate-100 */
+  }
+
+  .dark {
+    --bg-main: #0a0a0a; /* 4% brightness, neutral grey-black */
+    --bg-card: #171717; /* Slightly lighter for cards */
+    --text-main: #f8fafc; /* slate-50 */
+    --text-muted: #cbd5e1; /* slate-300 - much lighter grey */
+    --border-color: #262626; /* Lighter borders for better visibility */
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 overflow-x-hidden select-none transition-colors duration-300;
+    @apply bg-[var(--bg-main)] text-[var(--text-main)] overflow-x-hidden select-none transition-colors duration-300;
     font-family: var(--font-sans);
     font-size: var(--system-font-size);
     -webkit-tap-highlight-color: transparent;
@@ -62,7 +76,7 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
@@ -70,4 +84,10 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }
