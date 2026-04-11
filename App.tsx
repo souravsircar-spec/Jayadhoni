@@ -6,7 +6,7 @@ import Layout from './components/Layout';
 import SongCard from './components/SongCard';
 import SongDetail from './components/SongDetail';
 import InfoView from './components/InfoView';
-import { Search, ChevronLeft, Tag, Sparkles, X, Mic, MicOff, Home, List, Info, Settings, Heart, ArrowDownAZ, Hash, LogOut, Grip } from 'lucide-react';
+import { Search, ChevronLeft, Tag, Sparkles, X, Mic, MicOff, Home, List, Info, Settings, Heart, ArrowDownAZ, Hash } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { toBengaliNumber, latinizeBengali } from './utils/format';
 import { MainLogo } from './components/Logo';
@@ -14,7 +14,6 @@ import { MainLogo } from './components/Logo';
 import CollectionView from './components/CollectionView';
 import SettingsView from './components/SettingsView';
 import { SplashScreen } from './components/SplashScreen';
-import { ConfirmModal } from './components/ConfirmModal';
 
 const ALL_SONGS: Song[] = [...SONG_DB, ...CHORUS_DB].map(s => {
   let categories: string[] = [];
@@ -44,7 +43,6 @@ const HeaderNavButton = ({ active, onClick, icon, label }: { active: boolean, on
 
 const App: React.FC = () => {
   const [showSplash, setShowSplash] = useState(true);
-  const [showExitConfirm, setShowExitConfirm] = useState(false);
   const [activeTab, setActiveTab] = useState<TabType>('home');
   const [selectedSong, setSelectedSong] = useState<Song | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -77,13 +75,6 @@ const App: React.FC = () => {
   });
   const searchInputRef = useRef<HTMLInputElement>(null);
   
-  // Scroll Indicator State
-  const [scrollIndicator, setScrollIndicator] = useState<string | null>(null);
-  const [isScrolling, setIsScrolling] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-  const [scrollPercent, setScrollPercent] = useState(0);
-  const scrollTimeoutRef = useRef<number | null>(null);
-
   // Apply Settings
   useEffect(() => {
     localStorage.setItem('jayadhani_lyrics_font_size', fontSize.toString());
@@ -133,12 +124,6 @@ const App: React.FC = () => {
     const onPopState = (e: PopStateEvent) => {
       const state = e.state;
       if (!state) {
-        // If we're on home and there's no state (trying to go back from root)
-        if (activeTab === 'home' && !selectedSong) {
-          setShowExitConfirm(true);
-          // Push state back so they don't actually leave yet
-          window.history.pushState({ view: 'home' }, '');
-        }
         return;
       }
 
@@ -157,58 +142,6 @@ const App: React.FC = () => {
     window.addEventListener('popstate', onPopState);
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
-
-  // Scroll Indicator Effect
-  useEffect(() => {
-    const handleScroll = () => {
-      // Only show on home tab and when no song is selected
-      if (activeTab !== 'home' || selectedSong) return;
-
-      if (!isDragging) {
-        setIsScrolling(true);
-        if (scrollTimeoutRef.current) {
-          window.clearTimeout(scrollTimeoutRef.current);
-        }
-        
-        scrollTimeoutRef.current = window.setTimeout(() => {
-          setIsScrolling(false);
-        }, 1500); // Increased timeout for better visibility
-
-        // Calculate scroll percentage
-        const totalScrollable = document.documentElement.scrollHeight - window.innerHeight;
-        if (totalScrollable > 0) {
-          setScrollPercent(window.scrollY / totalScrollable);
-        }
-      }
-
-      // Find visible song
-      const cards = document.querySelectorAll('.song-card-item');
-      let visibleSongId = '';
-      let visibleSongTitle = '';
-
-      for (let i = 0; i < cards.length; i++) {
-        const rect = cards[i].getBoundingClientRect();
-        // Check if the card is near the top of the viewport
-        if (rect.top >= 0 && rect.top <= 300) {
-          visibleSongId = cards[i].getAttribute('data-id') || '';
-          visibleSongTitle = cards[i].getAttribute('data-title') || '';
-          break;
-        }
-      }
-
-      if (sortBy === 'number' && visibleSongId) {
-        setScrollIndicator(toBengaliNumber(parseInt(visibleSongId)));
-      } else if (sortBy === 'alphabetical' && visibleSongTitle) {
-        setScrollIndicator(visibleSongTitle.charAt(0));
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (scrollTimeoutRef.current) window.clearTimeout(scrollTimeoutRef.current);
-    };
-  }, [activeTab, selectedSong, sortBy]);
 
   // Copy protection
   useEffect(() => {
@@ -346,32 +279,22 @@ const App: React.FC = () => {
     window.history.pushState({ view: 'tab', tab }, '');
     setActiveTab(tab);
     setSelectedSong(null);
-    setIsScrolling(false);
-    setIsDragging(false);
   };
 
   const handleSelectSong = (song: Song) => {
     window.history.pushState({ view: 'song', songId: song.id }, '');
     setSelectedSong(song);
-    setIsScrolling(false);
-    setIsDragging(false);
   };
 
   const handleBack = () => {
     if (window.history.length > 1) {
       window.history.back();
     } else {
-      if (activeTab === 'home' && !selectedSong) {
-        setShowExitConfirm(true);
-      } else {
-        setSelectedSong(null);
+      if (activeTab !== 'home') {
         setActiveTab('home');
       }
+      setSelectedSong(null);
     }
-  };
-
-  const confirmExit = () => {
-    window.location.href = 'about:blank';
   };
 
   if (selectedSong) {
@@ -478,7 +401,7 @@ const App: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <header className="bg-[var(--bg-card)] border-b border-[var(--border-color)] sticky top-0 z-30 pt-4 pb-2 transition-colors">
+      <header className="bg-[var(--bg-card)] border-b border-[var(--border-color)] sticky top-0 z-30 pb-2 transition-colors" style={{ paddingTop: 'calc(1rem + env(safe-area-inset-top))' }}>
         <div className="px-6 py-2 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 relative">
           <div className="flex items-center gap-4">
             <MainLogo className="w-12 h-12 shadow-lg rounded-[1.1rem] overflow-hidden shrink-0" />
@@ -493,13 +416,6 @@ const App: React.FC = () => {
             <HeaderNavButton active={activeTab === 'collection'} onClick={() => handleTabChange('collection')} icon={<List className="w-4 h-4" />} label="সংগ্রহ" />
             <HeaderNavButton active={activeTab === 'settings'} onClick={() => handleTabChange('settings')} icon={<Settings className="w-4 h-4" />} label="সেটিংস" />
             <HeaderNavButton active={activeTab === 'info'} onClick={() => handleTabChange('info')} icon={<Info className="w-4 h-4" />} label="তথ্য" />
-            <button 
-              onClick={handleBack}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-900/20 transition-all ml-2"
-            >
-              <LogOut className="w-4 h-4" />
-              <span>প্রস্থান</span>
-            </button>
           </div>
         </div>
         
@@ -586,68 +502,6 @@ const App: React.FC = () => {
           </div>
         </div>
       </footer>
-
-      {/* Scroll Indicator Badge */}
-      <AnimatePresence>
-        {(isScrolling || isDragging) && scrollIndicator && (
-          <motion.div 
-            drag="y"
-            dragConstraints={{ top: 0, bottom: 0 }}
-            dragElastic={0}
-            onDragStart={() => {
-              setIsDragging(true);
-              if (scrollTimeoutRef.current) window.clearTimeout(scrollTimeoutRef.current);
-            }}
-            onDragEnd={() => {
-              setIsDragging(false);
-              scrollTimeoutRef.current = window.setTimeout(() => {
-                setIsScrolling(false);
-              }, 1500);
-            }}
-            onDrag={(e, info) => {
-              const totalScrollable = document.documentElement.scrollHeight - window.innerHeight;
-              // Calculate scroll based on drag delta
-              // The handle moves 90% of the screen height for 100% of the scroll
-              const scrollFactor = totalScrollable / (window.innerHeight * 0.9);
-              window.scrollBy(0, info.delta.y * scrollFactor);
-              
-              // Update percent manually while dragging for smooth visual feedback
-              const newPercent = window.scrollY / totalScrollable;
-              setScrollPercent(newPercent);
-            }}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ 
-              opacity: 1, 
-              x: 0,
-              top: `${5 + (scrollPercent * 90)}%` 
-            }}
-            exit={{ opacity: 0, x: 20 }}
-            transition={{ 
-              top: isDragging ? { duration: 0 } : { type: "spring", stiffness: 500, damping: 40, mass: 0.5 },
-              opacity: { duration: 0.2 }
-            }}
-            className="fixed right-0 z-[60] flex items-center gap-3 select-none touch-none pointer-events-auto"
-          >
-            <div className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 px-4 py-2 rounded-full shadow-xl flex items-center justify-center font-bold text-lg text-slate-600 dark:text-slate-200 min-w-[50px] font-bengali pointer-events-none">
-              {scrollIndicator}
-            </div>
-            
-            <div className="w-12 h-12 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-full shadow-2xl flex items-center justify-center text-slate-500 dark:text-slate-300 -mr-6 cursor-ns-resize active:scale-95 transition-transform pointer-events-auto">
-              <Grip className="w-6 h-6" />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <ConfirmModal
-        isOpen={showExitConfirm}
-        onClose={() => setShowExitConfirm(false)}
-        onConfirm={confirmExit}
-        title="আপনি কি প্রস্থান করতে চান?"
-        message="অ্যাপ থেকে প্রস্থান করলে আপনার বর্তমান সেশনটি বন্ধ হয়ে যাবে।"
-        confirmText="হ্যাঁ, প্রস্থান করুন"
-        cancelText="না, ফিরে যান"
-      />
     </Layout>
   );
 };

@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTab }) =>
         {children}
       </div>
 
-      <nav className="fixed bottom-0 left-0 right-0 bg-[var(--bg-card)]/80 backdrop-blur-xl border-t border-[var(--border-color)] px-4 pb-6 pt-3 md:hidden z-40">
+      <nav className="fixed bottom-0 left-0 right-0 bg-[var(--bg-card)]/80 backdrop-blur-xl border-t border-[var(--border-color)] px-4 pt-3 md:hidden z-40" style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }}>
         <div className="max-w-md mx-auto flex items-center justify-around">
           <MobileNavItem active={activeTab === 'home'} onClick={() => setActiveTab('home')} icon={<Home className="w-6 h-6" />} label="সূচী" />
           <MobileNavItem active={activeTab === 'collection'} onClick={() => setActiveTab('collection')} icon={<List className="w-6 h-6" />} label="সংগ্রহ" />

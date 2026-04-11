@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">জয়ধ্বনি</string>
+    <string name="title_activity_main">জয়ধ্বনি</string>
+    <string name="package_name">com.sourav.jayadhani</string>
+    <string name="custom_url_scheme">com.sourav.jayadhani</string>
+</resources>

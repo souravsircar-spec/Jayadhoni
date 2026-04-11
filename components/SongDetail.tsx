@@ -81,7 +81,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
 
   return (
     <div className="min-h-screen bg-[var(--bg-main)] font-bengali pb-24 relative transition-colors duration-300" style={{ fontFamily: globalFontFamily }}>
-      <header className="bg-[var(--bg-card)]/80 backdrop-blur-xl border-b border-[var(--border-color)] sticky top-0 left-0 right-0 z-50 shadow-sm shadow-slate-200/5">
+      <header className="bg-[var(--bg-card)]/80 backdrop-blur-xl border-b border-[var(--border-color)] sticky top-0 left-0 right-0 z-50 shadow-sm shadow-slate-200/5" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
         <div className="max-w-3xl mx-auto px-4 py-1.5 flex items-center justify-between relative min-h-[56px]">
           <button 
             onClick={onBack} 
