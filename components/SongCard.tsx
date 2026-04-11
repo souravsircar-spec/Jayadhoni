@@ -35,22 +35,22 @@ const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite,
       {/* Integrated ID Badge with transparent heart background */}
       <div 
         onClick={onToggleFavorite}
-        className="relative shrink-0 w-10 h-10 bg-emerald-50/50 dark:bg-emerald-700/30 border border-emerald-100/50 dark:border-emerald-600/40 rounded-xl flex items-center justify-center overflow-hidden transition-transform hover:scale-105 active:scale-95 group/heart"
+        className="relative shrink-0 w-10 h-10 bg-emerald-100/50 dark:bg-emerald-700/30 border border-emerald-200/50 dark:border-emerald-600/40 rounded-xl flex items-center justify-center overflow-hidden transition-transform hover:scale-105 active:scale-95 group/heart"
         title={isFavorite ? "পছন্দ থেকে সরান" : "পছন্দ হিসেবে রাখুন"}
       >
         {/* Transparent Heart Shape behind the number */}
         <Heart 
           className={`absolute w-7 h-7 transition-all duration-300 ${
             isFavorite 
-              ? 'text-rose-500/20 fill-rose-500/10 scale-125' 
-              : 'text-emerald-200/40 dark:text-emerald-500/20 fill-emerald-100/20 dark:fill-emerald-900/10 scale-100 group-hover/heart:scale-110'
+              ? 'text-rose-500/30 fill-rose-500/20 scale-125' 
+              : 'text-emerald-300/40 dark:text-emerald-500/20 fill-emerald-200/20 dark:fill-emerald-900/10 scale-100 group-hover/heart:scale-110'
           }`}
           strokeWidth={1.5}
         />
         
         {/* Song Number: Turns red (rose-600) when favorite */}
         <span className={`relative z-10 font-black font-sans text-base transition-colors duration-300 ${
-          isFavorite ? 'text-rose-600' : 'text-emerald-700 dark:text-emerald-300'
+          isFavorite ? 'text-rose-600' : 'text-emerald-800 dark:text-emerald-300'
         }`}>
           {toBengaliNumber(song.id)}
         </span>

@@ -81,11 +81,11 @@ const SongDetail: React.FC<SongDetailProps> = ({
 
   return (
     <div className="min-h-screen bg-[var(--bg-main)] font-bengali pb-24 relative transition-colors duration-300" style={{ fontFamily: globalFontFamily }}>
-      <header className="bg-[var(--bg-card)]/80 backdrop-blur-xl border-b border-[var(--border-color)] sticky top-0 left-0 right-0 z-50 shadow-sm shadow-slate-200/5" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
+      <header className="bg-[var(--header-bg)]/80 backdrop-blur-xl border-b border-[var(--border-color)] sticky top-0 left-0 right-0 z-50 shadow-sm shadow-slate-200/5" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
         <div className="max-w-3xl mx-auto px-4 py-1.5 flex items-center justify-between relative min-h-[56px]">
           <button 
             onClick={onBack} 
-            className="p-2.5 bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-2xl transition-all active:scale-90 z-10 shrink-0"
+            className="p-2.5 bg-[var(--bg-input)] text-[var(--text-main)] hover:bg-slate-200 dark:hover:bg-slate-700 rounded-2xl transition-all active:scale-90 z-10 shrink-0"
             aria-label="Back"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -93,8 +93,8 @@ const SongDetail: React.FC<SongDetailProps> = ({
           
           <div className="flex-1 flex items-center px-4 overflow-hidden">
             <div className="flex items-center gap-3 w-full">
-              <div className="w-10 h-10 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl flex items-center justify-center border border-emerald-100/50 dark:border-emerald-800/30 shrink-0">
-                <span className="text-sm font-black text-emerald-600 dark:text-emerald-500 font-sans">
+              <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/20 rounded-xl flex items-center justify-center border border-emerald-200/50 dark:border-emerald-800/30 shrink-0">
+                <span className="text-sm font-black text-emerald-800 dark:text-emerald-500 font-sans">
                   {toBengaliNumber(song.id)}
                 </span>
               </div>
@@ -108,7 +108,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
 
           <button 
             onClick={onToggleFavorite} 
-            className={`p-2.5 rounded-2xl transition-all active:scale-90 z-10 shrink-0 ${isFavorite ? 'bg-rose-50 dark:bg-rose-900/20 text-rose-500' : 'bg-slate-50 dark:bg-slate-800 text-slate-300 dark:text-slate-600'}`}
+            className={`p-2.5 rounded-2xl transition-all active:scale-90 z-10 shrink-0 ${isFavorite ? 'bg-rose-100 dark:bg-rose-900/20 text-rose-600' : 'bg-[var(--bg-input)] text-[var(--text-muted)]'}`}
             aria-label="Toggle Favorite"
           >
             <Heart className={`w-6 h-6 ${isFavorite ? 'fill-current' : ''}`} />

@@ -32,7 +32,7 @@ const CollectionView: React.FC<CollectionViewProps> = ({
           <div className="flex items-center gap-2">
             <button 
               onClick={() => setView('main')}
-              className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full text-slate-500 transition-colors"
+              className="p-1.5 hover:bg-[var(--bg-input)] rounded-full text-[var(--text-muted)] transition-colors"
             >
               <ChevronRight className="w-5 h-5 rotate-180" />
             </button>
@@ -69,7 +69,7 @@ const CollectionView: React.FC<CollectionViewProps> = ({
           <div className="flex items-center gap-2">
             <button 
               onClick={() => { setView('main'); setSelectedCategory(null); }}
-              className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full text-slate-500 transition-colors"
+              className="p-1.5 hover:bg-[var(--bg-input)] rounded-full text-[var(--text-muted)] transition-colors"
             >
               <ChevronRight className="w-5 h-5 rotate-180" />
             </button>
@@ -106,14 +106,14 @@ const CollectionView: React.FC<CollectionViewProps> = ({
           className="w-full bg-[var(--bg-card)] p-4 rounded-3xl border border-[var(--border-color)] text-left hover:border-rose-200 dark:hover:border-rose-900/50 hover:shadow-xl hover:shadow-rose-500/5 transition-all group active:scale-[0.98] flex items-center justify-between"
         >
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-rose-50 dark:bg-rose-900/20 rounded-2xl text-rose-500 group-hover:scale-110 transition-transform">
+            <div className="p-3 bg-rose-100 dark:bg-rose-900/20 rounded-2xl text-rose-600 group-hover:scale-110 transition-transform">
               <Heart className="w-5 h-5" />
             </div>
             <div>
               <h3 className="text-lg font-bold text-[var(--text-main)] font-bengali group-hover:text-rose-600 transition-colors">
                 প্রিয় গানসমূহ
               </h3>
-              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">
+              <p className="text-[10px] text-[var(--text-muted)] font-bold uppercase tracking-wider mt-0.5">
                 {toBengaliNumber(favorites.length)} টি গান
               </p>
             </div>
@@ -133,14 +133,14 @@ const CollectionView: React.FC<CollectionViewProps> = ({
               className="w-full bg-[var(--bg-card)] p-4 rounded-3xl border border-[var(--border-color)] text-left hover:border-emerald-200 dark:hover:border-emerald-900/50 hover:shadow-xl hover:shadow-emerald-500/5 transition-all group active:scale-[0.98] flex items-center justify-between"
             >
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl text-emerald-500 group-hover:scale-110 transition-transform">
+                <div className="p-3 bg-emerald-100 dark:bg-emerald-900/20 rounded-2xl text-emerald-700 dark:text-emerald-500 group-hover:scale-110 transition-transform">
                   <Tag className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-[var(--text-main)] font-bengali group-hover:text-emerald-600 transition-colors">
                     {cat.name}
                   </h3>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">
+                  <p className="text-[10px] text-[var(--text-muted)] font-bold uppercase tracking-wider mt-0.5">
                     {toBengaliNumber(cat.count)} টি গান
                   </p>
                 </div>

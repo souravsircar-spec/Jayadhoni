@@ -8,6 +8,7 @@ import SongDetail from './components/SongDetail';
 import InfoView from './components/InfoView';
 import { Search, ChevronLeft, Tag, Sparkles, X, Mic, MicOff, Home, List, Info, Settings, Heart, ArrowDownAZ, Hash } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { SpeechRecognition } from '@capacitor-community/speech-recognition';
 import { toBengaliNumber, latinizeBengali } from './utils/format';
 import { MainLogo } from './components/Logo';
 
@@ -246,29 +247,50 @@ const App: React.FC = () => {
     searchInputRef.current?.focus();
   };
 
-  const startListening = () => {
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-      alert('আপনার ব্রাউজার ভয়েস সার্চ সমর্থন করে না।');
-      return;
+  const startListening = async () => {
+    try {
+      const { available } = await SpeechRecognition.available();
+      if (!available) {
+        alert('ভয়েস সার্চ এই ডিভাইসে উপলব্ধ নয়।');
+        return;
+      }
+
+      const { speechRecognition } = await SpeechRecognition.checkPermissions();
+      if (speechRecognition !== 'granted') {
+        const { speechRecognition: newPermission } = await SpeechRecognition.requestPermissions();
+        if (newPermission !== 'granted') {
+          alert('ভয়েস সার্চ ব্যবহারের জন্য মাইক্রোফোন পারমিশন প্রয়োজন।');
+          return;
+        }
+      }
+
+      setIsListening(true);
+      
+      await SpeechRecognition.start({
+        language: 'bn-IN',
+        partialResults: false,
+        popup: true,
+      });
+
+      SpeechRecognition.addListener('partialResults', (data: any) => {
+        if (data.matches && data.matches.length > 0) {
+          setSearchQuery(data.matches[0]);
+        }
+      });
+
+      // Stop listening after a timeout or when results are received
+      // Note: The plugin handles most of this natively with the popup
+    } catch (error) {
+      console.error('Speech recognition error:', error);
+      setIsListening(false);
     }
-
-    const recognition = new SpeechRecognition();
-    recognition.lang = 'bn-IN';
-    recognition.continuous = false;
-    recognition.interimResults = false;
-
-    recognition.onstart = () => setIsListening(true);
-    recognition.onend = () => setIsListening(false);
-    recognition.onerror = () => setIsListening(false);
-
-    recognition.onresult = (event: any) => {
-      const transcript = event.results[0][0].transcript;
-      setSearchQuery(transcript);
-    };
-
-    recognition.start();
   };
+
+  useEffect(() => {
+    return () => {
+      SpeechRecognition.removeAllListeners();
+    };
+  }, []);
 
   useEffect(() => {
     // No-op for category cleanup as it's handled in CollectionView
@@ -352,7 +374,7 @@ const App: React.FC = () => {
     return (
       <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500 px-4">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold text-slate-800 dark:text-slate-200 border-b-2 border-emerald-500/20 pb-1.5 font-bengali">
+          <h2 className="text-xl font-bold text-[var(--text-main)] border-b-2 border-emerald-500/20 pb-1.5 font-bengali">
             {searchQuery ? 'অনুসন্ধানের ফলাফল' : 'সূচী'}
           </h2>
           <button 
@@ -401,17 +423,17 @@ const App: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <header className="bg-[var(--bg-card)] border-b border-[var(--border-color)] sticky top-0 z-30 pb-2 transition-colors" style={{ paddingTop: 'calc(1rem + env(safe-area-inset-top))' }}>
+      <header className="bg-[var(--header-bg)] border-b border-[var(--border-color)] sticky top-0 z-30 pb-2 transition-colors" style={{ paddingTop: 'calc(1rem + env(safe-area-inset-top))' }}>
         <div className="px-6 py-2 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 relative">
           <div className="flex items-center gap-4">
             <MainLogo className="w-12 h-12 shadow-lg rounded-[1.1rem] overflow-hidden shrink-0" />
             <div className="flex flex-col justify-between h-12 py-0.5 items-center">
               <h1 className="text-4xl font-black text-brand font-logo tracking-tight leading-none">জয়ধ্বনি</h1>
-              <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.25em]">বাংলা খ্রীষ্টিয় সংগীত</p>
+              <p className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-[0.25em]">বাংলা খ্রীষ্টিয় সংগীত</p>
             </div>
           </div>
           
-          <div className="hidden md:flex items-center gap-1 bg-slate-50 dark:bg-slate-800 p-1 rounded-2xl border border-slate-100 dark:border-slate-700">
+          <div className="hidden md:flex items-center gap-1 bg-[var(--bg-input)] p-1 rounded-2xl border border-[var(--border-color)]">
             <HeaderNavButton active={activeTab === 'home'} onClick={() => handleTabChange('home')} icon={<Home className="w-4 h-4" />} label="সূচী" />
             <HeaderNavButton active={activeTab === 'collection'} onClick={() => handleTabChange('collection')} icon={<List className="w-4 h-4" />} label="সংগ্রহ" />
             <HeaderNavButton active={activeTab === 'settings'} onClick={() => handleTabChange('settings')} icon={<Settings className="w-4 h-4" />} label="সেটিংস" />
@@ -423,13 +445,13 @@ const App: React.FC = () => {
           <div className="px-4 pt-2 max-w-6xl mx-auto">
             <div className="relative group">
               <div className="absolute left-4 inset-y-0 flex items-center pointer-events-none">
-                <Search className="w-4 h-4 text-slate-300 dark:text-slate-600 group-focus-within:text-emerald-500 transition-colors" />
+                <Search className="w-4 h-4 text-[var(--text-muted)] group-focus-within:text-emerald-500 transition-colors" />
               </div>
               <input 
                 ref={searchInputRef}
                 type="text" 
                 placeholder="গানের নাম বা নম্বর দিয়ে খুঁজুন..." 
-                className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 py-2 pl-12 pr-10 rounded-xl text-sm font-medium outline-none focus:border-emerald-300 dark:focus:border-emerald-500 focus:bg-white dark:focus:bg-slate-900 transition-all font-bengali text-[var(--text-main)]"
+                className="w-full bg-[var(--bg-input)] border border-[var(--border-color)] py-2 pl-12 pr-10 rounded-xl text-sm font-medium outline-none focus:border-emerald-300 dark:focus:border-emerald-500 focus:bg-[var(--bg-card)] transition-all font-bengali text-[var(--text-main)]"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -451,7 +473,7 @@ const App: React.FC = () => {
                     className={`relative p-1.5 rounded-lg transition-all z-10 ${
                       isListening 
                         ? 'bg-rose-500 text-white shadow-lg shadow-rose-500/30' 
-                        : 'text-slate-300 dark:text-slate-600 hover:text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-900/20'
+                        : 'text-[var(--text-muted)] hover:text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-900/20'
                     }`}
                     aria-label="Voice search"
                     title="ভয়েস সার্চ"
@@ -462,7 +484,7 @@ const App: React.FC = () => {
                 {searchQuery && (
                   <button 
                     onClick={handleClearSearch}
-                    className="p-1.5 text-slate-300 dark:text-slate-600 hover:text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-900/20 rounded-lg transition-all animate-in fade-in zoom-in duration-200"
+                    className="p-1.5 text-[var(--text-muted)] hover:text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-900/20 rounded-lg transition-all animate-in fade-in zoom-in duration-200"
                     aria-label="Clear search"
                   >
                     <X className="w-5 h-5" />
