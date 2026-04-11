@@ -7,15 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "tsc --noEmit",
-    "cap:sync": "npx cap sync",
-    "cap:open": "npx cap open android"
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
-    "@capacitor-community/speech-recognition": "^7.0.1",
-    "@capacitor/android": "^8.3.0",
-    "@capacitor/cli": "^8.3.0",
-    "@capacitor/core": "^8.3.0",
     "@tailwindcss/vite": "^4.2.0",
     "framer-motion": "^12.34.3",
     "lucide-react": "^0.574.0",

@@ -26,7 +26,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[100] bg-[var(--bg-card)] flex flex-col items-center justify-center"
+          className="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center"
         >
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}

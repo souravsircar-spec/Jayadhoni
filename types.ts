@@ -9,4 +9,4 @@ export interface Song {
   youtubeId?: string;
 }
 
-export type TabType = 'home' | 'collection' | 'settings' | 'info';
+export type TabType = 'home' | 'collection' | 'settings';

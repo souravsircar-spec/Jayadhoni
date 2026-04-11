@@ -1,8 +1,8 @@
 import { Song } from './types';
-import { HYMNS_1_100 } from './data/songs_1_100';
-import { HYMNS_101_200 } from './data/songs_101_200';
-import { HYMNS_201_300 } from './data/songs_201_300';
-import { HYMNS_301_343 } from './data/songs_301_343';
+import { HYMNS_1_100 } from './songs_1_100';
+import { HYMNS_101_200 } from './songs_101_200';
+import { HYMNS_201_300 } from './songs_201_300';
+import { HYMNS_301_343 } from './songs_301_343';
 
 // Aggregate all hymn collections into one database
 export const SONG_DB: Song[] = [

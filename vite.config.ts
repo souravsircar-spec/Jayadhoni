@@ -30,13 +30,13 @@ export default defineConfig(({ mode }) => {
             display: 'standalone',
             icons: [
               {
-                src: 'icon-192.png',
+                src: 'https://cdn-icons-png.flaticon.com/512/3251/3251521.png',
                 sizes: '192x192',
                 type: 'image/png',
                 purpose: 'any maskable'
               },
               {
-                src: 'icon-512.png',
+                src: 'https://cdn-icons-png.flaticon.com/512/3251/3251521.png',
                 sizes: '512x512',
                 type: 'image/png'
               }

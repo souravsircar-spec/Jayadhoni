@@ -8,10 +8,9 @@ interface SongCardProps {
   isFavorite: boolean;
   onToggleFavorite: (e: React.MouseEvent) => void;
   onClick: () => void;
-  showCategory?: boolean;
 }
 
-const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite, onClick, showCategory = true }) => {
+const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite, onClick }) => {
   const renderTitle = (title: string) => {
     const match = title.match(/^(.*?)\s*\((.*)\)$/);
     if (match) {
@@ -30,27 +29,27 @@ const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite,
   return (
     <div 
       onClick={onClick}
-      className="group relative bg-[var(--bg-card)] p-1.5 rounded-xl border border-[var(--border-color)] flex items-center gap-2 cursor-pointer transition-all hover:shadow-xl hover:shadow-emerald-500/5 active:scale-[0.99]"
+      className="group relative bg-white p-1.5 rounded-xl border border-slate-100 flex items-center gap-2 cursor-pointer transition-all hover:shadow-xl hover:shadow-emerald-500/5 active:scale-[0.99]"
     >
       {/* Integrated ID Badge with transparent heart background */}
       <div 
         onClick={onToggleFavorite}
-        className="relative shrink-0 w-10 h-10 bg-emerald-100/50 border border-emerald-200/50 rounded-xl flex items-center justify-center overflow-hidden transition-transform hover:scale-105 active:scale-95 group/heart"
+        className="relative shrink-0 w-10 h-10 bg-emerald-50/50 border border-emerald-100/50 rounded-xl flex items-center justify-center overflow-hidden transition-transform hover:scale-105 active:scale-95 group/heart"
         title={isFavorite ? "পছন্দ থেকে সরান" : "পছন্দ হিসেবে রাখুন"}
       >
         {/* Transparent Heart Shape behind the number */}
         <Heart 
           className={`absolute w-7 h-7 transition-all duration-300 ${
             isFavorite 
-              ? 'text-rose-500/30 fill-rose-500/20 scale-125' 
-              : 'text-emerald-300/40 fill-emerald-200/20 scale-100 group-hover/heart:scale-110'
+              ? 'text-rose-500/20 fill-rose-500/10 scale-125' 
+              : 'text-emerald-200/40 fill-emerald-100/20 scale-100 group-hover/heart:scale-110'
           }`}
           strokeWidth={1.5}
         />
         
         {/* Song Number: Turns red (rose-600) when favorite */}
         <span className={`relative z-10 font-black font-sans text-base transition-colors duration-300 ${
-          isFavorite ? 'text-rose-600' : 'text-emerald-800'
+          isFavorite ? 'text-rose-600' : 'text-emerald-700'
         }`}>
           {toBengaliNumber(song.id)}
         </span>
@@ -58,7 +57,7 @@ const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite,
 
       <div className="flex-1 min-w-0">
         <h3 
-          className="font-bold text-[var(--text-main)] font-bengali truncate group-hover:text-emerald-600 transition-colors"
+          className="font-bold text-slate-800 font-bengali truncate group-hover:text-emerald-600 transition-colors"
           style={{ fontSize: 'var(--index-font-size)' }}
         >
           {renderTitle(song.title)}
@@ -70,12 +69,10 @@ const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite,
               <span className="text-[11px] font-medium text-slate-400 leading-none">{song.composer}</span>
             </div>
           )}
-          {showCategory && (
-            <div className="flex items-center gap-1.5">
-              <Tag className="w-3 h-3 text-slate-300" />
-              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-none">{(song.categories || []).join(', ')}</span>
-            </div>
-          )}
+          <div className="flex items-center gap-1.5">
+            <Tag className="w-3 h-3 text-slate-300" />
+            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-none">{(song.categories || []).join(', ')}</span>
+          </div>
         </div>
       </div>
     </div>

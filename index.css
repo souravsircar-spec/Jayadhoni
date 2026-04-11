@@ -23,18 +23,10 @@
     --lyrics-font-size: 1.125rem;
     --system-font-size: 1rem;
     --index-font-size: 1.125rem;
-    
-    --bg-main: #f8fafc; /* slate-50 */
-    --bg-card: #ffffff;
-    --bg-input: #f1f5f9; /* slate-100 */
-    --text-main: #0f172a; /* slate-900 */
-    --text-muted: #64748b; /* slate-500 */
-    --border-color: #f1f5f9; /* slate-100 */
-    --header-bg: #ffffff;
   }
 
   body {
-    @apply bg-[var(--bg-main)] text-[var(--text-main)] overflow-x-hidden select-none transition-colors duration-300;
+    @apply bg-slate-50 text-slate-900 overflow-x-hidden select-none transition-colors duration-300;
     font-family: var(--font-sans);
     font-size: var(--system-font-size);
     -webkit-tap-highlight-color: transparent;
@@ -70,7 +62,7 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
