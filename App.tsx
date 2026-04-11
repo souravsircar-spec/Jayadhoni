@@ -33,8 +33,8 @@ const HeaderNavButton = ({ active, onClick, icon, label }: { active: boolean, on
     onClick={onClick} 
     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
       active 
-        ? 'bg-[var(--bg-card)] text-emerald-600 dark:text-emerald-500 shadow-sm' 
-        : 'text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-white/50 dark:hover:bg-slate-700/50'
+        ? 'bg-[var(--bg-card)] text-emerald-600 shadow-sm' 
+        : 'text-slate-400 hover:text-slate-600 hover:bg-white/50'
     }`}
   >
     {icon}
@@ -61,9 +61,6 @@ const App: React.FC = () => {
   });
   const [currentFont, setCurrentFont] = useState(() => {
     return localStorage.getItem('jayadhani_font_family') || '"Noto Serif Bengali", "Hind Siliguri", serif';
-  });
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    return localStorage.getItem('jayadhani_dark_mode') === 'true';
   });
 
   const [favorites, setFavorites] = useState<number[]>(() => {
@@ -96,15 +93,6 @@ const App: React.FC = () => {
     localStorage.setItem('jayadhani_font_family', currentFont);
     document.documentElement.style.setProperty('--current-font-family', currentFont);
   }, [currentFont]);
-
-  useEffect(() => {
-    localStorage.setItem('jayadhani_dark_mode', isDarkMode.toString());
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
 
   // Handle back button and history
   useEffect(() => {
@@ -345,8 +333,6 @@ const App: React.FC = () => {
           setFontSize={setFontSize}
           currentFont={currentFont}
           setCurrentFont={setCurrentFont}
-          isDarkMode={isDarkMode}
-          setIsDarkMode={setIsDarkMode}
         />
       );
     }
@@ -379,7 +365,7 @@ const App: React.FC = () => {
           </h2>
           <button 
             onClick={() => setSortBy(prev => prev === 'number' ? 'alphabetical' : 'number')}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-all font-bengali"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-bold hover:bg-slate-200 transition-all font-bengali"
           >
             {sortBy === 'number' ? <ArrowDownAZ className="w-4 h-4" /> : <Hash className="w-4 h-4" />}
             <span>{sortBy === 'number' ? 'বর্ণানুক্রমিক' : 'নম্বর অনুযায়ী'}</span>
@@ -451,7 +437,7 @@ const App: React.FC = () => {
                 ref={searchInputRef}
                 type="text" 
                 placeholder="গানের নাম বা নম্বর দিয়ে খুঁজুন..." 
-                className="w-full bg-[var(--bg-input)] border border-[var(--border-color)] py-2 pl-12 pr-10 rounded-xl text-sm font-medium outline-none focus:border-emerald-300 dark:focus:border-emerald-500 focus:bg-[var(--bg-card)] transition-all font-bengali text-[var(--text-main)]"
+                className="w-full bg-[var(--bg-input)] border border-[var(--border-color)] py-2 pl-12 pr-10 rounded-xl text-sm font-medium outline-none focus:border-emerald-300 focus:bg-[var(--bg-card)] transition-all font-bengali text-[var(--text-main)]"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -473,7 +459,7 @@ const App: React.FC = () => {
                     className={`relative p-1.5 rounded-lg transition-all z-10 ${
                       isListening 
                         ? 'bg-rose-500 text-white shadow-lg shadow-rose-500/30' 
-                        : 'text-[var(--text-muted)] hover:text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-900/20'
+                        : 'text-[var(--text-muted)] hover:text-emerald-500 hover:bg-emerald-50'
                     }`}
                     aria-label="Voice search"
                     title="ভয়েস সার্চ"
@@ -484,7 +470,7 @@ const App: React.FC = () => {
                 {searchQuery && (
                   <button 
                     onClick={handleClearSearch}
-                    className="p-1.5 text-[var(--text-muted)] hover:text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-900/20 rounded-lg transition-all animate-in fade-in zoom-in duration-200"
+                    className="p-1.5 text-[var(--text-muted)] hover:text-rose-500 hover:bg-rose-50 rounded-lg transition-all animate-in fade-in zoom-in duration-200"
                     aria-label="Clear search"
                   >
                     <X className="w-5 h-5" />
@@ -504,19 +490,19 @@ const App: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <MainLogo className="w-8 h-8 opacity-50 grayscale" />
-            <p className="text-xs font-bold text-slate-400 dark:text-slate-300 uppercase tracking-widest">জয়ধ্বনি © {toBengaliNumber('২০২৬')}</p>
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">জয়ধ্বনি © {toBengaliNumber('২০২৬')}</p>
           </div>
           <div className="flex items-center gap-6">
             <button 
               onClick={() => handleTabChange('info')}
-              className="text-xs font-bold text-slate-400 dark:text-slate-300 hover:text-emerald-600 transition-colors uppercase tracking-widest flex items-center gap-2"
+              className="text-xs font-bold text-slate-400 hover:text-emerald-600 transition-colors uppercase tracking-widest flex items-center gap-2"
             >
               <Info className="w-4 h-4" />
               তথ্য ও পরিচিতি
             </button>
             <button 
               onClick={() => handleTabChange('settings')}
-              className="text-xs font-bold text-slate-400 dark:text-slate-300 hover:text-emerald-600 transition-colors uppercase tracking-widest flex items-center gap-2"
+              className="text-xs font-bold text-slate-400 hover:text-emerald-600 transition-colors uppercase tracking-widest flex items-center gap-2"
             >
               <Settings className="w-4 h-4" />
               সেটিংস

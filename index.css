@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+Bengali:wght@400;500;600;700;900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Atma:wght@300;400;500;600;700&family=Mina:wght@400;700&family=Galada&family=Baloo+Da+2:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-bengali: var(--current-font-family, "Noto Serif Bengali", "Hind Siliguri", serif);
@@ -33,16 +31,6 @@
     --text-muted: #64748b; /* slate-500 */
     --border-color: #f1f5f9; /* slate-100 */
     --header-bg: #ffffff;
-  }
-
-  .dark {
-    --bg-main: #0a0a0a; /* 4% brightness, neutral grey-black */
-    --bg-card: #171717; /* Slightly lighter for cards */
-    --bg-input: #262626; /* neutral-800 */
-    --text-main: #f8fafc; /* slate-50 */
-    --text-muted: #cbd5e1; /* slate-300 - much lighter grey */
-    --border-color: #262626; /* Lighter borders for better visibility */
-    --header-bg: #171717;
   }
 
   body {
@@ -90,10 +78,4 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
-}
-.dark ::-webkit-scrollbar-thumb {
-  background: #334155;
-}
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
 }

@@ -85,7 +85,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
         <div className="max-w-3xl mx-auto px-4 py-1.5 flex items-center justify-between relative min-h-[56px]">
           <button 
             onClick={onBack} 
-            className="p-2.5 bg-[var(--bg-input)] text-[var(--text-main)] hover:bg-slate-200 dark:hover:bg-slate-700 rounded-2xl transition-all active:scale-90 z-10 shrink-0"
+            className="p-2.5 bg-[var(--bg-input)] text-[var(--text-main)] hover:bg-slate-200 rounded-2xl transition-all active:scale-90 z-10 shrink-0"
             aria-label="Back"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -93,8 +93,8 @@ const SongDetail: React.FC<SongDetailProps> = ({
           
           <div className="flex-1 flex items-center px-4 overflow-hidden">
             <div className="flex items-center gap-3 w-full">
-              <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/20 rounded-xl flex items-center justify-center border border-emerald-200/50 dark:border-emerald-800/30 shrink-0">
-                <span className="text-sm font-black text-emerald-800 dark:text-emerald-500 font-sans">
+              <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center border border-emerald-200/50 shrink-0">
+                <span className="text-sm font-black text-emerald-800 font-sans">
                   {toBengaliNumber(song.id)}
                 </span>
               </div>
@@ -108,7 +108,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
 
           <button 
             onClick={onToggleFavorite} 
-            className={`p-2.5 rounded-2xl transition-all active:scale-90 z-10 shrink-0 ${isFavorite ? 'bg-rose-100 dark:bg-rose-900/20 text-rose-600' : 'bg-[var(--bg-input)] text-[var(--text-muted)]'}`}
+            className={`p-2.5 rounded-2xl transition-all active:scale-90 z-10 shrink-0 ${isFavorite ? 'bg-rose-100 text-rose-600' : 'bg-[var(--bg-input)] text-[var(--text-muted)]'}`}
             aria-label="Toggle Favorite"
           >
             <Heart className={`w-6 h-6 ${isFavorite ? 'fill-current' : ''}`} />
@@ -127,13 +127,13 @@ const SongDetail: React.FC<SongDetailProps> = ({
           <div className="flex flex-col items-center justify-center gap-2">
             {song.composer && (
               <div className="flex items-center gap-2">
-                <User className="w-3 h-3 text-slate-300 dark:text-slate-500" />
-                <span className="text-xs font-bold text-slate-400 dark:text-slate-400 tracking-tight">{song.composer}</span>
+                <User className="w-3 h-3 text-slate-300" />
+                <span className="text-xs font-bold text-slate-400 tracking-tight">{song.composer}</span>
               </div>
             )}
             <div className="flex items-center gap-2">
               <Tag className="w-3 h-3 text-emerald-500" />
-              <span className="text-xs font-bold text-slate-400 dark:text-slate-400 uppercase tracking-widest">{(song.categories || []).join(', ')}</span>
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">{(song.categories || []).join(', ')}</span>
             </div>
           </div>
         </div>
@@ -149,7 +149,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
               <div key={index} className="flex flex-col items-center group animate-in fade-in duration-1000" style={{ animationDelay: `${index * 100}ms` }}>
                 {displayMarker && (
                   <div 
-                    className={`mb-3 font-black transition-colors duration-500 ${isChorus ? 'text-rose-400 italic' : 'text-emerald-500/50 dark:text-emerald-500/30'}`}
+                    className={`mb-3 font-black transition-colors duration-500 ${isChorus ? 'text-rose-400 italic' : 'text-emerald-500/50'}`}
                     style={{ fontSize: `${Math.max(14, globalFontSize * 0.75)}px` }}
                   >
                     {displayMarker}
@@ -189,7 +189,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
           <div className="flex items-center gap-1.5 p-1.5 bg-[var(--bg-card)]/95 backdrop-blur-2xl rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-[var(--border-color)]">
             <button 
               onClick={(e) => { e.stopPropagation(); onBack(); }}
-              className="p-2.5 text-slate-400 dark:text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 rounded-full transition-all active:scale-90 flex items-center gap-1.5 pr-3"
+              className="p-2.5 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90 flex items-center gap-1.5 pr-3"
               title="সূচী"
             >
               <Home className="w-5 h-5" />
@@ -200,7 +200,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
 
             <button 
               onClick={(e) => { e.stopPropagation(); setIsSettingsOpen(true); }} 
-              className="p-2.5 text-slate-400 dark:text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 rounded-full transition-all active:scale-90 flex items-center gap-1.5 pr-3"
+              className="p-2.5 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90 flex items-center gap-1.5 pr-3"
               title="সেটিংস"
             >
               <Settings className="w-5 h-5" />
@@ -212,7 +212,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
                 <div className="w-px h-6 bg-[var(--border-color)] mx-0" />
                 <button 
                   onClick={(e) => handleYoutubeOpen(e, song.youtubeId!)} 
-                  className="p-2.5 text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-900/30 rounded-full transition-all active:scale-90"
+                  className="p-2.5 text-rose-500 hover:bg-rose-50 rounded-full transition-all active:scale-90"
                   title="Watch on YouTube"
                 >
                   <Youtube className="w-5 h-5" />
@@ -258,7 +258,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
                       max="32" 
                       value={globalFontSize}
                       onChange={(e) => setFontSize(parseInt(e.target.value))}
-                      className="flex-grow h-1 bg-slate-100 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                      className="flex-grow h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-emerald-500"
                     />
                   </div>
                 </div>
@@ -273,7 +273,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
                         const selected = BENGALI_FONTS.find(f => f.id === e.target.value);
                         if (selected) setCurrentFont(selected.family);
                       }}
-                      className="w-full pl-2 pr-6 py-1.5 rounded-lg border border-[var(--border-color)] bg-slate-50/50 dark:bg-slate-800/50 text-[var(--text-main)] font-bengali text-[11px] appearance-none focus:ring-1 focus:ring-emerald-500 outline-none cursor-pointer"
+                      className="w-full pl-2 pr-6 py-1.5 rounded-lg border border-[var(--border-color)] bg-slate-50/50 text-[var(--text-main)] font-bengali text-[11px] appearance-none focus:ring-1 focus:ring-emerald-500 outline-none cursor-pointer"
                       style={{ fontFamily: globalFontFamily }}
                     >
                       {BENGALI_FONTS.map(font => (
@@ -282,7 +282,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
                         </option>
                       ))}
                     </select>
-                    <div className="absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-300 dark:text-slate-600">
+                    <div className="absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-300">
                       <ChevronRight className="w-3 h-3 rotate-90" />
                     </div>
                   </div>

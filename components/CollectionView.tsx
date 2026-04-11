@@ -103,10 +103,10 @@ const CollectionView: React.FC<CollectionViewProps> = ({
         <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest px-2">সংরক্ষিত</h3>
         <button 
           onClick={() => setView('favorites')}
-          className="w-full bg-[var(--bg-card)] p-4 rounded-3xl border border-[var(--border-color)] text-left hover:border-rose-200 dark:hover:border-rose-900/50 hover:shadow-xl hover:shadow-rose-500/5 transition-all group active:scale-[0.98] flex items-center justify-between"
+          className="w-full bg-[var(--bg-card)] p-4 rounded-3xl border border-[var(--border-color)] text-left hover:border-rose-200 hover:shadow-xl hover:shadow-rose-500/5 transition-all group active:scale-[0.98] flex items-center justify-between"
         >
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-rose-100 dark:bg-rose-900/20 rounded-2xl text-rose-600 group-hover:scale-110 transition-transform">
+            <div className="p-3 bg-rose-100 rounded-2xl text-rose-600 group-hover:scale-110 transition-transform">
               <Heart className="w-5 h-5" />
             </div>
             <div>
@@ -118,7 +118,7 @@ const CollectionView: React.FC<CollectionViewProps> = ({
               </p>
             </div>
           </div>
-          <ChevronRight className="w-5 h-5 text-slate-300 dark:text-slate-700" />
+          <ChevronRight className="w-5 h-5 text-slate-300" />
         </button>
       </section>
 
@@ -130,10 +130,10 @@ const CollectionView: React.FC<CollectionViewProps> = ({
             <button
               key={cat.name}
               onClick={() => { setSelectedCategory(cat.name); setView('category'); }}
-              className="w-full bg-[var(--bg-card)] p-4 rounded-3xl border border-[var(--border-color)] text-left hover:border-emerald-200 dark:hover:border-emerald-900/50 hover:shadow-xl hover:shadow-emerald-500/5 transition-all group active:scale-[0.98] flex items-center justify-between"
+              className="w-full bg-[var(--bg-card)] p-4 rounded-3xl border border-[var(--border-color)] text-left hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/5 transition-all group active:scale-[0.98] flex items-center justify-between"
             >
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-emerald-100 dark:bg-emerald-900/20 rounded-2xl text-emerald-700 dark:text-emerald-500 group-hover:scale-110 transition-transform">
+                <div className="p-3 bg-emerald-100 rounded-2xl text-emerald-700 group-hover:scale-110 transition-transform">
                   <Tag className="w-5 h-5" />
                 </div>
                 <div>
@@ -145,7 +145,7 @@ const CollectionView: React.FC<CollectionViewProps> = ({
                   </p>
                 </div>
               </div>
-              <ChevronRight className="w-5 h-5 text-slate-300 dark:text-slate-700" />
+              <ChevronRight className="w-5 h-5 text-slate-300" />
             </button>
           ))}
         </div>

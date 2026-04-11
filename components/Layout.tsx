@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTab }) =>
 };
 
 const MobileNavItem = ({ active, onClick, icon, label }: { active: boolean, onClick: () => void, icon: React.ReactNode, label: string }) => (
-  <button onClick={onClick} className={`flex flex-col items-center gap-1 transition-all ${active ? 'text-emerald-600 dark:text-emerald-500' : 'text-[var(--text-muted)]'}`}>
+  <button onClick={onClick} className={`flex flex-col items-center gap-1 transition-all ${active ? 'text-emerald-600' : 'text-[var(--text-muted)]'}`}>
     {icon}
     <span className="text-[10px] font-bold uppercase tracking-wider">{label}</span>
   </button>

@@ -16,8 +16,6 @@ interface SettingsViewProps {
   setFontSize: (size: number) => void;
   currentFont: string;
   setCurrentFont: (font: string) => void;
-  isDarkMode: boolean;
-  setIsDarkMode: (isDark: boolean) => void;
   onBack?: () => void;
 }
 
@@ -26,8 +24,6 @@ const SettingsView: React.FC<SettingsViewProps> = ({
   setFontSize,
   currentFont,
   setCurrentFont,
-  isDarkMode,
-  setIsDarkMode,
   onBack
 }) => {
   const [showInfo, setShowInfo] = React.useState(false);
@@ -62,7 +58,7 @@ const SettingsView: React.FC<SettingsViewProps> = ({
           {/* Font Size Setting */}
           <div className="p-4 border-b border-[var(--border-color)] space-y-3">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center text-amber-500 font-black text-lg font-bengali">
+              <div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-500 font-black text-lg font-bengali">
                 ক
               </div>
               <span className="font-bold text-[var(--text-main)] font-bengali">অ্যাপের অক্ষরের আকার</span>
@@ -85,9 +81,9 @@ const SettingsView: React.FC<SettingsViewProps> = ({
           </div>
 
           {/* Bengali Font Selection */}
-          <div className="p-4 border-b border-[var(--border-color)] space-y-3">
+          <div className="p-4 space-y-3">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-xl bg-rose-50 dark:bg-rose-900/20 flex items-center justify-center text-rose-500 font-black text-lg font-bengali">
+              <div className="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center text-rose-500 font-black text-lg font-bengali">
                 অ
               </div>
               <span className="font-bold text-[var(--text-main)] font-bengali">বাংলা ফন্ট পরিবর্তন</span>
@@ -123,22 +119,6 @@ const SettingsView: React.FC<SettingsViewProps> = ({
               ঈশ্বর আমাদের আশ্রয় ও বল, সংকটে অতিশয় সুপ্রাপ্য সাহায্য।
             </div>
           </div>
-
-          {/* Dark Mode Toggle */}
-          <div className="p-4 flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-500">
-                {isDarkMode ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
-              </div>
-              <span className="font-bold text-[var(--text-main)] font-bengali">ডার্ক মোড (Dark Mode)</span>
-            </div>
-            <button 
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className={`relative w-12 h-6 rounded-full transition-colors duration-300 focus:outline-none ${isDarkMode ? 'bg-emerald-500' : 'bg-slate-200 dark:bg-slate-700'}`}
-            >
-              <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow-sm transition-transform duration-300 ${isDarkMode ? 'translate-x-6' : 'translate-x-0'}`} />
-            </button>
-          </div>
         </div>
       </section>
 
@@ -151,7 +131,7 @@ const SettingsView: React.FC<SettingsViewProps> = ({
             className="w-full p-4 flex items-center justify-between hover:bg-[var(--bg-input)] transition-colors group text-left"
           >
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-900/20 flex items-center justify-center text-amber-600">
+              <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-600">
                 <Star className="w-5 h-5 fill-current" />
               </div>
               <div className="flex flex-col items-start">
