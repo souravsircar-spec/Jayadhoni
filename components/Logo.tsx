@@ -2,8 +2,8 @@ import React from 'react';
 
 export const MainLogo = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 1024 1024" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
-    {/* Background Squircle */}
-    <path d="M512 0C128 0 0 128 0 512s128 512 512 512 512-128 512-512S896 0 512 0z" fill="#358C5D"/>
+    {/* Background Square */}
+    <rect width="1024" height="1024" rx="160" fill="#388E3C"/>
     
     <g transform="translate(162, 212)">
       {/* Previous Bible Shape */}
@@ -20,8 +20,8 @@ export const MainLogo = ({ className }: { className?: string }) => (
 
       {/* Cross on the left page */}
       <g transform="translate(110, 63)">
-        <rect x="78" y="0" width="42" height="265" fill="#358C5D"/>
-        <rect x="0" y="65" width="198" height="42" fill="#358C5D"/>
+        <rect x="78" y="0" width="42" height="265" fill="#388E3C"/>
+        <rect x="0" y="65" width="198" height="42" fill="#388E3C"/>
       </g>
       
       {/* Lines and Musical Note on the right page */}
@@ -32,11 +32,11 @@ export const MainLogo = ({ className }: { className?: string }) => (
       </g>
       
       <g transform="translate(463, 223)">
-        <rect x="70" y="0" width="18" height="180" rx="9" fill="#4CAF50"/>
-        <path d="M79 9 C130 9 150 60 150 120 C150 140 140 155 130 160" stroke="#4CAF50" strokeWidth="18" strokeLinecap="round" fill="none"/>
+        <rect x="70" y="0" width="18" height="180" rx="9" fill="#388E3C"/>
+        <path d="M79 9 C130 9 150 60 150 120 C150 140 140 155 130 160" stroke="#388E3C" strokeWidth="18" strokeLinecap="round" fill="none"/>
         <g transform="translate(45, 180)">
-          <circle cx="0" cy="0" r="45" fill="#4CAF50"/>
-          <path d="M0 -45 A45 45 0 0 0 0 45 Z" fill="#2D8A5B"/>
+          <circle cx="0" cy="0" r="45" fill="#388E3C"/>
+          <path d="M0 -45 A45 45 0 0 0 0 45 Z" fill="#2e7d32"/>
         </g>
       </g>
     </g>

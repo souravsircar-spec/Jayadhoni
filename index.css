@@ -23,10 +23,41 @@
     --lyrics-font-size: 1.125rem;
     --system-font-size: 1rem;
     --index-font-size: 1.125rem;
+    
+    --bg-main: #f8fafc; /* slate-50 */
+    --bg-card: #ffffff;
+    --bg-input: #f1f5f9; /* slate-100 */
+    --text-main: #0f172a; /* slate-900 */
+    --text-muted: #64748b; /* slate-500 */
+    --border-color: #f1f5f9; /* slate-100 */
+    --header-bg: #ffffff;
+  }
+
+  /* Support for Dark Mode */
+  :root.dark {
+    --bg-main: #020617; /* slate-950 */
+    --bg-card: #0f172a; /* slate-900 */
+    --bg-input: #1e293b; /* slate-800 */
+    --text-main: #f8fafc; /* slate-50 */
+    --text-muted: #94a3b8; /* slate-400 */
+    --border-color: #1e293b; /* slate-800 */
+    --header-bg: #0f172a;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not(.light) {
+      --bg-main: #020617;
+      --bg-card: #0f172a;
+      --bg-input: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #1e293b;
+      --header-bg: #0f172a;
+    }
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 overflow-x-hidden select-none transition-colors duration-300;
+    @apply bg-[var(--bg-main)] text-[var(--text-main)] overflow-x-hidden select-none transition-colors duration-300;
     font-family: var(--font-sans);
     font-size: var(--system-font-size);
     -webkit-tap-highlight-color: transparent;
@@ -62,7 +93,7 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;

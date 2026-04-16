@@ -64,16 +64,6 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
             <h1 className="text-4xl font-black text-emerald-600 font-logo tracking-tight leading-none">জয়ধ্বনি</h1>
             <p className="text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mt-3">বাংলা খ্রীষ্টিয় সংগীত</p>
           </motion.div>
-
-          {/* Loading bar */}
-          <div className="absolute bottom-16 w-48 h-1 bg-slate-100 rounded-full overflow-hidden">
-            <motion.div
-              initial={{ x: "-100%" }}
-              animate={{ x: "0%" }}
-              transition={{ duration: 2, ease: "easeInOut" }}
-              className="w-full h-full bg-emerald-500"
-            />
-          </div>
         </motion.div>
       )}
     </AnimatePresence>

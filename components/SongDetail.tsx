@@ -62,13 +62,30 @@ const SongDetail: React.FC<SongDetailProps> = ({
     return title;
   };
 
+  const handleYoutubeOpen = (e: React.MouseEvent, videoId: string) => {
+    e.stopPropagation();
+    const webUrl = `https://www.youtube.com/watch?v=${videoId}`;
+    const appUrl = `vnd.youtube:${videoId}`;
+    
+    // Try deep link for mobile app
+    const start = Date.now();
+    window.location.href = appUrl;
+    
+    // Fallback to web link if app doesn't open within a short time
+    setTimeout(() => {
+      if (Date.now() - start < 1500) {
+        window.open(webUrl, '_blank');
+      }
+    }, 500);
+  };
+
   return (
-    <div className="min-h-screen bg-slate-50/30 font-bengali pb-24 relative transition-colors duration-300" style={{ fontFamily: globalFontFamily }}>
-      <header className="bg-white/80 backdrop-blur-xl border-b border-slate-100 sticky top-0 left-0 right-0 z-50 shadow-sm shadow-slate-200/5">
+    <div className="min-h-screen bg-[var(--bg-main)] font-bengali pb-24 relative transition-colors duration-300" style={{ fontFamily: globalFontFamily }}>
+      <header className="bg-[var(--header-bg)]/80 backdrop-blur-xl border-b border-[var(--border-color)] sticky top-0 left-0 right-0 z-50 shadow-sm shadow-slate-200/5" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
         <div className="max-w-3xl mx-auto px-4 py-1.5 flex items-center justify-between relative min-h-[56px]">
           <button 
             onClick={onBack} 
-            className="p-2.5 bg-slate-50 text-slate-600 hover:bg-slate-100 rounded-2xl transition-all active:scale-90 z-10 shrink-0"
+            className="p-2.5 bg-[var(--bg-input)] text-[var(--text-main)] hover:bg-slate-200 rounded-2xl transition-all active:scale-90 z-10 shrink-0"
             aria-label="Back"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -76,13 +93,13 @@ const SongDetail: React.FC<SongDetailProps> = ({
           
           <div className="flex-1 flex items-center px-4 overflow-hidden">
             <div className="flex items-center gap-3 w-full">
-              <div className="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center border border-emerald-100/50 shrink-0">
-                <span className="text-sm font-black text-emerald-600 font-sans">
+              <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center border border-emerald-200/50 shrink-0">
+                <span className="text-sm font-black text-emerald-800 font-sans">
                   {toBengaliNumber(song.id)}
                 </span>
               </div>
               <div className="min-w-0 flex-1">
-                <h1 className="text-[17px] font-bold text-slate-800 leading-tight line-clamp-2">
+                <h1 className="text-[17px] font-bold text-[var(--text-main)] leading-tight line-clamp-2">
                   {renderStyledTitle(song.title)}
                 </h1>
               </div>
@@ -91,7 +108,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
 
           <button 
             onClick={onToggleFavorite} 
-            className={`p-2.5 rounded-2xl transition-all active:scale-90 z-10 shrink-0 ${isFavorite ? 'bg-rose-50 text-rose-500' : 'bg-slate-50 text-slate-300'}`}
+            className={`p-2.5 rounded-2xl transition-all active:scale-90 z-10 shrink-0 ${isFavorite ? 'bg-rose-100 text-rose-600' : 'bg-[var(--bg-input)] text-[var(--text-muted)]'}`}
             aria-label="Toggle Favorite"
           >
             <Heart className={`w-6 h-6 ${isFavorite ? 'fill-current' : ''}`} />
@@ -104,7 +121,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
         className="max-w-3xl mx-auto px-4 pt-6 pb-4 md:pt-8 md:pb-6 text-center cursor-pointer min-h-screen"
       >
         <div className="mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <h1 className="text-[20px] md:text-[28px] font-black text-slate-900 leading-[1.2] mb-6 tracking-tight">
+          <h1 className="text-[20px] md:text-[28px] font-black text-[var(--text-main)] leading-[1.2] mb-6 tracking-tight">
             {renderStyledTitle(song.title, true)}
           </h1>
           <div className="flex flex-col items-center justify-center gap-2">
@@ -140,7 +157,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
                 )}
                 <div className="w-full">
                   <p 
-                    className={`leading-[1.9] font-medium whitespace-pre-wrap transition-all duration-500 mx-auto max-w-[90%] md:max-w-[80%] text-slate-700 ${isChorus ? 'italic' : ''}`} 
+                    className={`leading-[1.9] font-medium whitespace-pre-wrap transition-all duration-500 mx-auto max-w-[90%] md:max-w-[80%] text-[var(--text-main)] opacity-90 ${isChorus ? 'italic' : ''}`} 
                     style={{ fontSize: `${globalFontSize}px` }}
                   >
                     {content}
@@ -169,7 +186,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
         }`}
       >
         <div className="max-w-3xl mx-auto flex items-center justify-end pointer-events-auto">
-          <div className="flex items-center gap-1.5 p-1.5 bg-white/95 backdrop-blur-2xl rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-slate-200/60">
+          <div className="flex items-center gap-1.5 p-1.5 bg-[var(--bg-card)]/95 backdrop-blur-2xl rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-[var(--border-color)]">
             <button 
               onClick={(e) => { e.stopPropagation(); onBack(); }}
               className="p-2.5 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90 flex items-center gap-1.5 pr-3"
@@ -179,7 +196,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
               <span className="text-[10px] font-black uppercase tracking-widest hidden sm:inline">সূচী</span>
             </button>
 
-            <div className="w-px h-6 bg-slate-200/60 mx-0" />
+            <div className="w-px h-6 bg-[var(--border-color)] mx-0" />
 
             <button 
               onClick={(e) => { e.stopPropagation(); setIsSettingsOpen(true); }} 
@@ -192,12 +209,9 @@ const SongDetail: React.FC<SongDetailProps> = ({
 
             {song.youtubeId && (
               <>
-                <div className="w-px h-6 bg-slate-200/60 mx-0" />
+                <div className="w-px h-6 bg-[var(--border-color)] mx-0" />
                 <button 
-                  onClick={(e) => { 
-                    e.stopPropagation(); 
-                    window.open(`https://www.youtube.com/watch?v=${song.youtubeId}`, '_blank');
-                  }} 
+                  onClick={(e) => handleYoutubeOpen(e, song.youtubeId!)} 
                   className="p-2.5 text-rose-500 hover:bg-rose-50 rounded-full transition-all active:scale-90"
                   title="Watch on YouTube"
                 >
@@ -222,12 +236,12 @@ const SongDetail: React.FC<SongDetailProps> = ({
             {/* Close button outside the box */}
             <button 
               onClick={() => setIsSettingsOpen(false)}
-              className="absolute -top-2 -right-2 p-1.5 bg-white border border-slate-200 text-slate-400 hover:text-rose-500 rounded-full shadow-lg transition-all active:scale-90 z-10"
+              className="absolute -top-2 -right-2 p-1.5 bg-[var(--bg-card)] border border-[var(--border-color)] text-slate-400 hover:text-rose-500 rounded-full shadow-lg transition-all active:scale-90 z-10"
             >
               <X className="w-3.5 h-3.5" />
             </button>
 
-            <div className="bg-white/95 border border-slate-200 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3.5 space-y-4">
+            <div className="bg-[var(--bg-card)]/95 border border-[var(--border-color)] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3.5 space-y-4">
               <div className="space-y-4">
                 {/* Font Size */}
                 <div className="space-y-1.5">
@@ -259,11 +273,11 @@ const SongDetail: React.FC<SongDetailProps> = ({
                         const selected = BENGALI_FONTS.find(f => f.id === e.target.value);
                         if (selected) setCurrentFont(selected.family);
                       }}
-                      className="w-full pl-2 pr-6 py-1.5 rounded-lg border border-slate-100 bg-slate-50/50 text-slate-700 font-bengali text-[11px] appearance-none focus:ring-1 focus:ring-emerald-500 outline-none cursor-pointer"
+                      className="w-full pl-2 pr-6 py-1.5 rounded-lg border border-[var(--border-color)] bg-slate-50/50 text-[var(--text-main)] font-bengali text-[11px] appearance-none focus:ring-1 focus:ring-emerald-500 outline-none cursor-pointer"
                       style={{ fontFamily: globalFontFamily }}
                     >
                       {BENGALI_FONTS.map(font => (
-                        <option key={font.id} value={font.id} style={{ fontFamily: font.family }}>
+                        <option key={font.id} value={font.id} className="bg-[var(--bg-card)] text-[var(--text-main)]" style={{ fontFamily: font.family }}>
                           {font.name}
                         </option>
                       ))}
