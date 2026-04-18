@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_img</item>
-        <item name="windowSplashScreenBackground">@color/background</item>
-        <item name="postSplashScreenTheme">@style/AppTheme</item>
-    </style>
-</resources>
