@@ -2,6 +2,7 @@ import React from 'react';
 import { Heart, ShieldCheck, Cpu, User, Music, Search, Mic, Type, Youtube, Smartphone, Mail, Facebook, ArrowRight, ShoppingCart, MessageCircle } from 'lucide-react';
 import { toBengaliNumber } from '../utils/format';
 import { motion } from 'motion/react';
+import crossImage from '../assets/Cross.png';
 
 const PortraitPhoto = ({ className }: { className?: string }) => {
   const [hasError, setHasError] = React.useState(false);
@@ -58,7 +59,7 @@ const InfoView: React.FC = () => {
             className="w-32 md:w-40"
           >
             <img 
-              src="/Cross.png" 
+              src={crossImage} 
               alt="Cross with Red Cloth"
               referrerPolicy="no-referrer"
               className="w-full h-auto object-contain filter contrast-[1.05] brightness-[1.1]"
