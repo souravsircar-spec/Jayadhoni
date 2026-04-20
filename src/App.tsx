@@ -407,7 +407,7 @@ const App: React.FC = () => {
           <h2 className="text-xl font-black text-slate-800 relative font-bengali">
             {searchQuery ? 'অনুসন্ধানের ফলাফল' : 'সূচী'}
             {!searchQuery && (
-              <div className="absolute -bottom-[9px] left-0 w-12 h-1 bg-emerald-500 rounded-full" />
+              <div className="absolute -bottom-[9px] left-1/2 -translate-x-1/2 w-12 h-1 bg-emerald-500 rounded-full" />
             )}
           </h2>
           <button 
