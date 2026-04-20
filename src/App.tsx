@@ -343,6 +343,12 @@ const App: React.FC = () => {
     }
   };
 
+  const handleGoHome = () => {
+    setSelectedSong(null);
+    setActiveTab('home');
+    window.history.pushState({ view: 'home' }, '');
+  };
+
   if (selectedSong) {
     const currentIndex = ALL_SONGS.findIndex(s => s.id === selectedSong.id);
     return (
@@ -360,6 +366,7 @@ const App: React.FC = () => {
         setCurrentFont={setCurrentFont}
         onNext={currentIndex < ALL_SONGS.length - 1 ? goToNextSong : undefined}
         onPrevious={currentIndex > 0 ? goToPreviousSong : undefined}
+        onGoHome={handleGoHome}
       />
     );
   }

@@ -17,6 +17,7 @@ interface SongDetailProps {
   setCurrentFont: (font: string) => void;
   onNext?: () => void;
   onPrevious?: () => void;
+  onGoHome?: () => void;
 }
 
 const SongDetail: React.FC<SongDetailProps> = ({ 
@@ -30,7 +31,8 @@ const SongDetail: React.FC<SongDetailProps> = ({
   setFontSize,
   setCurrentFont,
   onNext,
-  onPrevious
+  onPrevious,
+  onGoHome
 }) => {
   const [showControls, setShowControls] = useState(true);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -254,7 +256,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
         <div className="max-w-3xl mx-auto flex items-center justify-end pointer-events-auto">
           <div className="flex items-center gap-1.5 p-1.5 bg-white/95 backdrop-blur-2xl rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-slate-200/60 transition-colors">
             <button 
-              onClick={(e) => { e.stopPropagation(); onBack(); }}
+              onClick={(e) => { e.stopPropagation(); onGoHome?.(); }}
               className="p-2.5 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all active:scale-90 flex items-center gap-1.5 pr-3"
               title="সূচী"
             >
