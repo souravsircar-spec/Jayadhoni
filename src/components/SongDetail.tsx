@@ -224,10 +224,10 @@ const SongDetail: React.FC<SongDetailProps> = ({
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 onClick={(e) => { e.stopPropagation(); onPrevious(); }}
-                className="fixed left-2 top-1/2 -translate-y-1/2 z-40 p-1.5 bg-white/20 backdrop-blur-sm border border-slate-200/10 rounded-full text-slate-400/30 hover:text-emerald-500 hover:bg-white/80 transition-all active:scale-90"
+                className="fixed left-2 top-1/2 -translate-y-1/2 z-40 p-2 bg-white/20 backdrop-blur-sm border border-slate-200/10 rounded-full text-slate-400/30 hover:text-emerald-500 hover:bg-white/80 transition-all active:scale-90"
                 aria-label="Previous song"
               >
-                <ChevronLeft className="w-4 h-4" />
+                <ChevronLeft className="w-5 h-5" />
               </motion.button>
             )}
             {onNext && (
@@ -236,10 +236,10 @@ const SongDetail: React.FC<SongDetailProps> = ({
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 onClick={(e) => { e.stopPropagation(); onNext(); }}
-                className="fixed right-2 top-1/2 -translate-y-1/2 z-40 p-1.5 bg-white/20 backdrop-blur-sm border border-slate-200/10 rounded-full text-slate-400/30 hover:text-emerald-500 hover:bg-white/80 transition-all active:scale-90"
+                className="fixed right-2 top-1/2 -translate-y-1/2 z-40 p-2 bg-white/20 backdrop-blur-sm border border-slate-200/10 rounded-full text-slate-400/30 hover:text-emerald-500 hover:bg-white/80 transition-all active:scale-90"
                 aria-label="Next song"
               >
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-5 h-5" />
               </motion.button>
             )}
           </>
