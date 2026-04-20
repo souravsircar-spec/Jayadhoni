@@ -327,7 +327,24 @@ const App: React.FC = () => {
     return <SplashScreen onComplete={() => setShowSplash(false)} />;
   }
 
+  const goToNextSong = () => {
+    if (!selectedSong) return;
+    const currentIndex = ALL_SONGS.findIndex(s => s.id === selectedSong.id);
+    if (currentIndex < ALL_SONGS.length - 1) {
+      handleSelectSong(ALL_SONGS[currentIndex + 1]);
+    }
+  };
+
+  const goToPreviousSong = () => {
+    if (!selectedSong) return;
+    const currentIndex = ALL_SONGS.findIndex(s => s.id === selectedSong.id);
+    if (currentIndex > 0) {
+      handleSelectSong(ALL_SONGS[currentIndex - 1]);
+    }
+  };
+
   if (selectedSong) {
+    const currentIndex = ALL_SONGS.findIndex(s => s.id === selectedSong.id);
     return (
       <SongDetail 
         song={selectedSong} 
@@ -341,6 +358,8 @@ const App: React.FC = () => {
         globalFontFamily={currentFont}
         setFontSize={setFontSize}
         setCurrentFont={setCurrentFont}
+        onNext={currentIndex < ALL_SONGS.length - 1 ? goToNextSong : undefined}
+        onPrevious={currentIndex > 0 ? goToPreviousSong : undefined}
       />
     );
   }

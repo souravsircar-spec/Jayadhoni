@@ -15,6 +15,8 @@ interface SongDetailProps {
   globalFontFamily: string;
   setFontSize: (size: number) => void;
   setCurrentFont: (font: string) => void;
+  onNext?: () => void;
+  onPrevious?: () => void;
 }
 
 const SongDetail: React.FC<SongDetailProps> = ({ 
@@ -26,7 +28,9 @@ const SongDetail: React.FC<SongDetailProps> = ({
   globalFontSize,
   globalFontFamily,
   setFontSize,
-  setCurrentFont
+  setCurrentFont,
+  onNext,
+  onPrevious
 }) => {
   const [showControls, setShowControls] = useState(true);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -46,6 +50,33 @@ const SongDetail: React.FC<SongDetailProps> = ({
   }, [stanzas]);
 
   const toggleControls = () => setShowControls(prev => !prev);
+
+  // Swipe gesture handling
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  // Min swipe distance in pixels
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe && onNext) {
+      onNext();
+    } else if (isRightSwipe && onPrevious) {
+      onPrevious();
+    }
+  };
 
   const renderStyledTitle = (title: string, isLarge: boolean = false) => {
     const match = title.match(/^(.*?)\s*\((.*)\)$/);
@@ -118,6 +149,9 @@ const SongDetail: React.FC<SongDetailProps> = ({
 
       <main 
         onClick={toggleControls}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
         className="max-w-3xl mx-auto px-4 pt-6 pb-4 md:pt-8 md:pb-6 text-center cursor-pointer min-h-screen"
       >
         <div className="mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -148,7 +182,7 @@ const SongDetail: React.FC<SongDetailProps> = ({
             return (
               <div key={index} className="flex flex-col items-center group animate-in fade-in duration-1000" style={{ animationDelay: `${index * 100}ms` }}>
                 {displayMarker && (
-                  <div 
+                   <div 
                     className={`mb-3 font-black transition-colors duration-500 ${isChorus ? 'text-rose-400 italic' : 'text-emerald-500/50'}`}
                     style={{ fontSize: `${Math.max(14, globalFontSize * 0.75)}px` }}
                   >
@@ -179,6 +213,38 @@ const SongDetail: React.FC<SongDetailProps> = ({
           <div className="h-px w-16 bg-gradient-to-l from-transparent to-slate-400" />
         </div>
       </main>
+
+      {/* Navigation Buttons (Next/Previous) */}
+      <AnimatePresence>
+        {showControls && (
+          <>
+            {onPrevious && (
+              <motion.button
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                onClick={(e) => { e.stopPropagation(); onPrevious(); }}
+                className="fixed left-2 top-1/2 -translate-y-1/2 z-40 p-1.5 bg-white/20 backdrop-blur-sm border border-slate-200/10 rounded-full text-slate-400/30 hover:text-emerald-500 hover:bg-white/80 transition-all active:scale-90"
+                aria-label="Previous song"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </motion.button>
+            )}
+            {onNext && (
+              <motion.button
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                onClick={(e) => { e.stopPropagation(); onNext(); }}
+                className="fixed right-2 top-1/2 -translate-y-1/2 z-40 p-1.5 bg-white/20 backdrop-blur-sm border border-slate-200/10 rounded-full text-slate-400/30 hover:text-emerald-500 hover:bg-white/80 transition-all active:scale-90"
+                aria-label="Next song"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </motion.button>
+            )}
+          </>
+        )}
+      </AnimatePresence>
 
       <div 
         className={`fixed bottom-8 left-0 right-0 z-40 px-6 pointer-events-none transition-all duration-500 transform ${
