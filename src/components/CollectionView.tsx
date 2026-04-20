@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Song } from '../types';
-import { Tag, Heart, ChevronRight, Search, Sparkles } from 'lucide-react';
+import { Tag, Heart, ChevronRight, Search, Sparkles, Music } from 'lucide-react';
 import { toBengaliNumber } from '../utils/format';
 import SongCard from './SongCard';
 
@@ -95,7 +95,7 @@ const CollectionView: React.FC<CollectionViewProps> = ({
   return (
     <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500 px-4">
       <div className="flex items-center justify-center mb-4">
-        <h2 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-1.5 font-bengali">সংগ্রহ</h2>
+        <h2 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-1.5 font-bengali transition-colors">সংগ্রহ</h2>
       </div>
 
       {/* Favorites Shortcut */}
@@ -122,22 +122,21 @@ const CollectionView: React.FC<CollectionViewProps> = ({
         </button>
       </section>
 
-      {/* Categories Section */}
-      <section className="space-y-3">
-        <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest px-2">বিষয়ভিত্তিক বিভাগ</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <section className="space-y-4">
+        <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest px-2 font-sans">বিষয়ভিত্তিক বিভাগ</h3>
+        <div className="space-y-3 px-2">
           {categories.map(cat => (
             <button
               key={cat.name}
               onClick={() => { setSelectedCategory(cat.name); setView('category'); }}
-              className="bg-white p-4 rounded-3xl border border-slate-100 text-left hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/5 transition-all group active:scale-[0.98] flex items-center justify-between"
+              className="w-full bg-white p-4 rounded-3xl border border-slate-100 text-left hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/5 transition-all group active:scale-[0.98] flex items-center justify-between"
             >
               <div className="flex items-center gap-3">
                 <div className="p-3 bg-emerald-50 rounded-2xl text-emerald-500 group-hover:scale-110 transition-transform">
-                  <Tag className="w-5 h-5" />
+                  <Music className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-800 font-bengali group-hover:text-emerald-600 transition-colors line-clamp-1">
+                  <h3 className="text-lg font-bold text-slate-800 font-bengali group-hover:text-emerald-600 transition-colors">
                     {cat.name}
                   </h3>
                   <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">
@@ -145,7 +144,7 @@ const CollectionView: React.FC<CollectionViewProps> = ({
                   </p>
                 </div>
               </div>
-              <ChevronRight className="w-5 h-5 text-slate-300" />
+              <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-emerald-500 transition-colors" />
             </button>
           ))}
         </div>

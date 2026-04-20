@@ -154,7 +154,7 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 308,
-    title: "সুরক্ষা যীশুর কোলে",
+    title: "সুরক্ষা যীশুর কোলে (Safe in the Arms of Jesus)",
     transliteration: "Surakkha Jishur Kole",
     composer: "ফ্যানি জে. ক্রসবি",
     category: "সমাধি ও সান্ত্বনা",
@@ -196,7 +196,7 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 310,
-    title: "যীশুর নামটি সঙ্গে রাখ",
+    title: "যীশুর নামটি সঙ্গে রাখ (Take the Name of Jesus with You)",
     transliteration: "Jishur Namti Songe Rakho",
     composer: "নৃপাল চন্দ্র বিশ্বাস (১৮৮৫)",
     category: "সমাধি ও সান্ত্বনা",
@@ -219,7 +219,7 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 311,
-    title: "যীশু মোদের কেমন বন্ধু",
+    title: "যীশু মোদের কেমন বন্ধু (What a Friend We Have in Jesus)",
     transliteration: "Jishu Moder Kemon Bondhu",
     composer: "জোসেফ এম. স্ক্রাইভেন",
     category: "সমাধি ও সান্ত্বনা",
@@ -240,7 +240,7 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 312,
-    title: "বন্ধু কি আর আছে যীশুর মত?",
+    title: "বন্ধু কি আর আছে যীশুর মত? (No, Not One!)",
     transliteration: "Bondhu Ki Ar Ache Jishur Moto?",
     composer: "মদন মোহন বিশ্বাস (১৮৮৪)",
     category: "সমাধি ও সান্ত্বনা",
@@ -261,7 +261,7 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 313,
-    title: "এক স্রোতঃ আছে শোণিতের",
+    title: "এক স্রোতঃ আছে শোণিতের (There is a Fountain Filled with Blood)",
     transliteration: "Ek Sroto Ache Shoniter",
     composer: "উইলিয়াম কেরী",
     category: "সমাধি ও সান্ত্বনা",
@@ -306,7 +306,7 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 315,
-    title: "ক্রুশের সৈনিক তব, এ ভাব কেমন",
+    title: "ক্রুশের সৈনিক তব, এ ভাব কেমন (Am I a Soldier of the Cross)",
     transliteration: "Krusher Shoinik Tobo",
     composer: "অমৃতলাল নাথ",
     category: "সমাধি ও সান্ত্বনা",
@@ -1132,8 +1132,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 352,
-    title: "এসো পবিত্র আত্মা মোর হৃদয়ে এসো",
-    transliteration: "Eso pavitra aatma mor hridoye eso",
+    title: "আ পবিত্র আত্মা মেরে দিল মে আ",
+    transliteration: "Aa Pavitra Atma Mere Dil Me Aa",
     category: "হিন্দি",
     lyrics: `আ পবিত্র আত্মা মেরে দিল মে আ (২)
 মেরে জীবন কো তু হী চলা (২)
@@ -1159,8 +1159,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 353,
-    title: "তুমিই আদি ও তুমিই অন্ত",
-    transliteration: "Tumi-i aadi o tumi-i onto",
+    title: "আদি অর অন্ত তুহি হে",
+    transliteration: "Aadi Aur Ant Tuhi Hai",
     category: "হিন্দি",
     lyrics: `আদি অর অন্ত তুহি হে
 আলফা অর ওমেগা তুহি হে
@@ -1199,8 +1199,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 354,
-    title: "এসো আমরা সদাপ্রভুর ধন্যবাদ করি",
-    transliteration: "Eso amra sodaprobhur dhonnobad kori",
+    title: "আও হাম যিহোবা কা ধন্যবাদ করে",
+    transliteration: "Aao Hum Yehovah Ka Dhonnobad Kare",
     category: "হিন্দি",
     lyrics: `আও হাম যিহোবা কা ধন্যবাদ করে,
 আপনে সারে হৃদয় সে বন্দনা করে,
@@ -1222,8 +1222,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 355,
-    title: "আরাধনা করি তাঁর আরাধনা",
-    transliteration: "Aradhana kori tnar aradhana",
+    title: "আরাধনা, করে আরাধনা",
+    transliteration: "Aradhana Kare Aradhana",
     category: "হিন্দি",
     lyrics: `আরাধনা, করে আরাধনা,
 উপকারো কো উসকি ইয়াদ করে,
@@ -1245,8 +1245,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 356,
-    title: "আকাশের নিচে আর পৃথিবীর উপরে",
-    transliteration: "Akasher niche ar prithibir upore",
+    title: "আসমান কে নীচে ঔর ধরতি পর",
+    transliteration: "Asman Ke Niche Aur Dharti Par",
     category: "হিন্দি",
     lyrics: `আসমান কে নীচে ঔর ধরতি পর
 সব সে উঁচা হে প্রভু যীশু তেরা নাম
@@ -1262,8 +1262,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 357,
-    title: "আওয়াজ তুলবো আমরা",
-    transliteration: "Aawaaz tulbo amra",
+    title: "আবাজ উঠায়েঙ্গে",
+    transliteration: "Aawaaz Uthayenge",
     category: "হিন্দি",
     lyrics: `আবাজ উঠায়েঙ্গে
 হাম সাজ বাজায়েঙ্গে
@@ -1330,8 +1330,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 359,
-    title: "এসেছি মোরা তোমার চরণে",
-    transliteration: "Esechhi mora tomar chorone",
+    title: "আয়ে হে হাম তেরে চরনো মে",
+    transliteration: "Aaye Hain Hum Tere Charno Mein",
     category: "হিন্দি",
     lyrics: `আয়ে হে হাম তেরে চরনো মে
 লেকর হাম স্তুতি (৩)
@@ -1378,8 +1378,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 361,
-    title: "অব্রাহামের ঈশ্বর ইসহাকের ঈশ্বর",
-    transliteration: "Abrahamer ishwar Ishaker ishwar",
+    title: "অব্রাহাম কা প্রভু, ইসহাক কা প্রভু",
+    transliteration: "Abraham Ka Prabhu Ishak Ka Prabhu",
     category: "হিন্দি",
     lyrics: `অব্রাহাম কা প্রভু, ইসহাক কা প্রভু
 য়াকুব কা প্রভু তু মেরা হে (২)
@@ -1518,8 +1518,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 368,
-    title: "শেষ দিনের অভিষেক",
-    transliteration: "Shesh diner obhishek",
+    title: "অন্তিম দিনো কে অভিষেক",
+    transliteration: "Antim Dino Ke Abhishek",
     category: "হিন্দি",
     lyrics: `অন্তিম দিনো কে অভিষেক,
 সারে লোগো কে উপর তু ভেজ
@@ -1551,8 +1551,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 369,
-    title: "আকাশের ওপারে",
-    transliteration: "Akasher opare",
+    title: "আসমানো কে পার",
+    transliteration: "Asmano Ke Par",
     category: "হিন্দি",
     lyrics: `আসমানো কে পার,
 হে এক অনোখা সংসার (২)
@@ -1579,8 +1579,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 370,
-    title: "অদ্ভূত সামর্থ্য ভরা যীশু নাম",
-    transliteration: "Adbhut samortho bhora jishu nam",
+    title: "অদ্ভুৎ সামর্থ সে ভরা যীশু নাম",
+    transliteration: "Adbhut Samorth Se Bhora Jishu Nam",
     category: "হিন্দি",
     lyrics: `অদ্ভুৎ সামর্থ সে ভরা যীশু নাম (২)
 স্বর্গ ঔর পৃথিবী উসকা সর্ব্বাধিকার
@@ -1604,8 +1604,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 371,
-    title: "বাঁচাও আমার লোকেদের",
-    transliteration: "Bachao amar lokeder",
+    title: "বাঁচালে মেরে লোগোঁ কো",
+    transliteration: "Bachale Mere Logo Ko",
     category: "হিন্দি",
     lyrics: `বাঁচালে মেরে লোগোঁ কো,
 বাঁচালে মেরে শহর কো (২)
@@ -1668,8 +1668,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 374,
-    title: "ভ্রান্ত পথে ছিলাম আমরা",
-    transliteration: "Bhranto pothe chhilam amra",
+    title: "ভুলে ঔর ভটকে থ্যে হ্যাম",
+    transliteration: "Bhule Aur Bhatke Thye Hum",
     category: "হিন্দি",
     lyrics: `ভুলে ঔর ভটকে থ্যে হ্যাম,
 জাতে তো জাতে কাঁহা
@@ -1707,8 +1707,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 376,
-    title: "বলো জয় মিলিয়া জয়",
-    transliteration: "Bolo joy miliya joy",
+    title: "বোলো জয় মিলকর জয়",
+    transliteration: "Bolo Joy Milkar Joy",
     category: "হিন্দি",
     lyrics: `বোলো জয় মিলকর জয়
 বোলো জয় যীশু কি জয় (২)
@@ -1740,8 +1740,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 377,
-    title: "চাই তোমাকে প্রাণের চেয়ে",
-    transliteration: "Chai tomake praner cheye",
+    title: "চাহে তুম কো দিল সে",
+    transliteration: "Chahe Tum Ko Dil Se",
     category: "হিন্দি",
     lyrics: `চাহে তুম কো দিল সে,
 গায়ে যে গীত মিল কে,
@@ -1871,8 +1871,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 383,
-    title: "হে আমাদের স্বর্গস্থ পিতা",
-    transliteration: "Hey amader sworgostho pita",
+    title: "এয়্ হমারে বাপ তুজো আসমান ম্যে হে",
+    transliteration: "Ae Humare Baap Tuzo Asman Me Hai",
     category: "হিন্দি",
     lyrics: `এয়্ হমারে বাপ তুজো আসমান ম্যে হে
 তেরা নাম পাক মানা জায়ে
@@ -1905,8 +1905,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 384,
-    title: "একটি আগুন প্রতি হৃদয়ে",
-    transliteration: "Ekti agun proti hridoye",
+    title: "এক আগ হর দিল ম্যে",
+    transliteration: "Ek Aag Har Dil Mein",
     category: "হিন্দি",
     lyrics: `এক আগ হর দিল ম্যে
 হ্যাম কো জ্বালানা হে
@@ -1929,8 +1929,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 385,
-    title: "গাইবার হৃদয় আর বাজাবার জীবন",
-    transliteration: "Gaibar hridoy ar bajabar jibon",
+    title: "গানে কা দিল ঔর বজানে কা জীবন",
+    transliteration: "Gaane Ka Dil Aur Bajane Ka Jibon",
     category: "হিন্দি",
     lyrics: `গানে কা দিল ঔর বজানে কা জীবন
 হম সব নে পায়া হে (২)
@@ -1944,8 +1944,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 386,
-    title: "গুনে গুনে স্তুতি করি",
-    transliteration: "Gune gune stuti kori",
+    title: "গিন গিন কে স্তুতি করু",
+    transliteration: "Gin Gin Ke Stuti Karu",
     category: "হিন্দি",
     lyrics: `গিন গিন কে স্তুতি করু
 বেশুমার তেরে দানো কে লিয়ে
@@ -1972,8 +1972,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 387,
-    title: "হে আমার মন সদাপ্রভুর ধন্যবাদ করো",
-    transliteration: "Hey amar mon sodaprobhur dhonnobad koro",
+    title: "হে মেরে মন যিহোবা কো",
+    transliteration: "He Mere Man Yehovah Ko",
     category: "হিন্দি",
     lyrics: `হে মেরে মন যিহোবা কো
 ধন্য ধন্য কহো (২)
@@ -2016,8 +2016,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 389,
-    title: "হাল্লিলুইয়া স্তুতি গাই আমরা",
-    transliteration: "Hallelujah stuti gai amra",
+    title: "হাল্লেলুইয়া স্তুতি গায়ে হ্যাম",
+    transliteration: "Hallelujah Stuti Gaye Hum",
     category: "হিন্দি",
     lyrics: `হাল্লেলুইয়া স্তুতি গায়ে হ্যাম
 যীশু কি স্তুতি গায়ে হ্যাম (২)
@@ -2041,8 +2041,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 390,
-    title: "হে জীবন্ত পরমেশ্বর",
-    transliteration: "Hey jibonto paromeshwar",
+    title: "হে জীবিত পরমেশ্বর",
+    transliteration: "He Jibit Paromeshwar",
     category: "হিন্দি",
     lyrics: `হে জীবিত পরমেশ্বর
 ম্যে তেরি আরাধনা করতা হুঁ
@@ -2067,8 +2067,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 391,
-    title: "হে প্রভু দেবতাদের মধ্যে তোমার মতো কে",
-    transliteration: "Hey probhu debotader modhdhe tomar moto ke",
+    title: "হে প্রভু দেবতায়ো মে",
+    transliteration: "He Prabhu Devtayo Mein",
     category: "হিন্দি",
     lyrics: `হে প্রভু দেবতায়ো মে
 তেরে সমান হে কৌন
@@ -2125,8 +2125,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 393,
-    title: "হয়ে কুরবান সব গুনাহ থেকে",
-    transliteration: "Hoye kurban sob gunah theke",
+    title: "হoke কুর্বাণ হর গুনাহ সে",
+    transliteration: "Hoke Kurban Har Gunah Se",
     category: "হিন্দি",
     lyrics: `হoke কুর্বাণ হর গুনাহ সে
 তুনে মুঝকো হে বাচায়া
@@ -2154,7 +2154,7 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 394,
-    title: "হরিণী যেমন জলের জন্য",
+    title: "হরিণী যেমন জলের জন্য (As the Deer)",
     transliteration: "Horini jemon joler jonno",
     category: "আবাহন ও আরাধনা",
     lyrics: `হরিণী যেমন জলের জন্য ব্যাকুল
@@ -2189,8 +2189,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 396,
-    title: "যখন থেকে প্রিয় যীশু এসেছেন",
-    transliteration: "Jokhon theke priyo jishu esechhen",
+    title: "জব সে প্যারা যীশু আয়া",
+    transliteration: "Jab Se Pyara Jishu Aaya",
     category: "হিন্দি",
     lyrics: `জব সে প্যারা যীশু আয়া
 মেরা জীবন বদল গেয়া
@@ -2219,8 +2219,8 @@ export const SONGS_301_400: Song[] = [
   },
   {
     id: 397,
-    title: "জয় জয় প্রভু যীশুর জয়",
-    transliteration: "Joy joy probhu jishur joy",
+    title: "জয় জয় প্রভু যীশু কি",
+    transliteration: "Joy Joy Probhu Jishu Ki",
     category: "হিন্দি",
     lyrics: `জয় জয় প্রভু যীশু কি (২)
 হামকো বাচানে আয়া জগত মে

@@ -1,9 +1,11 @@
 import React from 'react';
 import { 
   ChevronRight, 
-  Monitor
+  Monitor,
+  Star
 } from 'lucide-react';
 import { BENGALI_FONTS } from '../constants';
+import { MainLogo } from './Logo';
 
 interface SettingsViewProps {
   fontSize: number;
@@ -23,13 +25,13 @@ const SettingsView: React.FC<SettingsViewProps> = ({
   return (
     <div className="max-w-2xl mx-auto p-4 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-32">
       <div className="flex items-center justify-center mb-4">
-        <h2 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-1.5 font-bengali">সেটিংস</h2>
+        <h2 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-1.5 font-bengali transition-colors">সেটিংস</h2>
       </div>
 
       {/* Appearance Section */}
       <section className="space-y-3">
-        <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest px-2">অ্যাপের চেহারা</h3>
-        <div className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm">
+        <h3 className="text-xs font-black text-slate-500/60 uppercase tracking-widest px-2 font-bengali">অ্যাপের চেহারা</h3>
+        <div className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm transition-colors">
           {/* Font Size Setting */}
           <div className="p-4 border-b border-slate-50 space-y-3">
             <div className="flex items-center gap-4">
@@ -50,9 +52,6 @@ const SettingsView: React.FC<SettingsViewProps> = ({
               />
               <span className="text-xl text-slate-400 font-bold font-bengali">ক</span>
             </div>
-            <p className="text-[10px] text-slate-400 font-medium px-2 font-bengali">
-              * এটি গানের লিরিক্স এবং অ্যাপের অন্যান্য লেখার আকার পরিবর্তন করবে।
-            </p>
           </div>
 
           {/* Bengali Font Selection */}
@@ -67,14 +66,14 @@ const SettingsView: React.FC<SettingsViewProps> = ({
               <select
                 value={BENGALI_FONTS.find(f => f.family === currentFont)?.id || 'noto'}
                 onChange={(e) => {
-                  const selected = BENGALI_FONTS.find(f => f.id === e.target.value);
-                  if (selected) setCurrentFont(selected.family);
+                   const selected = BENGALI_FONTS.find(f => f.id === e.target.value);
+                   if (selected) setCurrentFont(selected.family);
                 }}
-                className="w-full p-3 rounded-xl border border-slate-100 bg-white text-slate-700 font-bengali appearance-none focus:ring-2 focus:ring-emerald-500 outline-none"
+                className="w-full p-3 rounded-xl border border-slate-100 bg-white text-slate-700 font-bengali appearance-none focus:ring-2 focus:ring-emerald-500 outline-none transition-colors"
                 style={{ fontFamily: currentFont }}
               >
                 {BENGALI_FONTS.map(font => (
-                  <option key={font.id} value={font.id} style={{ fontFamily: font.family }}>
+                  <option key={font.id} value={font.id} style={{ fontFamily: font.family }} className="bg-white">
                     {font.name}
                   </option>
                 ))}
@@ -83,24 +82,36 @@ const SettingsView: React.FC<SettingsViewProps> = ({
                 <ChevronRight className="w-5 h-5 rotate-90" />
               </div>
             </div>
-            <div 
-              className="text-center p-4 bg-slate-50 rounded-2xl border border-dashed border-slate-200 transition-all"
-              style={{ 
-                fontFamily: currentFont,
-                fontSize: `${fontSize}px`,
-                lineHeight: 1.6
-              }}
-            >
-              ঈশ্বর আমাদের আশ্রয় ও বল, সংকটে অতিশয় সুপ্রাপ্য সাহায্য।
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Info Section - Simplified to just Version */}
+      {/* Ratings Section */}
+      <section className="space-y-4">
+        <h3 className="text-sm font-bold text-slate-500/80 px-2 font-bengali">মতামত ও রেটিং</h3>
+        <div className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm transition-colors p-2">
+          <a 
+            href="#" 
+            className="flex items-center justify-between p-4 group active:bg-slate-50 transition-all"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-500 shadow-sm border border-emerald-100/50">
+                <Star className="w-6 h-6 fill-current" />
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <span className="text-lg font-bold text-slate-800 font-bengali tracking-tight">অ্যাপটি রেট করুন</span>
+                <span className="text-xs text-slate-400 font-medium font-bengali">প্লে-স্টোরে আপনার মতামত দিন</span>
+              </div>
+            </div>
+            <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all" />
+          </a>
+        </div>
+      </section>
+
+      {/* Others Section */}
       <section className="space-y-3">
-        <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest px-2">অন্যান্য</h3>
-        <div className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm">
+        <h3 className="text-xs font-black text-slate-500/60 uppercase tracking-widest px-2 font-bengali">অন্যান্য</h3>
+        <div className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm transition-colors">
           <div className="flex items-center justify-between p-4">
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-500">
@@ -112,12 +123,6 @@ const SettingsView: React.FC<SettingsViewProps> = ({
           </div>
         </div>
       </section>
-
-      {/* Android TV Compatibility Note */}
-      <div className="p-6 text-center space-y-2 opacity-50">
-        <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Android TV Compatible</p>
-        <p className="text-[10px] text-slate-400 font-medium">D-pad নেভিগেশন সমর্থন করে</p>
-      </div>
     </div>
   );
 };

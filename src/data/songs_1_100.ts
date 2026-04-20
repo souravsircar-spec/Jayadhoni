@@ -56,7 +56,7 @@ export const HYMNS_1_100: Song[] = [
 },
 {
   id: 3,
-  title: "পুণ্য, পুণ্য, পুণ্য! সর্ব্বশক্তিমান!",
+  title: "পুণ্য, পুণ্য, পুণ্য! সর্ব্বশক্তিমান! (Holy, Holy, Holy! Lord God Almighty!)",
   transliteration: "Punyo, Punyo, Punyo! Sorbo-shaktiman!",
   category: "আবাহন ও আরাধনা",
   composer: "জে. এ. ডি. ম্যাকডোনাল্ড",

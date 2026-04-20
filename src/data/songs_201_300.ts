@@ -3,7 +3,7 @@ import { Song } from '../types';
 export const HYMNS_201_300: Song[] = [
   {
     id: 201,
-    title: "আবার গাও মিষ্টস্বরে গাও",
+    title: "আবার গাও মিষ্টস্বরে গাও (Sing Them Over Again)",
     transliteration: "Abar Gao Mistoshore Gao",
     composer: "ফিলিপ পি. ব্লিস (১৮৭৪)",
     category: "খ্রীষ্টীয় জীবন ও সাক্ষ্য",
@@ -991,7 +991,7 @@ export const HYMNS_201_300: Song[] = [
   },
   {
     id: 250,
-    title: "খ্রীষ্ট শরীর আত্মার চিকিৎসক",
+    title: "খ্রীষ্ট শরীর আত্মার চিকিৎসক (The Great Physician Now is Near)",
     transliteration: "Khristo Shorir Atmar Chikitshok",
     composer: "উইলিয়াম হান্টার (১৮৫৯)",
     category: "পরিত্রাণ ও সুসমাচার",
@@ -1847,7 +1847,7 @@ export const HYMNS_201_300: Song[] = [
   },
 {
     id: 288,
-    title: "রব উঠে অস্থির তরঙ্গ হইতে",
+    title: "রব উঠে অস্থির তরঙ্গ হইতে (Send the Light)",
     transliteration: "Rob Uthe Osthir Torongo Hoite",
     composer: "চার্লস এইচ. গ্যাব্রিয়েল (১৮৯০)",
     category: "পরিত্রাণ ও সুসমাচার",

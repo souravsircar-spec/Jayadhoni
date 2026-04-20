@@ -23,10 +23,14 @@
     --lyrics-font-size: 1.125rem;
     --system-font-size: 1rem;
     --index-font-size: 1.125rem;
+    --bg-main: #f8fafc;
+    --text-main: #0f172a;
+    --bg-card: #ffffff;
+    --border-main: #f1f5f9;
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 overflow-x-hidden select-none transition-colors duration-300;
+    @apply bg-[var(--bg-main)] text-[var(--text-main)] overflow-x-hidden select-none transition-colors duration-300;
     font-family: var(--font-sans);
     font-size: var(--system-font-size);
     -webkit-tap-highlight-color: transparent;
@@ -38,6 +42,10 @@
 }
 
 @layer components {
+  .dark-card {
+    @apply bg-[var(--bg-card)] border-[var(--border-main)];
+  }
+
   .font-bengali {
     font-family: var(--font-bengali);
   }
@@ -50,11 +58,6 @@
     font-size: var(--lyrics-font-size);
     line-height: 1.8;
   }
-
-  /* Android TV Focus Styles */
-  :focus-visible {
-    @apply outline-4 outline-emerald-500 outline-offset-4 ring-4 ring-emerald-500/20;
-  }
 }
 
 /* Custom Scrollbar */
@@ -62,12 +65,11 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  @apply bg-slate-100 dark:bg-slate-900;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 10px;
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  @apply bg-slate-400 dark:bg-slate-600;
 }

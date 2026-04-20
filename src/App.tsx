@@ -377,13 +377,16 @@ const App: React.FC = () => {
 
     return (
       <div className="space-y-2 animate-in fade-in slide-in-from-bottom-4 duration-500 px-4">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-1.5 font-bengali">
+        <div className="flex items-center justify-between mb-4 border-b border-emerald-500/10 pb-2">
+          <h2 className="text-xl font-black text-slate-800 relative font-bengali">
             {searchQuery ? 'অনুসন্ধানের ফলাফল' : 'সূচী'}
+            {!searchQuery && (
+              <div className="absolute -bottom-[9px] left-0 w-12 h-1 bg-emerald-500 rounded-full" />
+            )}
           </h2>
           <button 
             onClick={() => setSortBy(prev => prev === 'number' ? 'alphabetical' : 'number')}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-bold hover:bg-slate-200 transition-all font-bengali"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-600 text-xs font-bold hover:bg-slate-200 transition-all font-bengali border border-transparent"
           >
             {sortBy === 'number' ? <ArrowDownAZ className="w-4 h-4" /> : <Hash className="w-4 h-4" />}
             <span>{sortBy === 'number' ? 'বর্ণানুক্রমিক' : 'নম্বর অনুযায়ী'}</span>
@@ -417,14 +420,14 @@ const App: React.FC = () => {
       <header className="bg-white border-b border-slate-100 sticky top-0 z-30 pb-2 transition-colors">
         <div className="px-6 py-2 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 relative">
           <div className="flex items-center gap-4">
-            <MainLogo className="w-12 h-12 shadow-lg rounded-[1.1rem] overflow-hidden shrink-0" />
-            <div className="text-left">
+            <MainLogo className="w-12 h-12 shadow-lg rounded-[1.1rem] overflow-hidden shrink-0 border border-emerald-500/10" />
+            <div className="flex flex-col items-center">
               <h1 className="text-4xl font-black text-brand font-logo tracking-tight leading-none">জয়ধ্বনি</h1>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.25em] mt-1.5">বাংলা খ্রীষ্টিয় সংগীত</p>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.25em] mt-1.5 text-center ml-[0.25em]">বাংলা খ্রীষ্টিয় সংগীত</p>
             </div>
           </div>
           
-          <div className="hidden md:flex items-center gap-1 bg-slate-50 p-1 rounded-2xl border border-slate-100">
+          <div className="hidden md:flex items-center gap-1 bg-slate-50 p-1 rounded-2xl border border-slate-100 transition-colors">
             <HeaderNavButton active={activeTab === 'home'} onClick={() => handleTabChange('home')} icon={<Home className="w-4 h-4" />} label="সূচী" />
             <HeaderNavButton active={activeTab === 'collection'} onClick={() => handleTabChange('collection')} icon={<List className="w-4 h-4" />} label="সংগ্রহ" />
             <HeaderNavButton active={activeTab === 'info'} onClick={() => handleTabChange('info')} icon={<Info className="w-4 h-4" />} label="তথ্য" />

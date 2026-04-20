@@ -14,14 +14,7 @@ const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite,
   const renderTitle = (title: string) => {
     const match = title.match(/^(.*?)\s*\((.*)\)$/);
     if (match) {
-      return (
-        <>
-          {match[1]}
-          <span className="ml-1.5 text-[0.8em] italic font-medium text-slate-500 font-sans tracking-tight">
-            ({match[2]})
-          </span>
-        </>
-      );
+      return match[1];
     }
     return title;
   };
@@ -29,26 +22,23 @@ const SongCard: React.FC<SongCardProps> = ({ song, isFavorite, onToggleFavorite,
   return (
     <div 
       onClick={onClick}
-      className="group relative bg-white p-1.5 rounded-xl border border-slate-100 flex items-center gap-2 cursor-pointer transition-all hover:shadow-xl hover:shadow-emerald-500/5 active:scale-[0.99]"
+      className="group relative bg-white p-2 rounded-2xl border border-slate-100 flex items-center gap-3 cursor-pointer transition-all hover:shadow-xl hover:shadow-emerald-500/5 active:scale-[0.98]"
     >
-      {/* Integrated ID Badge with transparent heart background */}
       <div 
         onClick={onToggleFavorite}
-        className="relative shrink-0 w-10 h-10 bg-emerald-50/50 border border-emerald-100/50 rounded-xl flex items-center justify-center overflow-hidden transition-transform hover:scale-105 active:scale-95 group/heart"
+        className="relative shrink-0 w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center overflow-hidden transition-all hover:scale-105 active:scale-95 group/heart border border-emerald-100"
         title={isFavorite ? "পছন্দ থেকে সরান" : "পছন্দ হিসেবে রাখুন"}
       >
-        {/* Transparent Heart Shape behind the number */}
         <Heart 
-          className={`absolute w-7 h-7 transition-all duration-300 ${
+          className={`absolute w-8 h-8 transition-all duration-500 ${
             isFavorite 
-              ? 'text-rose-500/20 fill-rose-500/10 scale-125' 
-              : 'text-emerald-200/40 fill-emerald-100/20 scale-100 group-hover/heart:scale-110'
+              ? 'text-rose-500/20 fill-rose-500/15 scale-125' 
+              : 'text-emerald-500/5 fill-transparent scale-100 group-hover/heart:scale-110'
           }`}
           strokeWidth={1.5}
         />
         
-        {/* Song Number: Turns red (rose-600) when favorite */}
-        <span className={`relative z-10 font-black font-sans text-base transition-colors duration-300 ${
+        <span className={`relative z-10 font-black font-sans text-lg transition-colors duration-300 ${
           isFavorite ? 'text-rose-600' : 'text-emerald-700'
         }`}>
           {toBengaliNumber(song.id)}

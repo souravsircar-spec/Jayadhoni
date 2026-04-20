@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, ShieldCheck, Cpu, User, Music, Search, Mic, Type, Youtube, Smartphone, Mail, Info, Facebook, ArrowRight, ShoppingCart } from 'lucide-react';
+import { Heart, ShieldCheck, Cpu, User, Music, Search, Mic, Type, Youtube, Smartphone, Mail, Facebook, ArrowRight, ShoppingCart, MessageCircle } from 'lucide-react';
 import { toBengaliNumber } from '../utils/format';
 import { motion } from 'motion/react';
 
@@ -10,7 +10,7 @@ const PortraitPhoto = ({ className }: { className?: string }) => {
   return (
     <div className={`relative group ${className}`}>
       <div className="absolute -inset-4 bg-emerald-600/10 blur-2xl rounded-sm opacity-50" />
-      <div className="relative border-4 border-white shadow-xl overflow-hidden bg-slate-50 rounded-sm inline-block">
+      <div className="relative border-4 border-white shadow-xl overflow-hidden bg-slate-50 rounded-sm inline-block transition-colors">
         {!hasError ? (
           <img 
             src={imageUrl} 
@@ -38,186 +38,199 @@ const FeatureItem = ({ icon, title, desc }: { icon: React.ReactNode, title: stri
       {icon}
     </div>
     <div className="space-y-1">
-      <h4 className="text-sm font-black text-slate-800 tracking-tight">{title}</h4>
-      <p className="text-xs text-slate-500 leading-relaxed font-medium">{desc}</p>
+      <h4 className="text-sm font-black text-slate-800 tracking-tight transition-colors">{title}</h4>
+      <p className="text-xs text-slate-500 leading-relaxed font-medium transition-colors">{desc}</p>
     </div>
   </div>
 );
 
 const InfoView: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto p-4 pt-6 space-y-6 animate-in fade-in duration-1000 font-bengali pb-32">
-      {/* Header Branding - Integrated with Cross */}
-      <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-6">
-        <div className="flex items-center justify-center">
-          {/* Cross Container */}
+    <div className="max-w-4xl mx-auto p-4 pt-6 space-y-8 animate-in fade-in duration-1000 font-bengali pb-32 transition-colors">
+      
+      {/* 1. Green Cross Card */}
+      <div className="bg-emerald-600 p-8 rounded-[2rem] shadow-xl shadow-emerald-200/40 text-white flex flex-col items-center text-center space-y-8 transition-colors overflow-hidden">
+        <div className="w-full flex justify-center">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="relative flex justify-center items-center"
+            className="w-32 md:w-40"
           >
-            <div className="w-32 md:w-40 flex items-center justify-center">
-              <img 
-                src="/Cross.jpg" 
-                alt="Cross with Red Cloth"
-                referrerPolicy="no-referrer"
-                className="w-full h-auto object-contain filter contrast-[1.05] brightness-[1.05]"
-                style={{ mixBlendMode: 'multiply' }}
-              />
-            </div>
+            <img 
+              src="/Cross.png" 
+              alt="Cross with Red Cloth"
+              referrerPolicy="no-referrer"
+              className="w-full h-auto object-contain filter contrast-[1.05] brightness-[1.1]"
+            />
           </motion.div>
         </div>
 
-        <div className="space-y-4 max-w-2xl">
-          <motion.div
+        <div className="max-w-xl">
+          <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
+            className="text-white font-bold italic text-lg md:text-xl leading-relaxed py-2"
           >
-            <p className="text-emerald-700 font-bold italic text-base md:text-lg border-x-4 border-emerald-500/30 px-6 py-2 bg-emerald-50/50 rounded-2xl leading-relaxed">
-              সব গৌরব, প্রশংসা ও স্তুতি কেবল আমাদের প্রেমময় পিতা ঈশ্বর ও ত্রাণকর্তা প্রভু যীশু খ্রীষ্টেরই প্রাপ্য।
-            </p>
-          </motion.div>
+            “সব গৌরব, প্রশংসা ও স্তুতি কেবল আমাদের প্রেমময় পিতা ঈশ্বর ও ত্রাণকর্তা প্রভু যীশু খ্রীষ্টেরই প্রাপ্য।”
+          </motion.p>
+          <div className="w-16 h-1 bg-white/20 rounded-full mx-auto mt-6" />
         </div>
       </div>
 
-      {/* Dedication Section */}
-      <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-6">
-        <h3 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-2">স্বর্গীয় বিভু রঞ্জন সরকার</h3>
-        <PortraitPhoto className="" />
+      {/* 2. Dedication Section (উৎসর্গ) */}
+      <div className="bg-white p-8 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-8 transition-colors relative overflow-hidden">
+        <div className="flex items-center justify-center">
+          <h2 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-1.5 font-bengali transition-colors">উৎসর্গ</h2>
+        </div>
+
+        <div className="w-40 md:w-48">
+          <PortraitPhoto className="mt-2" />
+        </div>
+
         <div className="space-y-4">
-          <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">
+          <h3 className="text-lg font-bold text-slate-800">স্বর্গীয় বিভু রঞ্জন সরকার</h3>
+          <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
             জন্ম : ১লা আগস্ট ১৯২৮ — নিদ্রিত : ৩০শে ডিসেম্বর ১৯৮৫
           </p>
-          <p className="text-lg text-slate-700 leading-relaxed max-w-sm mx-auto font-medium">
+          <p className="text-base text-slate-700 leading-relaxed max-w-sm mx-auto font-medium py-2">
             আমাদের পিতৃব্য স্বর্গীয় বিভু রঞ্জন সরকার মহাশয়ের স্মরণার্থে ‘জয়ধ্বনি’ অ্যাপটি উৎসর্গীকৃত।
           </p>
         </div>
-        <div className="flex items-center gap-4 text-emerald-600/10">
-           <Heart className="w-6 h-6 fill-current" />
-           <Heart className="w-6 h-6 fill-current" />
+
+        <div className="flex items-center gap-4 text-emerald-600/10 pt-4">
+           <Heart className="w-8 h-8 fill-current" />
+           <Heart className="w-8 h-8 fill-current" />
         </div>
       </div>
 
-      {/* Introduction Section */}
-      <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-6">
-        <h3 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-2">ভূমিকা</h3>
+      {/* 3. Introduction Section (ভূমিকা) */}
+      <div className="bg-white p-8 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-6 transition-colors">
+        <div className="flex items-center justify-center">
+          <h2 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-1.5 font-bengali transition-colors">ভূমিকা</h2>
+        </div>
         <div className="space-y-5 text-slate-700 leading-relaxed font-medium max-w-2xl px-2">
-          <p className="text-[15px]">
+          <p className="text-sm md:text-base">
             ১৯৬৪ সালে ভ্রাতা বিভু রঞ্জন সরকার মহাশয়ের প্রচেষ্টায় 'জয়ধ্বনি' গীত পুস্তকটি প্রথম প্রকাশিত হয়। দীর্ঘ কয়েক দশক ধরে এই সংকলনটি খ্রীষ্টীয় আরাধনায় এক বিশেষ ভূমিকা পালন করে আসছে। সেই ঐতিহ্যকে আধুনিক প্রজন্মের কাছে পৌঁছে দিতে এবং ডিজিটাল মাধ্যমে এর ব্যবহার সহজতর করতে এই অ্যাপটি নির্মাণ করা হয়েছে। আমাদের প্রার্থনা, পশ্চিমবঙ্গ ও বাংলাদেশের সকল বাংলা মণ্ডলী যেন এই ডিজিটাল সংস্করণের মাধ্যমে উপকৃত হন।
           </p>
         </div>
       </div>
 
       {/* Features Section */}
-      <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-8">
-        <h3 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-2">অ্যাপের প্রধান বৈশিষ্ট্যসমূহ</h3>
+      <div className="bg-white p-8 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-8 transition-colors">
+        <div className="flex items-center justify-center">
+          <h2 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-1.5 font-bengali transition-colors">অ্যাপের প্রধান বৈশিষ্ট্যসমূহ</h2>
+        </div>
         
-        <div className="grid gap-8 sm:grid-cols-2 text-left w-full">
+        <div className="grid gap-8 sm:grid-cols-2 text-left w-full px-2">
           <FeatureItem 
-            icon={<Music className="w-5 h-5" />}
+            icon={<Music className="w-5 h-5 text-emerald-600" />}
             title="বিশাল ভাণ্ডার"
-            desc="৪৫০ টিরও বেশি ঐতিহ্যবাহী স্তোত্রগান এবং সমকালীন কোরাস গানের সংগ্রহ। নিয়মিতভাবে নতুন গান সংযোজন করা হচ্ছে।"
+            desc="৬০০ টিরও বেশি ঐতিহ্যবাহী স্তোত্রগান এবং সমকালীন কোরাস গানের সংগ্রহ। নিয়মিতভাবে নতুন গান সংযোজন করা হচ্ছে।"
           />
           <FeatureItem 
-            icon={<Search className="w-5 h-5" />}
-            title="উন্নত অনুসন্ধান (Search)"
-            desc="গান নম্বর, শিরোনাম বা গানের কলি দিয়ে খোঁজার পাশাপাশি ইংরেজি হরফে বাংলা লিখেও (Phonetic Search) গান খুঁজে পাওয়া সম্ভব।"
+            icon={<Search className="w-5 h-5 text-emerald-600" />}
+            title="উন্নত অনুসন্ধান"
+            desc="গান নম্বর, শিরোনাম বা গানের কলি দিয়ে খোঁজার পাশাপাশি ইংরেজি হরফে বাংলা লিখেও গান খুঁজে পাওয়া সম্ভব।"
           />
           <FeatureItem 
-            icon={<Mic className="w-5 h-5" />}
+            icon={<Mic className="w-5 h-5 text-emerald-600" />}
             title="ভয়েস সার্চ"
             desc="দ্রুত গান খোঁজার জন্য এতে যুক্ত করা হয়েছে বাংলা ভয়েস রিকগনিশন সুবিধা।"
           />
           <FeatureItem 
-            icon={<Heart className="w-5 h-5" />}
+            icon={<Heart className="w-5 h-5 text-emerald-600" />}
             title="ব্যক্তিগতকরণ"
-            desc="আপনার প্রিয় গানগুলো আলাদাভাবে 'Favorites' তালিকায় সংরক্ষণ করার সুবিধা।"
+            desc="আপনার প্রিয় গানগুলো আলাদাভাবে 'প্রিয় গান' তালিকায় সংরক্ষণ করার সুবিধা।"
           />
           <FeatureItem 
-            icon={<Type className="w-5 h-5" />}
+            icon={<Type className="w-5 h-5 text-emerald-600" />}
             title="সহজ পঠনযোগ্যতা"
-            desc="পড়ার সুবিধার্থে ফন্টের আকার ছোট বা বড় করার অপশন এবং বিঘ্নহীন অভিজ্ঞতার জন্য 'ইমার্সিভ মোড'।"
+            desc="পড়ার সুবিধার্থে ফন্টের আকার পরিবর্তন করার অপশন এবং বিঘ্নহীন পঠন অভিজ্ঞতার জন্য 'ইমার্সিভ মোড'।"
           />
           <FeatureItem 
-            icon={<Youtube className="w-5 h-5" />}
-            title="মাল্টিমিডিয়া সংযোগ"
-            desc="অনেক গানের সাথে সরাসরি ইউটিউব (YouTube) লিঙ্ক যুক্ত করা হয়েছে যাতে গানটি শোনার সুবিধা পাওয়া যায়।"
+            icon={<Youtube className="w-5 h-5 text-emerald-600" />}
+            title="ইউটিউব সংযোগ"
+            desc="অনেক গানের সাথে সরাসরি ভিডিও লিঙ্ক যুক্ত করা হয়েছে যাতে গানটি শোনার সুবিধা পাওয়া যায়।"
           />
           <FeatureItem 
-            icon={<Smartphone className="w-5 h-5" />}
+            icon={<Smartphone className="w-5 h-5 text-emerald-600" />}
             title="অফলাইন সুবিধা"
-            desc="এটি একটি প্রগ্রেসিভ ওয়েব অ্যাপ (PWA), যা মোবাইল বা ডেক্সটপে ইনস্টল করা যায় এবং অফলাইনেও গান ও লিরিক্স দেখা সম্ভব।"
+            desc="এটি একটি আধুনিক ওয়েব অ্যাপ, যা মোবাইল বা ডেক্সটপে ইনস্টল করা যায় এবং অফলাইনেও গান দেখা সম্ভব।"
           />
         </div>
       </div>
 
       {/* Contact & Social Section */}
-      <div className="bg-emerald-600 p-6 md:p-8 rounded-3xl shadow-xl shadow-emerald-200/40 text-white flex flex-col items-center text-center space-y-6">
-        <h3 className="text-xl font-bold text-white border-b-2 border-white/20 pb-2">আমাদের সাথে যুক্ত থাকুন</h3>
-        <p className="text-lg font-medium opacity-90 leading-relaxed max-w-md">
-          নতুন গানের আপডেট পেতে এবং আমাদের সাথে সরাসরি যোগাযোগ করতে নিচের মাধ্যমগুলো ব্যবহার করুন।
-        </p>
-
-        {/* Physical Book Option */}
-        <div className="w-full max-w-md bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 flex items-center gap-4 text-left">
-          <div className="w-12 h-12 rounded-xl bg-amber-400 text-amber-900 flex items-center justify-center shrink-0">
-            <ShoppingCart className="w-6 h-6" />
-          </div>
-          <div className="space-y-0.5">
-            <h4 className="font-bold text-white font-bengali">'জয়ধ্বনি' গীত পুস্তকের হার্ডকপি</h4>
-            <p className="text-xs text-white/80 font-medium font-bengali">মূল্য: ১৫০ টাকা + কুরিয়ার চার্জ</p>
-            <p className="text-[10px] text-amber-200 font-bold uppercase tracking-wider">বইটি সংগ্রহ করতে আমাদের সাথে যোগাযোগ করুন</p>
-          </div>
+      <div className="bg-white p-8 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center space-y-8 transition-colors">
+        <div className="flex items-center justify-center">
+          <h2 className="text-xl font-bold text-slate-800 border-b-2 border-emerald-500/20 pb-1.5 font-bengali transition-colors">আমাদের সোশ্যাল মিডিয়া</h2>
         </div>
-        
-        <div className="flex flex-col sm:flex-row gap-4 w-full justify-center pt-2">
+
+        <div className="flex items-center justify-center gap-8">
+          <a 
+            href="https://whatsapp.com/channel/0029Vb7r7YvBlHpUzJXhLk2K" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-14 h-14 flex items-center justify-center bg-emerald-50 text-emerald-600 rounded-2xl transition-all hover:bg-emerald-100 hover:scale-110 active:scale-95 shadow-sm"
+            title="হোয়াটসঅ্যাপ চ্যানেল"
+          >
+            <MessageCircle className="w-7 h-7" />
+          </a>
+
           <a 
             href="https://www.facebook.com/profile.php?id=61578663071457" 
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between gap-3 px-6 py-4 bg-white text-emerald-600 rounded-2xl font-bold text-sm hover:bg-emerald-50 transition-all shadow-lg group"
+            className="w-14 h-14 flex items-center justify-center bg-blue-50 text-blue-600 rounded-2xl transition-all hover:bg-blue-100 hover:scale-110 active:scale-95 shadow-sm"
+            title="ফেসবুক"
           >
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-blue-50 text-blue-600 rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                <Facebook className="w-5 h-5" />
-              </div>
-              <div className="text-left">
-                <div className="text-[10px] uppercase tracking-widest text-slate-400">Facebook Page</div>
-                <div>অফিসিয়াল ফেসবুক পেজ</div>
-              </div>
-            </div>
-            <ArrowRight className="w-4 h-4 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            <Facebook className="w-7 h-7" />
           </a>
 
           <a 
             href="https://www.youtube.com/@jayodhoni" 
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between gap-3 px-6 py-4 bg-white text-emerald-600 rounded-2xl font-bold text-sm hover:bg-emerald-50 transition-all shadow-lg group"
+            className="w-14 h-14 flex items-center justify-center bg-red-50 text-red-600 rounded-2xl transition-all hover:bg-red-100 hover:scale-110 active:scale-95 shadow-sm"
+            title="ইউটিউব"
           >
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-red-50 text-red-600 rounded-xl group-hover:bg-red-600 group-hover:text-white transition-colors">
-                <Youtube className="w-5 h-5" />
-              </div>
-              <div className="text-left">
-                <div className="text-[10px] uppercase tracking-widest text-slate-400">Youtube Channel</div>
-                <div>অফিসিয়াল ইউটিউব চ্যানেল</div>
-              </div>
-            </div>
-            <ArrowRight className="w-4 h-4 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            <Youtube className="w-7 h-7" />
           </a>
         </div>
+      </div>
 
-        <div className="pt-4 border-t border-white/10 w-full mt-4">
-          <a 
-            href="mailto:souravsircar@gmail.com" 
-            className="inline-flex items-center gap-3 text-sm font-bold text-white hover:text-emerald-100 underline decoration-emerald-200/50 underline-offset-4"
-          >
-            <Mail className="w-4 h-4" />
-            souravsircar@gmail.com
-          </a>
+      {/* Printed Edition & Email Section (Separated for clarity) */}
+      <div className="bg-emerald-600 p-8 rounded-[2rem] shadow-xl shadow-emerald-200/40 text-white flex flex-col items-center text-center space-y-8">
+        <div className="flex items-center justify-center">
+          <h2 className="text-xl font-bold text-white border-b-2 border-white/20 pb-1.5 font-bengali transition-colors">যোগাযোগ ও সংগ্রহ</h2>
+        </div>
+
+        <p className="text-base md:text-lg font-medium leading-relaxed max-w-xl">
+          গানের বইটির মুদ্রিত সংস্করণের জন্য বা কোনো পরামর্শের জন্য আমাদের সাথে যোগাযোগ করুন।
+        </p>
+
+        <div className="w-full max-w-md bg-white/10 backdrop-blur-sm border border-white/20 rounded-[2rem] p-6 flex flex-col items-center gap-4 mt-4">
+          <div className="w-16 h-16 rounded-2xl bg-amber-400 text-amber-900 flex items-center justify-center shadow-lg shrink-0">
+            <ShoppingCart className="w-8 h-8" />
+          </div>
+          <div className="space-y-2">
+            <h4 className="text-xl font-bold font-bengali tracking-tight">'জয়ধ্বনি' গীত পুস্তকের মুদ্রিত সংস্করণ</h4>
+            <p className="text-sm text-white/90 font-medium font-bengali">মূল্য: ১৫০ টাকা + কুরিয়ার চার্জ</p>
+            <p className="text-xs text-amber-200 font-black uppercase tracking-widest pt-2">বইটি সংগ্রহ করতে আমাদের সাথে যোগাযোগ করুন</p>
+          </div>
+        </div>
+        
+        <div className="pt-4 border-t border-white/10 w-full flex flex-col items-center gap-4">
+          <div className="bg-white rounded-full px-8 py-3 shadow-xl border border-white/50 group transition-transform active:scale-95">
+            <a 
+              href="mailto:souravsircar@gmail.com" 
+              className="text-sm md:text-base font-black text-emerald-700 hover:text-emerald-600 transition-colors tracking-tight"
+            >
+              souravsircar@gmail.com
+            </a>
+          </div>
         </div>
       </div>
 
