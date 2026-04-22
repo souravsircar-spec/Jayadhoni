@@ -508,6 +508,7 @@ export const HYMNS_1_100: Song[] = [
   title: "যীশু আমার পরমপিতা",
   transliteration: "Jishu Amar Porompita",
   category: "আবাহন ও আরাধনা",
+  youtubeId: "W-WLWQcKWvI",
   lyrics: `যীশু আমার পরমপিতা! যীশু আমার পরিত্রাতা!
 যীশু আমার মুক্তিদাতা! যীশু আমার জীবনদাতা!
 তোমার মহিমা আমি করব! তোমার স্তুতি আমি গাইব!
@@ -548,6 +549,7 @@ export const HYMNS_1_100: Song[] = [
   title: "জয় জয় যীশুর জয়",
   transliteration: "Joy Joy Jishur Joy",
   category: "প্রশংসা ও ধন্যবাদ",
+  youtubeId: "eZn1jCxGKaA",
   composer: "",
   lyrics: `জয় জয় যীশুর জয় (২)
 এই শুভদিনে আমরা সকলে গাহি তাঁহার গান।
@@ -565,9 +567,10 @@ export const HYMNS_1_100: Song[] = [
 },
 {
   id: 26,
-  title: "হোক যীশু নামের সমাদর",
+  title: "হোক যীশু নামের সমাদর (All Hail The Power Of Jesus Name)",
   transliteration: "Hok Jishu Namer Somador",
   category: "প্রশংসা ও ধন্যবাদ",
+  youtubeId: "iJcv9jFjZx0",
   composer: "যাকোব কান্তিনাথ বিশ্বাস",
   lyrics: `১ হোক যীশু নামের সমাদর! দূত করুক প্রণিপাত।
 স্তব কর তাঁহার নিরন্তর, রাজ-কিরীট পরাও তাঁয়।
@@ -586,10 +589,11 @@ export const HYMNS_1_100: Song[] = [
 },
 {
   id: 27,
-  title: "হে মোর ঈশ্বর",
+  title: "হে মোর ঈশ্বর (O Lord My God)",
   transliteration: "He Mor Ishwar Bishmoye Mugdho Mor Pran",
   category: "প্রশংসা ও ধন্যবাদ",
   composer: "জেমস্ রবীন্দ্র বিশ্বাস",
+  youtubeId: "0mBwqx5Rch4",
   lyrics: `১ হে মোর ঈশ্বর বিস্ময়ে মুগ্ধ মোর প্রাণ,
 কী অদ্ভুত তোমার সৃজিত এই ভুবন।
 তারা দেখি শুনি বজ্রনাদ ভীষণ,
